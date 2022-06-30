@@ -3,7 +3,6 @@
 namespace BusinessProcessRoot\Entities;
 
 use CodeIgniter\Entity;
-
 use BusinessProcessRoot\Models\Kelurahan as KelurahanModel;
 use BusinessProcessRoot\Models\KkMainDataUtamaResponden as KkMainDataUtamaRespondenModel;
 use BusinessProcessRoot\Models\KkMainDataPekerjaanDanOrganisasi as KkMainDataPekerjaanDanOrganisasiModel;
@@ -13,6 +12,9 @@ use BusinessProcessRoot\Models\KkMainAsetTanah as KkMainAsetTanahModel;
 use BusinessProcessRoot\Models\KkMainAsetRumah as KkMainAsetRumahModel;
 use BusinessProcessRoot\Models\KkMainAsetPerkebunan as KkMainPerkebunanModel;
 use BusinessProcessRoot\Models\KkMainAsetTanamanPangan as KkMainTanamanPanganModel;
+use BusinessProcessRoot\Models\KkMainAsetBuahBuahan as KkMainBuahBuahanModel;
+use BusinessProcessRoot\Models\KkMainAsetTanamanObat as KkMainTanamanObatModel;
+use BusinessProcessRoot\Models\KkMainAsetKehutanan as KkMainKehutananModel;
 
 class KkMain extends Entity
 {
@@ -158,7 +160,40 @@ class KkMain extends Entity
 		foreach($kdur_ent as $ke){
 			$ke->jenis_komoditas_pangan_string = ucwords(strtolower($ke->get_jenis_komoditas_pangan_string()));
 		}
+	return $kdur_ent;
+	}
 
+
+	public function get_kk_main_aset_buah_buahan(){
+		$kdur_model = new KkMainBuahBuahanModel();
+
+		$kdur_ent = $kdur_model->where("kk_id",$this->attributes['kk_id'])->findAll();
+
+		foreach($kdur_ent as $ke){
+			$ke->jenis_komoditas_buah_buahan_string = ucwords(strtolower($ke->get_jenis_komoditas_buah_buahan_string()));
+		}
+	return $kdur_ent;
+	}
+
+	public function get_kk_main_aset_tanaman_obat(){
+		$kdur_model = new KkMainTanamanObatModel();
+
+		$kdur_ent = $kdur_model->where("kk_id",$this->attributes['kk_id'])->findAll();
+
+		foreach($kdur_ent as $ke){
+			$ke->jenis_komoditas_tanaman_obat_string = ucwords(strtolower($ke->get_jenis_komoditas_tanaman_obat_string()));
+		}
+	return $kdur_ent;
+	}
+
+	public function get_kk_main_aset_kehutanan(){
+		$kdur_model = new KkMainKehutananModel();
+
+		$kdur_ent = $kdur_model->where("kk_id",$this->attributes['kk_id'])->findAll();
+
+		foreach($kdur_ent as $ke){
+			$ke->jenis_komoditas_kehutanan_string = ucwords(strtolower($ke->get_jenis_komoditas_kehutanan_string()));
+		}
 	return $kdur_ent;
 	}
 		

@@ -361,8 +361,15 @@ $(document).ready(function(){
 
 				//aset tanaman pangan
 				$(".jenis_komoditas_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['jenis_komoditas_pangan_string']); 
-			
+ 
+				//aset tanaman Buahan
+				$(".jenis_komoditas_buah_buahan").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['jenis_komoditas_buah_buahan_string']); 
+ 
+				//aset tanaman Obat
+				$(".jenis_komoditas_tanaman_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['jenis_komoditas_tanaman_obat_string']);
 
+				//aset Kehutanan
+				$(".jenis_komoditas_kehutanan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['jenis_komoditas_kehutanan_string']);
 
 				var lembaga_pemerintahan_list = "<ul>";
 				for(var ij=0;ij<rd[0]['get_kk_main_lembaga_pemerintahan'].length; ij++){

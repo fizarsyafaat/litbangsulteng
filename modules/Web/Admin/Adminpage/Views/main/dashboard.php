@@ -552,7 +552,7 @@
 							    			<div class="form-group">
 							    				<div class="row">
 							    					<div class="col-12">
-									    				<label>Perkebunan</label>
+									    				<label>Data Aset Perkebunan</label>
 							    					</div>
 							    				</div>
 							    				<div class="row">
@@ -597,18 +597,70 @@
 							    	</div>
 							    </div>			
 
+							    <div class="tab-pane fade" id="nav-pertanian" role="tabpanel" aria-labelledby="nav-pertanian-tab">
+							    	<div class="row">
+							    		<div class="col-12">
+							    			<div class="form-group">
+							    				<div class="row">
+							    					<div class="col-12">
+									    				<label>Data Aset Pertanian</label>
+							    					</div>
+							    				</div>
+							    				<div class="row">
+							    					<div class="col-12 table-responsive">
+							    						<table class="table table-striped komoditas-pertanian-table">
+							    							<thead class="thead-dark">
+							    								<tr>
+								    								<th>Jenis Komoditas Pertanian</th>
+								    								<th>Luas Panen</th>
+								    								<th>Jumlah Produksi</th>
+								    								<th>Hasil Pemasaran</th>
+								    								<th>Jumlah Pohon</th>
+								    								<th>Jenis Bibit</th>
+								    								<th>Pestisida</th>
+								    								<th>Pupuk Organik</th>
+								    								<th>Pupuk Pabrik</th>
+								    								<th>Lokasi Lahan</th>
+							    								</tr>
+							    							</thead>
+							    							<tbody>
+							    							</tbody>
+							    							<tfoot>
+							    								<tr>
+							    									<td class="jenis_komoditas_buah_buahan">Kom1</td>
+							    									<td class="luas_panen">Kom1</td>
+							    									<td class="jumlah_produksi">Kom1</td>
+							    									<td class="hasil_pemasaran">Kom1</td>
+							    									<td class="jumlah_pohon ">Kom1</td>
+							    									<td class="jenis_bibit">Kom1</td>
+							    									<td class="pestisida">Kom1</td>
+							    									<td class="pupuk_organik">Kom1</td>
+							    									<td class="pupuk_pabrik">kom1</td>
+							    									<td class="lokasi">Lokasi</td>
+
+							    								</tr>
+							    							</tfoot>
+							    						</table>
+							    					</div>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    </div>			
+   	
+
 							    <div class="tab-pane fade" id="nav-tanaman-pangan" role="tabpanel" aria-labelledby="nav-tanaman-pangan-tab">
 							    	<div class="row">
 							    		<div class="col-12">
 							    			<div class="form-group">
 							    				<div class="row">
 							    					<div class="col-12">
-									    				<label>Aset Tanaman Pangan</label>
+									    				<label>Data Aset Tanaman Pangan</label>
 							    					</div>
 							    				</div>
 							    				<div class="row">
 							    					<div class="col-12 table-responsive">
-							    						<table class="table table-striped komoditas-perkebunan-table">
+							    						<table class="table table-striped komoditas-tanaman-pangan-table">
 							    							<thead class="thead-dark">
 							    								<tr>
 								    								<th>Jenis Komoditas Tanaman Pangan</th>
@@ -648,6 +700,107 @@
 							    	</div>
 							    </div>							
 
+							     <div class="tab-pane fade" id="nav-tanaman-obat" role="tabpanel" aria-labelledby="nav-tanaman-obat-tab">
+							    	<div class="row">
+							    		<div class="col-12">
+							    			<div class="form-group">
+							    				<div class="row">
+							    					<div class="col-12">
+									    				<label>Data Aset Tanaman Obat</label>
+							    					</div>
+							    				</div>
+							    				<div class="row">
+							    					<div class="col-12 table-responsive">
+							    						<table class="table table-striped komoditas-tanaman-obat-table">
+							    							<thead class="thead-dark">
+							    								<tr>
+								    								<th>Jenis Komoditas Tanaman Obat</th>
+								    								<th>Luas Panen</th>
+								    								<th>Jumlah Produksi</th>
+								    								<th>Hasil Pemasaran</th>
+								    								<th>Jumlah Pohon</th>
+								    								<th>Jenis Bibit</th>
+								    								<th>Pestisida</th>
+								    								<th>Pupuk Organik</th>
+								    								<th>Pupuk Pabrik</th>
+								    								<th>Lokasi Lahan</th>
+							    								</tr>
+							    							</thead>
+							    							<tbody>
+							    							</tbody>
+							    							<tfoot>
+							    								<tr>
+							    									<td class="jenis_komoditas_obat">Kom1</td>
+							    									<td class="luas_panen">Kom1</td>
+							    									<td class="jumlah_produksi">Kom1</td>
+							    									<td class="hasil_pemasaran">Kom1</td>
+							    									<td class="jumlah_pohon ">Kom1</td>
+							    									<td class="jenis_bibit">Kom1</td>
+							    									<td class="pestisida">Kom1</td>
+							    									<td class="pupuk_organik">Kom1</td>
+							    									<td class="pupuk_pabrik">kom1</td>
+							    									<td class="lokasi">Lokasi</td>
+
+							    								</tr>
+							    							</tfoot>
+							    						</table>
+							    					</div>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    </div>		
+
+							    <div class="tab-pane fade" id="nav-kehutanan" role="tabpanel" aria-labelledby="nav-kehutanan-tab">
+							    	<div class="row">
+							    		<div class="col-12">
+							    			<div class="form-group">
+							    				<div class="row">
+							    					<div class="col-12">
+									    				<label>Data Aset Kehutanan</label>
+							    					</div>
+							    				</div>
+							    				<div class="row">
+							    					<div class="col-12 table-responsive">
+							    						<table class="table table-striped komoditas-tanaman-obat-table">
+							    							<thead class="thead-dark">
+							    								<tr>
+								    								<th>Jenis Komoditas kehutanan</th>
+								    								<th>Luas Panen</th>
+								    								<th>Jumlah Produksi</th>
+								    								<th>Hasil Pemasaran</th>
+								    								<th>Jumlah Pohon</th>
+								    								<th>Jenis Bibit</th>
+								    								<th>Pestisida</th>
+								    								<th>Pupuk Organik</th>
+								    								<th>Pupuk Pabrik</th>
+								    								<th>Lokasi Lahan</th>
+							    								</tr>
+							    							</thead>
+							    							<tbody>
+							    							</tbody>
+							    							<tfoot>
+							    								<tr>
+							    									<td class="jenis_komoditas_kehutanan">Kom1</td>
+							    									<td class="luas_panen">Kom1</td>
+							    									<td class="jumlah_produksi">Kom1</td>
+							    									<td class="hasil_pemasaran">Kom1</td>
+							    									<td class="jumlah_pohon ">Kom1</td>
+							    									<td class="jenis_bibit">Kom1</td>
+							    									<td class="pestisida">Kom1</td>
+							    									<td class="pupuk_organik">Kom1</td>
+							    									<td class="pupuk_pabrik">kom1</td>
+							    									<td class="lokasi">Lokasi</td>
+
+							    								</tr>
+							    							</tfoot>
+							    						</table>
+							    					</div>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    </div>
 
 								    <div class="tab-pane fade" id="nav-responden" role="tabpanel" aria-labelledby="nav-responden-tab">
 								    	<div class="row">

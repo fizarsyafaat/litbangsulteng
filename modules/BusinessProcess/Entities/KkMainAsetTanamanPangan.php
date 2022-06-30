@@ -31,7 +31,7 @@ class KkMainAsetTanamanPangan extends Entity
 
 			$skm_model = new KomoditasTanamanPanganModel();
 		$skm_ent = $skm_model->find($this->attributes['jenis_komoditas']);
-		return $skm_ent->nama_komoditas_tanaman_pangan;
+		return $skm_ent->nama_komoditas_buah_buahan;
 	}
 
 	public function get_luas_panen_string(){
