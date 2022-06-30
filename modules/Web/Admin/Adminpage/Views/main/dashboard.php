@@ -628,7 +628,7 @@
 							    							<tfoot>
 							    								<tr>
 							    									<td class="jenis_komoditas_buah_buahan">Kom1</td>
-							    									<td class="luas_panen">Kom1</td>
+							    									<td class="luas_panen_buah">Kom1</td>
 							    									<td class="jumlah_produksi">Kom1</td>
 							    									<td class="hasil_pemasaran">Kom1</td>
 							    									<td class="jumlah_pohon ">Kom1</td>
@@ -808,7 +808,7 @@
 							    			<div class="form-group">
 							    				<div class="row">
 							    					<div class="col-12">
-									    				<label>Data Komoditas TernakTernak</label>
+									    				<label>Data Komoditas Hewan Ternak </label>
 							    					</div>
 							    				</div>
 							    				<div class="row">
@@ -837,6 +837,52 @@
 							    									<td class="jumlah_produksi_hasil_ternak">Kom1</td>
 							    									<td class="pemasaran_hasil_ternak">Kom1</td>
 							    									<td class="jenis_pakan_ternak">Kom1</td>
+							    							
+							    								</tr>
+							    							</tfoot>
+							    						</table>
+							    					</div>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    </div>
+
+							     <div class="tab-pane fade" id="nav-perikanan" role="tabpanel" aria-labelledby="nav-perikanan-tab">
+							    	<div class="row">
+							    		<div class="col-12">
+							    			<div class="form-group">
+							    				<div class="row">
+							    					<div class="col-12">
+									    				<label>Data Komoditas Perikanan </label>
+							    					</div>
+							    				</div>
+							    				<div class="row">
+							    					<div class="col-12 table-responsive">
+							    						<table class="table table-striped komoditas-ternak-table">
+							    							<thead class="thead-dark">
+							    								<tr>
+								    								<th>Jenis Komoditas Ikan</th>
+								    								<th>Luas Panen Ikan</th>
+								    								<th>Jumlah Pemasaran Ikan</th>
+								    								<th>Hasil Pemasaran Ikan</th>
+								    								<th>Jumlah Ikan</th>
+								    								<th>Jenis Bibit Ikan</th>
+								    								<th>Jenis Pakan Ikan</th>
+								    								
+							    								</tr>
+							    							</thead>
+							    							<tbody>
+							    							</tbody>
+							    							<tfoot>
+							    								<tr>
+							    									<td class="komoditas_ikan">Kom1</td>
+							    									<td class="luas_panen_ikan">Kom2</td>
+							    									<td class="jumlah_produksi_ikan">Kom1</td>
+							    									<td class="hasil_pemasaran_ikan">Kom1</td>
+							    									<td class="jumlah_ikan">Kom1</td>
+							    									<td class="jenis_bibit_ikan">Kom1</td>
+							    									<td class="jenis_pakan_ikan">Kom1</td>
 							    							
 							    								</tr>
 							    							</tfoot>

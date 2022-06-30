@@ -364,6 +364,7 @@ $(document).ready(function(){
  
 				//aset tanaman Buahan
 				$(".jenis_komoditas_buah_buahan").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['jenis_komoditas_buah_buahan_string']); 
+				$(".luas_panen_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['luas_panen_buah_string']); 
  
 				//aset tanaman Obat
 				$(".jenis_komoditas_tanaman_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['jenis_komoditas_tanaman_obat_string']);
@@ -379,6 +380,15 @@ $(document).ready(function(){
 				$(".jumlah_produksi_hasil_ternak").html(rd[0]['get_kk_main_aset_ternak'][0]['jumlah_produksi_hasil_ternak_string']);
 				$(".pemasaran_hasil_ternak").html(rd[0]['get_kk_main_aset_ternak'][0]['pemasaran_hasil_ternak_string']);
 				$(".jenis_pakan_ternak").html(rd[0]['get_kk_main_aset_ternak'][0]['jenis_pakan_ternak_string']);
+
+				//aset ikan
+				$(".komoditas_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['komoditas_ikan_string']);
+				$(".luas_panen_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['luas_panen_ikan_string']);
+				$(".jumlah_produksi_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['jumlah_produksi_ikan_string']);
+				$(".hasil_pemasaran_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['hasil_pemasaran_ikan_string']);
+				$(".jumlah_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['jumlah_ikan_string']);
+				$(".jenis_bibit_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['jenis_bibit_ikan_string']);
+				$(".jenis_pakan_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['jenis_pakan_ikan_string']);
 
 				var lembaga_pemerintahan_list = "<ul>";
 				for(var ij=0;ij<rd[0]['get_kk_main_lembaga_pemerintahan'].length; ij++){

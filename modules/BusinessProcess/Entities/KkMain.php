@@ -16,6 +16,7 @@ use BusinessProcessRoot\Models\KkMainAsetBuahBuahan as KkMainBuahBuahanModel;
 use BusinessProcessRoot\Models\KkMainAsetTanamanObat as KkMainTanamanObatModel;
 use BusinessProcessRoot\Models\KkMainAsetKehutanan as KkMainKehutananModel;
 use BusinessProcessRoot\Models\KkMainAsetTernak as KkMainAsetTernakModel;
+use BusinessProcessRoot\Models\KkMainAsetIkan as KkMainAsetIkanModel;
 
 class KkMain extends Entity
 {
@@ -172,6 +173,7 @@ class KkMain extends Entity
 
 		foreach($kdur_ent as $ke){
 			$ke->jenis_komoditas_buah_buahan_string = ucwords(strtolower($ke->get_jenis_komoditas_buah_buahan_string()));
+				$ke->luas_panen_buah_string = ucwords(strtolower($ke->get_luas_panen_buah_string()));
 		}
 	return $kdur_ent;
 	}
@@ -183,6 +185,8 @@ class KkMain extends Entity
 
 		foreach($kdur_ent as $ke){
 			$ke->jenis_komoditas_tanaman_obat_string = ucwords(strtolower($ke->get_jenis_komoditas_tanaman_obat_string()));
+		
+		
 		}
 	return $kdur_ent;
 	}
@@ -211,6 +215,23 @@ class KkMain extends Entity
 			$ke->jumlah_produksi_hasil_ternak_string = ucwords(strtolower($ke->get_jumlah_produksi_hasil_ternak_string()));
 			$ke->pemasaran_hasil_ternak_string = ucwords(strtolower($ke->get_pemasaran_hasil_ternak_string()));
 			$ke->jenis_pakan_ternak_string = ucwords(strtolower($ke->get_jenis_pakan_ternak_string()));
+		}
+		return $kdur_ent;
+	}
+
+	public function get_kk_main_aset_ikan(){
+		$kdur_model = new KkMainAsetIkanModel();
+
+		$kdur_ent = $kdur_model->where("kk_id",$this->attributes['kk_id'])->findAll();
+
+		foreach($kdur_ent as $ke){
+			$ke->komoditas_ikan_string = ucwords(strtolower($ke->get_komoditas_ikan_string()));
+			$ke->luas_panen_ikan_string = ucwords(strtolower($ke->get_luas_panen_ikan_string()));
+			$ke->jumlah_produksi_ikan_string = ucwords(strtolower($ke->get_jumlah_produksi_ikan_string()));
+			$ke->hasil_pemasaran_ikan_string = ucwords(strtolower($ke->get_hasil_pemasaran_ikan_string()));
+			$ke->jumlah_ikan_string = ucwords(strtolower($ke->get_jumlah_ikan_string()));
+			$ke->jenis_bibit_ikan_string = ucwords(strtolower($ke->get_jenis_bibit_ikan_string()));
+			$ke->jenis_pakan_ikan_string = ucwords(strtolower($ke->get_jenis_pakan_ikan_string()));
 		}
 		return $kdur_ent;
 	}

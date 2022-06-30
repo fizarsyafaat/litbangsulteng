@@ -34,7 +34,7 @@ class KkMainAsetBuahBuahan extends Entity
 		return $skm_ent->nama_komoditas_buah_buahan;
 	}
 
-	public function get_luas_panen_string(){
+	public function get_luas_panen_buah_string(){
 
 			$skm_model = new LuasLahanModel();
 			$skm_ent = $skm_model->find($this->attributes['luas_panen']);
