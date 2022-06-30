@@ -18,6 +18,8 @@ use BusinessProcessRoot\Models\KkMainAsetKehutanan as KkMainKehutananModel;
 use BusinessProcessRoot\Models\KkMainAsetTernak as KkMainAsetTernakModel;
 use BusinessProcessRoot\Models\KkMainAsetIkan as KkMainAsetIkanModel;
 use BusinessProcessRoot\Models\KkMainAsetIkanTangkap as KkMainAsetIkanTangkapModel;
+use BusinessProcessRoot\Models\KkMainPariwisata as KkMainPariwisataModel;
+use BusinessProcessRoot\Models\KkMainKesehatan as KkMainKesehatanModel;
 
 class KkMain extends Entity
 {
@@ -276,6 +278,35 @@ class KkMain extends Entity
 			$ke->alat_tangkap_media_ikan_string = ucwords(strtolower($ke->get_alat_tangkap_media_ikan_string()));
 			$ke->jumlah_unit_string = ucwords(strtolower($ke->get_jumlah_unit_string()));
 			
+		}
+		return $kdur_ent;
+	}
+
+	public function get_kk_main_pariwisata(){
+		$kdur_model = new KkMainPariwisataModel();
+
+		$kdur_ent = $kdur_model->where("kk_id",$this->attributes['kk_id'])->findAll();
+
+		foreach($kdur_ent as $ke){
+		$ke->jumlah_aktivitas_wisata_bulanan_string = ucwords(strtolower($ke->get_jumlah_aktivitas_wisata_bulanan_string()));
+		$ke->jumlah_biaya_wisata_bulanan_string = ucwords(strtolower($ke->get_jumlah_biaya_wisata_bulanan_string()));
+		$ke->lokasi_objek_wisata_string = ucwords(strtolower($ke->get_lokasi_objek_wisata_string()));
+			
+		}
+		return $kdur_ent;
+	}
+
+	public function get_kk_main_kesehatan(){
+		$kdur_model = new KkMainKesehatanModel();
+
+		$kdur_ent = $kdur_model->where("kk_id",$this->attributes['kk_id'])->findAll();
+
+		foreach($kdur_ent as $ke){
+		$ke->penderita_sakit_kelainan_string = ucwords(strtolower($ke->get_penderita_sakit_kelainan_string()));
+		$ke->perilaku_hidup_bersih_string = ucwords(strtolower($ke->get_perilaku_hidup_bersih_string()));
+		$ke->pola_makan_string = ucwords(strtolower($ke->get_pola_makan_string()));
+		$ke->kebiasaan_berobat_string = ucwords(strtolower($ke->get_kebiasaan_berobat_string()));
+		$ke->jenis_penyakit_string = ucwords(strtolower($ke->get_jenis_penyakit_string()));
 		}
 		return $kdur_ent;
 	}

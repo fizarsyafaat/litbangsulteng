@@ -417,6 +417,142 @@
 								    		</div>
 								    	</div>
 								    </div>
+
+								      <div class="tab-pane fade" id="nav-pariwisata" role="tabpanel" aria-labelledby="nav-pariwisata-tab">
+								    	<div class="row">
+								    		<div class="col-12">
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Jumlah Aktivitas Wisata Bulanan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="jumlah_aktivitas_wisata_bulanan">Wisata 1</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Jumlah Biaya Wisata Bulanan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="jumlah_biaya_wisata_bulanan">Wisata 2</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Lokasi Objek Wisata</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="lokasi_objek_wisata">Wisata 3</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Daya Tarik Wisata Palu</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="daya_tarik_wisata_palu">Wisata 4</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Pengelolaan Pariwisata Palu</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="pengelolaan_pariwisata_palu">Wisata 5</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    		</div>
+								    	</div>
+								    </div>	
+
+								      <div class="tab-pane fade" id="nav-kesehatan" role="tabpanel" aria-labelledby="nav-kesehatan-tab">
+								    	<div class="row">
+								    		<div class="col-12">
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Penderita Sakit Kelainan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="penderita_sakit_kelainan">kesehatan 1</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Perilaku Hidup Bersih</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="perilaku_hidup_bersih">kesehatan 2</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Pola Makan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="pola_makan">kesehatan 3</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Kebiasan Berobat</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="kebiasaan_berobat">kesehatan 4</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Jenis Penyakit</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="jenis_penyakit">kesehatan 5</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    		</div>
+								    	</div>
+								    </div>	
+
+
 								     <div class="tab-pane fade" id="nav-keadaan-rumah" role="tabpanel" aria-labelledby="nav-keadaan-rumah-tab">
 								    	<div class="row">
 								    		<div class="col-12">

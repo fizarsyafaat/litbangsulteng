@@ -61,6 +61,8 @@ class GeneralJSON extends DefaultAdminFuncController{
 			$kl->get_kk_main_aset_ternak= $kl->get_kk_main_aset_ternak();								
 			$kl->get_kk_main_aset_ikan= $kl->get_kk_main_aset_ikan();									
 			$kl->get_kk_main_aset_ikan_tangkap= $kl->get_kk_main_aset_ikan_tangkap();				
+			$kl->get_kk_main_pariwisata= $kl->get_kk_main_pariwisata();						
+			$kl->get_kk_main_kesehatan= $kl->get_kk_main_kesehatan();				
 			
 		}
 

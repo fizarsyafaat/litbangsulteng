@@ -430,6 +430,20 @@ $(document).ready(function(){
 				$(".alat_tangkap_media_ikan").html(rd[0]['get_kk_main_aset_ikan_tangkap'][0]['alat_tangkap_media_ikan_string']);
 				$(".jumlah_unit").html(rd[0]['get_kk_main_aset_ikan_tangkap'][0]['jumlah_unit_string']);
 
+				//aset Pariwisata
+				$(".jumlah_aktivitas_wisata_bulanan").html(rd[0]['get_kk_main_pariwisata'][0]['jumlah_aktivitas_wisata_bulanan_string']);
+				$(".jumlah_biaya_wisata_bulanan").html(rd[0]['get_kk_main_pariwisata'][0]['jumlah_biaya_wisata_bulanan_string']);
+				$(".lokasi_objek_wisata").html(rd[0]['get_kk_main_pariwisata'][0]['lokasi_objek_wisata_string']);
+				$(".daya_tarik_wisata_palu").html(rd[0]['get_kk_main_pariwisata'][0]['daya_tarik_wisata_palu']);
+				$(".pengelolaan_pariwisata_palu").html(rd[0]['get_kk_main_pariwisata'][0]['pengelolaan_pariwisata_palu']);
+
+				//aset kesehatan
+				$(".penderita_sakit_kelainan").html(rd[0]['get_kk_main_kesehatan'][0]['penderita_sakit_kelainan_string']);
+				$(".perilaku_hidup_bersih").html(rd[0]['get_kk_main_kesehatan'][0]['perilaku_hidup_bersih_string']);
+				$(".pola_makan").html(rd[0]['get_kk_main_kesehatan'][0]['pola_makan_string']);
+				$(".kebiasaan_berobat").html(rd[0]['get_kk_main_kesehatan'][0]['kebiasaan_berobat_string']);
+				$(".jenis_penyakit").html(rd[0]['get_kk_main_kesehatan'][0]['jenis_penyakit_string']);
+
 				var lembaga_pemerintahan_list = "<ul>";
 				for(var ij=0;ij<rd[0]['get_kk_main_lembaga_pemerintahan'].length; ij++){
 					lembaga_pemerintahan_list += "<li>"+rd[0]['get_kk_main_lembaga_pemerintahan'][ij]['lembaga_pemerintahan_string']+"</li>";
