@@ -205,6 +205,12 @@ class KkMain extends Entity
 
 		foreach($kdur_ent as $ke){
 			$ke->jenis_ternak_string = ucwords(strtolower($ke->get_jenis_ternak_string()));
+			$ke->luas_kandang_string = ucwords(strtolower($ke->get_luas_kandang_string()));
+			$ke->jumlah_ekor_string = ucwords(strtolower($ke->get_jumlah_ekor_string()));
+			$ke->jenis_hasil_ternak_string = ucwords(strtolower($ke->get_jenis_hasil_ternak_string()));
+			$ke->jumlah_produksi_hasil_ternak_string = ucwords(strtolower($ke->get_jumlah_produksi_hasil_ternak_string()));
+			$ke->pemasaran_hasil_ternak_string = ucwords(strtolower($ke->get_pemasaran_hasil_ternak_string()));
+			$ke->jenis_pakan_ternak_string = ucwords(strtolower($ke->get_jenis_pakan_ternak_string()));
 		}
 		return $kdur_ent;
 	}

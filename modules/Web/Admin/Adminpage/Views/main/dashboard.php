@@ -808,7 +808,7 @@
 							    			<div class="form-group">
 							    				<div class="row">
 							    					<div class="col-12">
-									    				<label>Data Aset Kehutanan</label>
+									    				<label>Data Komoditas TernakTernak</label>
 							    					</div>
 							    				</div>
 							    				<div class="row">
@@ -816,8 +816,14 @@
 							    						<table class="table table-striped komoditas-ternak-table">
 							    							<thead class="thead-dark">
 							    								<tr>
-								    								<th>Jenis Komoditas ternak</th>
-								    							
+								    								<th>Jenis Komoditas Ternak</th>
+								    								<th>Luas Kandang</th>
+								    								<th>Jumlah Ekor</th>
+								    								<th>Jenis Hasil Ternak</th>
+								    								<th>Jumlah Produksi Hasil Ternak</th>
+								    								<th>Pemasaran Hasil Ternak</th>
+								    								<th>Jenis Pakan Ternak</th>
+								    								
 							    								</tr>
 							    							</thead>
 							    							<tbody>
@@ -825,8 +831,13 @@
 							    							<tfoot>
 							    								<tr>
 							    									<td class="jenis_ternak">Kom1</td>
-							    									
-
+							    									<td class="luas_kandang">Kom1</td>
+							    									<td class="jumlah_ekor">Kom1</td>
+							    									<td class="jenis_hasil_ternak">Kom1</td>
+							    									<td class="jumlah_produksi_hasil_ternak">Kom1</td>
+							    									<td class="pemasaran_hasil_ternak">Kom1</td>
+							    									<td class="jenis_pakan_ternak">Kom1</td>
+							    							
 							    								</tr>
 							    							</tfoot>
 							    						</table>

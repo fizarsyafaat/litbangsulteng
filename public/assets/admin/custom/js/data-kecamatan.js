@@ -373,6 +373,12 @@ $(document).ready(function(){
 				
 				//aset ternak
 				$(".jenis_ternak").html(rd[0]['get_kk_main_aset_ternak'][0]['jenis_ternak_string']);
+				$(".luas_kandang").html(rd[0]['get_kk_main_aset_ternak'][0]['luas_kandang_string']);
+				$(".jumlah_ekor").html(rd[0]['get_kk_main_aset_ternak'][0]['jumlah_ekor_string']);
+				$(".jenis_hasil_ternak").html(rd[0]['get_kk_main_aset_ternak'][0]['jenis_hasil_ternak_string']);
+				$(".jumlah_produksi_hasil_ternak").html(rd[0]['get_kk_main_aset_ternak'][0]['jumlah_produksi_hasil_ternak_string']);
+				$(".pemasaran_hasil_ternak").html(rd[0]['get_kk_main_aset_ternak'][0]['pemasaran_hasil_ternak_string']);
+				$(".jenis_pakan_ternak").html(rd[0]['get_kk_main_aset_ternak'][0]['jenis_pakan_ternak_string']);
 
 				var lembaga_pemerintahan_list = "<ul>";
 				for(var ij=0;ij<rd[0]['get_kk_main_lembaga_pemerintahan'].length; ij++){
