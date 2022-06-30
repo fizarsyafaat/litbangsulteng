@@ -426,6 +426,10 @@ $(document).ready(function(){
 				$(".jenis_bibit_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['jenis_bibit_ikan_string']);
 				$(".jenis_pakan_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['jenis_pakan_ikan_string']);
 
+				//aset ikan tangkap
+				$(".alat_tangkap_media_ikan").html(rd[0]['get_kk_main_aset_ikan_tangkap'][0]['alat_tangkap_media_ikan_string']);
+				$(".jumlah_unit").html(rd[0]['get_kk_main_aset_ikan_tangkap'][0]['jumlah_unit_string']);
+
 				var lembaga_pemerintahan_list = "<ul>";
 				for(var ij=0;ij<rd[0]['get_kk_main_lembaga_pemerintahan'].length; ij++){
 					lembaga_pemerintahan_list += "<li>"+rd[0]['get_kk_main_lembaga_pemerintahan'][ij]['lembaga_pemerintahan_string']+"</li>";

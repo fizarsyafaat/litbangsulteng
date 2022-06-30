@@ -848,34 +848,34 @@
 							    	</div>
 							    </div>
 
-							     <div class="tab-pane fade" id="nav-perikanan" role="tabpanel" aria-labelledby="nav-perikanan-tab">
+							   <div class="tab-pane fade" id="nav-perikanan" role="tabpanel" aria-labelledby="nav-perikanan-tab">
 							    	<div class="row">
 							    		<div class="col-12">
 							    			<div class="form-group">
 							    				<div class="row">
 							    					<div class="col-12">
-									    				<label>Data Komoditas Perikanan </label>
+									    				<label>Data Komoditas Perikanan</label>
 							    					</div>
 							    				</div>
 							    				<div class="row">
 							    					<div class="col-12 table-responsive">
-							    						<table class="table table-striped komoditas-ternak-table">
+							    						<table class="table table-striped komoditas-perikanan-table">
 							    							<thead class="thead-dark">
 							    								<tr>
-								    								<th>Jenis Komoditas Ikan</th>
-								    								<th>Luas Panen Ikan</th>
-								    								<th>Jumlah Pemasaran Ikan</th>
-								    								<th>Hasil Pemasaran Ikan</th>
+								    								<th>Jenis perikanan</th>
+								    								<th>Luas Panen</th>
 								    								<th>Jumlah Ikan</th>
-								    								<th>Jenis Bibit Ikan</th>
+								    								<th>Jumlah Produksi Hasil Ternak</th>
+								    								<th>Jenis Bibit Perikanan</th>
+								    								<th>Pemasaran Hasil Ternak</th>
 								    								<th>Jenis Pakan Ikan</th>
-								    								
 							    								</tr>
 							    							</thead>
 							    							<tbody>
 							    							</tbody>
 							    							<tfoot>
 							    								<tr>
+							    									
 							    									<td class="komoditas_ikan">Kom1</td>
 							    									<td class="luas_panen_ikan">Kom2</td>
 							    									<td class="jumlah_produksi_ikan">Kom1</td>
@@ -883,7 +883,38 @@
 							    									<td class="jumlah_ikan">Kom1</td>
 							    									<td class="jenis_bibit_ikan">Kom1</td>
 							    									<td class="jenis_pakan_ikan">Kom1</td>
-							    							
+							    								</tr>
+							    							</tfoot>
+							    						</table>
+							    					</div>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    	<div class="row">
+							    		<div class="col-12">
+							    			<div class="form-group">
+							    				<div class="row">
+							    					<div class="col-12">
+									    				<label>Data Perikanan Tangkap</label>
+							    					</div>
+							    				</div>
+							    				<div class="row">
+							    					<div class="col-lg-6 col-sm-8 col-12 table-responsive">
+							    						<table class="table table-striped komoditas-perikanan-tangkap-table">
+							    							<thead class="thead-dark">
+							    								<tr>
+								    								<th>Alat Tangkap Media Budidaya Ikan</th>
+								    								<th>Jumlah Unit</th>
+							    								</tr>
+							    							</thead>
+							    							<tbody>
+							    							</tbody>
+							    							<tfoot>
+							    								<tr>
+							    									
+							    									<td class="alat_tangkap_media_ikan">Kom1</td>
+							    									<td class="jumlah_unit">Kom1</td>
 							    								</tr>
 							    							</tfoot>
 							    						</table>
@@ -893,6 +924,8 @@
 							    		</div>
 							    	</div>
 							    </div>
+
+									   
 
 								    <div class="tab-pane fade" id="nav-responden" role="tabpanel" aria-labelledby="nav-responden-tab">
 								    	<div class="row">

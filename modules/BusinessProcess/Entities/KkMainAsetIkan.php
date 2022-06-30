@@ -1,7 +1,7 @@
 <?php
 
 namespace BusinessProcessRoot\Entities;
-use BusinessProcessRoot\Models\KomoditasIkan as KomoditasIkanModel;
+use BusinessProcessRoot\Models\KomoditasIkan as KomoditasIkanModel; 
 use BusinessProcessRoot\Models\LuasPanenIkan as LuasPanenIkanModel;
 use BusinessProcessRoot\Models\JumlahProduksi as JumlahProduksiModel;
 use BusinessProcessRoot\Models\HasilPemasaran as HasilPemasaranModel;

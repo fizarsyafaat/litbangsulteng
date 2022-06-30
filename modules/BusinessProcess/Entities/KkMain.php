@@ -17,6 +17,7 @@ use BusinessProcessRoot\Models\KkMainAsetTanamanObat as KkMainTanamanObatModel;
 use BusinessProcessRoot\Models\KkMainAsetKehutanan as KkMainKehutananModel;
 use BusinessProcessRoot\Models\KkMainAsetTernak as KkMainAsetTernakModel;
 use BusinessProcessRoot\Models\KkMainAsetIkan as KkMainAsetIkanModel;
+use BusinessProcessRoot\Models\KkMainAsetIkanTangkap as KkMainAsetIkanTangkapModel;
 
 class KkMain extends Entity
 {
@@ -266,6 +267,18 @@ class KkMain extends Entity
 		return $kdur_ent;
 	}
 
+	public function get_kk_main_aset_ikan_tangkap(){
+		$kdur_model = new KkMainAsetIkanTangkapModel();
+
+		$kdur_ent = $kdur_model->where("kk_id",$this->attributes['kk_id'])->findAll();
+
+		foreach($kdur_ent as $ke){
+			$ke->alat_tangkap_media_ikan_string = ucwords(strtolower($ke->get_alat_tangkap_media_ikan_string()));
+			$ke->jumlah_unit_string = ucwords(strtolower($ke->get_jumlah_unit_string()));
+			
+		}
+		return $kdur_ent;
+	}
 		
 	public function get_kelurahan(){
 		$klrh_model = new KelurahanModel();
