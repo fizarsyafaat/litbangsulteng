@@ -46,6 +46,7 @@ class GeneralJSON extends DefaultAdminFuncController{
 			$kl->alamat_lengkap = $kl->obtain_alamat_lengkap();
 
 			//KK MAIN
+
 			$kl->get_kk_main_data_responden = $kl->get_kk_main_data_responden();
 			$kl->get_kk_main_data_pekerjaan = $kl->get_kk_main_data_pekerjaan();
 			$kl->get_kk_main_lembaga_pemerintahan = $kl->get_kk_main_lembaga_pemerintahan();
@@ -56,7 +57,9 @@ class GeneralJSON extends DefaultAdminFuncController{
 			$kl->get_kk_main_aset_tanaman_pangan = $kl->get_kk_main_aset_tanaman_pangan();			
 			$kl->get_kk_main_aset_buah_buahan = $kl->get_kk_main_aset_buah_buahan();						
 			$kl->get_kk_main_aset_tanaman_obat = $kl->get_kk_main_aset_tanaman_obat();							
-			$kl->get_kk_main_aset_kehutanan= $kl->get_kk_main_aset_kehutanan();
+			$kl->get_kk_main_aset_kehutanan= $kl->get_kk_main_aset_kehutanan();							
+			$kl->get_kk_main_aset_ternak= $kl->get_kk_main_aset_ternak();				
+			
 		}
 
 		echo json_encode($kk_list);

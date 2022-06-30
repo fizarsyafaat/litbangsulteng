@@ -370,6 +370,9 @@ $(document).ready(function(){
 
 				//aset Kehutanan
 				$(".jenis_komoditas_kehutanan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['jenis_komoditas_kehutanan_string']);
+				
+				//aset ternak
+				$(".jenis_ternak").html(rd[0]['get_kk_main_aset_ternak'][0]['jenis_ternak_string']);
 
 				var lembaga_pemerintahan_list = "<ul>";
 				for(var ij=0;ij<rd[0]['get_kk_main_lembaga_pemerintahan'].length; ij++){

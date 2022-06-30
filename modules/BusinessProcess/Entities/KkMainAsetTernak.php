@@ -1,7 +1,7 @@
 <?php
 
 namespace BusinessProcessRoot\Entities;
-
+use BusinessProcessRoot\Models\KomoditasTernak as KomoditasTernakModel;
 use CodeIgniter\Entity;
 
 class KkMainAsetTernak extends Entity
@@ -15,4 +15,12 @@ class KkMainAsetTernak extends Entity
 	protected $jumlah_produksi_hasil_ternak;
 	protected $pemasaran_hasil_ternak;
 	protected $jenis_pakan_ternak;
+
+
+	public function get_jenis_ternak_string() {
+		$skm_model = new KomoditasTernakModel();
+		$skm_ent = $skm_model->find($this->attributes['jenis_ternak']);
+		return $skm_ent->nama_komoditas_ternak;
+	}
+
 }

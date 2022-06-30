@@ -15,6 +15,7 @@ use BusinessProcessRoot\Models\KkMainAsetTanamanPangan as KkMainTanamanPanganMod
 use BusinessProcessRoot\Models\KkMainAsetBuahBuahan as KkMainBuahBuahanModel;
 use BusinessProcessRoot\Models\KkMainAsetTanamanObat as KkMainTanamanObatModel;
 use BusinessProcessRoot\Models\KkMainAsetKehutanan as KkMainKehutananModel;
+use BusinessProcessRoot\Models\KkMainAsetTernak as KkMainAsetTernakModel;
 
 class KkMain extends Entity
 {
@@ -196,6 +197,18 @@ class KkMain extends Entity
 		}
 	return $kdur_ent;
 	}
+
+		public function get_kk_main_aset_ternak(){
+		$kdur_model = new KkMainAsetTernakModel();
+
+		$kdur_ent = $kdur_model->where("kk_id",$this->attributes['kk_id'])->findAll();
+
+		foreach($kdur_ent as $ke){
+			$ke->jenis_ternak_string = ucwords(strtolower($ke->get_jenis_ternak_string()));
+		}
+		return $kdur_ent;
+	}
+
 		
 	public function get_kelurahan(){
 		$klrh_model = new KelurahanModel();

@@ -802,6 +802,41 @@
 							    	</div>
 							    </div>
 
+							        <div class="tab-pane fade" id="nav-ternak" role="tabpanel" aria-labelledby="nav-ternak-tab">
+							    	<div class="row">
+							    		<div class="col-12">
+							    			<div class="form-group">
+							    				<div class="row">
+							    					<div class="col-12">
+									    				<label>Data Aset Kehutanan</label>
+							    					</div>
+							    				</div>
+							    				<div class="row">
+							    					<div class="col-12 table-responsive">
+							    						<table class="table table-striped komoditas-ternak-table">
+							    							<thead class="thead-dark">
+							    								<tr>
+								    								<th>Jenis Komoditas ternak</th>
+								    							
+							    								</tr>
+							    							</thead>
+							    							<tbody>
+							    							</tbody>
+							    							<tfoot>
+							    								<tr>
+							    									<td class="jenis_ternak">Kom1</td>
+							    									
+
+							    								</tr>
+							    							</tfoot>
+							    						</table>
+							    					</div>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    </div>
+
 								    <div class="tab-pane fade" id="nav-responden" role="tabpanel" aria-labelledby="nav-responden-tab">
 								    	<div class="row">
 								    		<div class="col-12">
