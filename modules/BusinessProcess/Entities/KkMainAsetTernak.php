@@ -43,13 +43,13 @@ class KkMainAsetTernak extends Entity
 	public function get_jenis_hasil_ternak_string() {
 		$skm_model = new JenisKomoditasHasilTernakModel();
 		$skm_ent = $skm_model->find($this->attributes['jenis_hasil_ternak']);
-		return $skm_ent->nama_jenis_hasil_ternak;
+		return $skm_ent->nama_jenis_komoditas_hasil_ternak;
 	}
 
 	public function get_jumlah_produksi_hasil_ternak_string() {
 		$skm_model = new JumlahProduksiModel();
 		$skm_ent = $skm_model->find($this->attributes['jumlah_produksi_hasil_ternak']);
-		return $skm_ent->nama_jumlah_produksi_hasil_ternak;
+		return $skm_ent->nama_jumlah_produksi;
 	}
 
 	public function get_pemasaran_hasil_ternak_string() {
@@ -61,7 +61,7 @@ class KkMainAsetTernak extends Entity
 	public function get_jenis_pakan_ternak_string() {
 		$skm_model = new JenisPakanTernakModel();
 		$skm_ent = $skm_model->find($this->attributes['jenis_pakan_ternak']);
-		return $skm_ent->nama_nama_jenis_pakan_ternak;
+		return $skm_ent->nama_jenis_pakan_ternak;
 	}
 
 

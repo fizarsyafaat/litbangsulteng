@@ -730,7 +730,7 @@
 							    							</tbody>
 							    							<tfoot>
 							    								<tr>
-							    									<td class="jenis_komoditas_obat">Kom1</td>
+							    									<td class="jenis_komoditas_tanaman_obat">Kom1</td>
 							    									<td class="luas_panen">Kom1</td>
 							    									<td class="jumlah_produksi">Kom1</td>
 							    									<td class="hasil_pemasaran">Kom1</td>
@@ -831,7 +831,7 @@
 							    							<tfoot>
 							    								<tr>
 							    									<td class="jenis_ternak">Kom1</td>
-							    									<td class="luas_kandang">Kom1</td>
+							    									<td class="luas_kandang">Kom2</td>
 							    									<td class="jumlah_ekor">Kom1</td>
 							    									<td class="jenis_hasil_ternak">Kom1</td>
 							    									<td class="jumlah_produksi_hasil_ternak">Kom1</td>
