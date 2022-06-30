@@ -361,17 +361,53 @@ $(document).ready(function(){
 
 				//aset tanaman pangan
 				$(".jenis_komoditas_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['jenis_komoditas_pangan_string']); 
+ 				$(".luas_panen_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['luas_panen_pangan_string']); 
+				$(".jumlah_produksi_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['jumlah_produksi_pangan_string']); 
+				$(".hasil_pemasaran_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['hasil_pemasaran_pangan_string']); 
+				$(".jumlah_pohon_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['jumlah_pohon_pangan_string']); 
+				$(".jenis_bibit_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['jenis_bibit_pangan_string']); 
+				$(".pestisida_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['pestisida_pangan_string']); 
+				$(".pupuk_organik_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['pupuk_organik_pangan_string']); 
+				$(".pupuk_pabrik_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['pupuk_pabrik_pangan_string']); 				 
+				$(".lokasi_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['lokasi']); 
  
 				//aset tanaman Buahan
 				$(".jenis_komoditas_buah_buahan").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['jenis_komoditas_buah_buahan_string']); 
 				$(".luas_panen_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['luas_panen_buah_string']); 
+				$(".jumlah_produksi_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['jumlah_produksi_buah_string']); 
+				$(".hasil_pemasaran_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['hasil_pemasaran_buah_string']); 
+				$(".jumlah_pohon_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['jumlah_pohon_buah_string']); 
+				$(".jenis_bibit_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['jenis_bibit_buah_string']); 
+				$(".pestisida_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['pestisida_buah_string']); 
+				$(".pupuk_organik_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['pupuk_organik_buah_string']); 
+				$(".pupuk_pabrik_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['pupuk_pabrik_buah_string']); 				 
+				$(".lokasi_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['lokasi']); 
  
 				//aset tanaman Obat
 				$(".jenis_komoditas_tanaman_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['jenis_komoditas_tanaman_obat_string']);
+				$(".luas_panen_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['luas_panen_obat_string']); 
+				$(".jumlah_produksi_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['jumlah_produksi_obat_string']); 
+				$(".hasil_pemasaran_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['hasil_pemasaran_obat_string']); 
+				$(".jumlah_pohon_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['jumlah_pohon_obat_string']); 
+				$(".jenis_bibit_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['jenis_bibit_obat_string']); 
+				$(".pestisida_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['pestisida_obat_string']); 
+				$(".pupuk_organik_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['pupuk_organik_obat_string']); 
+				$(".pupuk_pabrik_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['pupuk_pabrik_obat_string']); 				 
+				$(".lokasi_obat").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['lokasi']); 
+ 
 
 				//aset Kehutanan
 				$(".jenis_komoditas_kehutanan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['jenis_komoditas_kehutanan_string']);
-				
+				$(".luas_panen_kehutangan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['luas_panen_kehutangan_string']); 
+				$(".jumlah_produksi_kehutangan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['jumlah_produksi_kehutangan_string']); 
+				$(".hasil_pemasaran_kehutangan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['hasil_pemasaran_kehutangan_string']); 
+				$(".jumlah_pohon_kehutangan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['jumlah_pohon_kehutangan_string']); 
+				$(".jenis_bibit_kehutangan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['jenis_bibit_kehutangan_string']); 
+				$(".pestisida_kehutangan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['pestisida_kehutangan_string']); 
+				$(".pupuk_organik_kehutangan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['pupuk_organik_kehutangan_string']); 
+				$(".pupuk_pabrik_kehutangan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['pupuk_pabrik_kehutangan_string']); 				 
+				$(".lokasi_kehutangan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['lokasi']); 
+
 				//aset ternak
 				$(".jenis_ternak").html(rd[0]['get_kk_main_aset_ternak'][0]['jenis_ternak_string']);
 				$(".luas_kandang").html(rd[0]['get_kk_main_aset_ternak'][0]['luas_kandang_string']);

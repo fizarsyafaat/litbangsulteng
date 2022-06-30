@@ -161,6 +161,14 @@ class KkMain extends Entity
 
 		foreach($kdur_ent as $ke){
 			$ke->jenis_komoditas_pangan_string = ucwords(strtolower($ke->get_jenis_komoditas_pangan_string()));
+			$ke->luas_panen_pangan_string = ucwords(strtolower($ke->get_luas_panen_pangan_string()));
+			$ke->jumlah_produksi_pangan_string = ucwords(strtolower($ke->get_jumlah_produksi_pangan_string()));
+			$ke->hasil_pemasaran_pangan_string = ucwords(strtolower($ke->get_hasil_pemasaran_pangan_string()));
+			$ke->jumlah_pohon_pangan_string = ucwords(strtolower($ke->get_jumlah_pohon_pangan_string()));
+			$ke->jenis_bibit_pangan_string = ucwords(strtolower($ke->get_jenis_bibit_pangan_string()));
+			$ke->pestisida_pangan_string = ucwords(strtolower($ke->get_pestisida_pangan_string()));
+			$ke->pupuk_organik_pangan_string = ucwords(strtolower($ke->get_pupuk_organik_pangan_string()));
+			$ke->pupuk_pabrik_pangan_string = ucwords(strtolower($ke->get_pupuk_pabrik_pangan_string()));
 		}
 	return $kdur_ent;
 	}
@@ -173,7 +181,14 @@ class KkMain extends Entity
 
 		foreach($kdur_ent as $ke){
 			$ke->jenis_komoditas_buah_buahan_string = ucwords(strtolower($ke->get_jenis_komoditas_buah_buahan_string()));
-				$ke->luas_panen_buah_string = ucwords(strtolower($ke->get_luas_panen_buah_string()));
+			$ke->luas_panen_buah_string = ucwords(strtolower($ke->get_luas_panen_buah_string()));
+			$ke->jumlah_produksi_buah_string = ucwords(strtolower($ke->get_jumlah_produksi_buah_string()));
+			$ke->hasil_pemasaran_buah_string = ucwords(strtolower($ke->get_hasil_pemasaran_buah_string()));
+			$ke->jumlah_pohon_buah_string = ucwords(strtolower($ke->get_jumlah_pohon_buah_string()));
+			$ke->jenis_bibit_buah_string = ucwords(strtolower($ke->get_jenis_bibit_buah_string()));
+			$ke->pestisida_buah_string = ucwords(strtolower($ke->get_pestisida_buah_string()));
+			$ke->pupuk_organik_buah_string = ucwords(strtolower($ke->get_pupuk_organik_buah_string()));
+			$ke->pupuk_pabrik_buah_string = ucwords(strtolower($ke->get_pupuk_pabrik_buah_string()));
 		}
 	return $kdur_ent;
 	}
@@ -185,7 +200,14 @@ class KkMain extends Entity
 
 		foreach($kdur_ent as $ke){
 			$ke->jenis_komoditas_tanaman_obat_string = ucwords(strtolower($ke->get_jenis_komoditas_tanaman_obat_string()));
-		
+			$ke->luas_panen_obat_string = ucwords(strtolower($ke->get_luas_panen_obat_string()));
+			$ke->jumlah_produksi_obat_string = ucwords(strtolower($ke->get_jumlah_produksi_obat_string()));
+			$ke->hasil_pemasaran_obat_string = ucwords(strtolower($ke->get_hasil_pemasaran_obat_string()));
+			$ke->jumlah_pohon_obat_string = ucwords(strtolower($ke->get_jumlah_pohon_obat_string()));
+			$ke->jenis_bibit_obat_string = ucwords(strtolower($ke->get_jenis_bibit_obat_string()));
+			$ke->pestisida_obat_string = ucwords(strtolower($ke->get_pestisida_obat_string()));
+			$ke->pupuk_organik_obat_string = ucwords(strtolower($ke->get_pupuk_organik_obat_string()));
+			$ke->pupuk_pabrik_obat_string = ucwords(strtolower($ke->get_pupuk_pabrik_obat_string()));
 		
 		}
 	return $kdur_ent;
@@ -198,6 +220,14 @@ class KkMain extends Entity
 
 		foreach($kdur_ent as $ke){
 			$ke->jenis_komoditas_kehutanan_string = ucwords(strtolower($ke->get_jenis_komoditas_kehutanan_string()));
+			$ke->luas_panen_kehutangan_string = ucwords(strtolower($ke->get_luas_panen_kehutangan_string()));
+			$ke->jumlah_produksi_kehutangan_string = ucwords(strtolower($ke->get_jumlah_produksi_kehutangan_string()));
+			$ke->hasil_pemasaran_kehutangan_string = ucwords(strtolower($ke->get_hasil_pemasaran_kehutangan_string()));
+			$ke->jumlah_pohon_kehutangan_string = ucwords(strtolower($ke->get_jumlah_pohon_kehutangan_string()));
+			$ke->jenis_bibit_kehutangan_string = ucwords(strtolower($ke->get_jenis_bibit_kehutangan_string()));
+			$ke->pestisida_kehutangan_string = ucwords(strtolower($ke->get_pestisida_kehutangan_string()));
+			$ke->pupuk_organik_kehutangan_string = ucwords(strtolower($ke->get_pupuk_organik_kehutangan_string()));
+			$ke->pupuk_pabrik_kehutangan_string = ucwords(strtolower($ke->get_pupuk_pabrik_kehutangan_string()));
 		}
 	return $kdur_ent;
 	}

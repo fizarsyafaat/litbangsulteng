@@ -34,14 +34,14 @@ class KkMainAsetTanamanObat extends Entity
 		return $skm_ent->nama_komoditas_tanaman_obat;
 	}
 
-	public function get_luas_panen_string(){
+	public function get_luas_panen_obat_string(){
 
 			$skm_model = new LuasLahanModel();
 			$skm_ent = $skm_model->find($this->attributes['luas_panen']);
 			return $skm_ent->nama_luas_lahan;
 	}
 
-	public function get_jumlah_produksi_string(){
+	public function get_jumlah_produksi_obat_string(){
 
 			$skm_model = new JumlahProduksiModel();
 			$skm_ent = $skm_model->find($this->attributes['jumlah_produksi']);
@@ -49,7 +49,7 @@ class KkMainAsetTanamanObat extends Entity
 	}
 
 
-	public function get_jumlah_pohon_string(){
+	public function get_jumlah_pohon_obat_string(){
 
 			$skm_model = new JumlahPohonModel();
 			$skm_ent = $skm_model->find($this->attributes['jumlah_pohon']);
@@ -57,35 +57,35 @@ class KkMainAsetTanamanObat extends Entity
 	}
 
 
-	public function get_jenis_bibit_string(){
+	public function get_jenis_bibit_obat_string(){
 
 			$skm_model = new JenisBibitModel();
 			$skm_ent = $skm_model->find($this->attributes['jenis_bibit']);
 			return $skm_ent->nama_jenis_bibit;
 	}
 
-	public function get_pestisida_string(){
+	public function get_pestisida_obat_string(){
 
 			$skm_model = new PestisidaModel();
 			$skm_ent = $skm_model->find($this->attributes['pestisida']);
 			return $skm_ent->nama_pestisida;
 	}
 
-	public function get_pupuk_organik_string(){
+	public function get_pupuk_organik_obat_string(){
 
 			$skm_model = new PupukOrganikModel();
 			$skm_ent = $skm_model->find($this->attributes['pupuk_organik']);
 			return $skm_ent->nama_pupuk_organik;
 	}
 
-	public function get_pupuk_pabrik_string(){
+	public function get_pupuk_pabrik_obat_string(){
 
 			$skm_model = new PupukPabrikModel();
 			$skm_ent = $skm_model->find($this->attributes['pupuk_pabrik']);
 			return $skm_ent->nama_pupuk_pabrik;
 	}
 
-	public function get_hasil_pemasaran_string(){
+	public function get_hasil_pemasaran_obat_string(){
 
 		$skm_model = new HasilPemasaranModel();
 		$skm_ent = $skm_model->find($this->attributes['hasil_pemasaran']);
