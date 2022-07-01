@@ -333,6 +333,7 @@ $(document).ready(function(){
 				$(".aset_tanah").html(rd[0]['get_kk_main_aset_tanah'][0]['aset_tanah_string']); 
 
 
+
 				//aset Rumah
 				console.log(rd[0]['get_kk_main_aset_rumah']);
 				$(".sumber_air_minum").html(rd[0]['get_kk_main_aset_rumah'][0]['sumber_air_minum_string']); 
@@ -444,12 +445,31 @@ $(document).ready(function(){
 				$(".kebiasaan_berobat").html(rd[0]['get_kk_main_kesehatan'][0]['kebiasaan_berobat_string']);
 				$(".jenis_penyakit").html(rd[0]['get_kk_main_kesehatan'][0]['jenis_penyakit_string']);
 
+				//aset Persalinan
+				$(".kualitas_ibu_hamil").html(rd[0]['get_kk_main_persalinan'][0]['kualitas_ibu_hamil_string']);
+				$(".kualitas_bayi").html(rd[0]['get_kk_main_persalinan'][0]['kualitas_bayi_string']);
+				$(".tempat_persalinan").html(rd[0]['get_kk_main_persalinan'][0]['tempat_persalinan_string']);
+				$(".pertolongan_persalinan").html(rd[0]['get_kk_main_persalinan'][0]['pertolongan_persalinan_string']);
+				$(".fasilitas_layanan_kesehatan").html(rd[0]['get_kk_main_persalinan'][0]['fasilitas_layanan_kesehatan_string']);
+				$(".umur_balita").html(rd[0]['get_kk_main_persalinan'][0]['umur_balita_string']);
+				$(".berat_badan").html(rd[0]['get_kk_main_persalinan'][0]['berat_badan_string']);
+				$(".tinggi_badan").html(rd[0]['get_kk_main_persalinan'][0]['tinggi_badan_string']);
+				$(".kondisi_saat_pengukuran").html(rd[0]['get_kk_main_persalinan'][0]['kondisi_saat_pengukuran_string']);
+				$(".status_gizi_balita").html(rd[0]['get_kk_main_persalinan'][0]['status_gizi_balita_string']);
+
 				var lembaga_pemerintahan_list = "<ul>";
 				for(var ij=0;ij<rd[0]['get_kk_main_lembaga_pemerintahan'].length; ij++){
 					lembaga_pemerintahan_list += "<li>"+rd[0]['get_kk_main_lembaga_pemerintahan'][ij]['lembaga_pemerintahan_string']+"</li>";
 				}
 				lembaga_pemerintahan_list += "</ul>";
 				$(".lembaga_pemerintahan_multi").html(lembaga_pemerintahan_list);
+
+				var acceptorkb_list = "<ul>";
+				for(var ij=0;ij<rd[0]['get_kk_main_acceptorkb'].length; ij++){
+					acceptorkb_list += "<li>"+rd[0]['get_kk_main_acceptorkb'][ij]['acceptorkb_string']+"</li>";
+				}
+				lembaga_pemerintahan_list += "</ul>";
+				$(".acceptorkb_multi").html(acceptorkb_list);
 
 				var transportasi_umum_list = "<ul>";
 				for(var ij=0;ij<rd[0]['get_kk_main_aset_transportasi_umum'].length; ij++){
@@ -458,6 +478,13 @@ $(document).ready(function(){
 				transportasi_umum_list += "</ul>";
 				$(".transportasi_umum_multi").html(transportasi_umum_list);
 				
+				var cakupan_imunisasi_list = "<ul>";
+				for(var ij=0;ij<rd[0]['get_kk_main_cakupan_imunisasi'].length; ij++){
+					cakupan_imunisasi_list += "<li>"+rd[0]['get_kk_main_cakupan_imunisasi'][ij]['cakupan_imunisasi_string']+"</li>";
+				}
+				cakupan_imunisasi_list += "</ul>";
+				$(".cakupan_imunisasi_multi").html(cakupan_imunisasi_list);
+
 				var lembaga_pendidikan_list = "<ul>";
 				for(var ij=0;ij<rd[0]['get_kk_main_aset_transportasi_umum'].length; ij++){
 					lembaga_pendidikan_list += "<li>"+rd[0]['get_kk_main_aset_lembaga_pendidikan'][ij]['lembaga_pendidikan_string']+"</li>";

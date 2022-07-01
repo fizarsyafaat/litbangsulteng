@@ -23,6 +23,9 @@ use BusinessProcessRoot\Models\KkMainKesehatan as KkMainKesehatanModel;
 use BusinessProcessRoot\Models\KkMainAsetTransportasiUmum as KkMainAsetTransportasiUmumModel;
 use BusinessProcessRoot\Models\KkMainLembagaPendidikan as KkMainLembagaPendidikanModel;
 use BusinessProcessRoot\Models\KkMainAsetProduksi as KkMainAsetProduksiModel;
+use BusinessProcessRoot\Models\KkMainPersalinan as KkMainPersalinanModel;
+use BusinessProcessRoot\Models\KkMainAcceptorKb as KkMainAcceptorKbModel;
+use BusinessProcessRoot\Models\KkMainCakupanImunisasi as KkMainCakupanImunisasiModel;
 
 class KkMain extends Entity
 {
@@ -117,6 +120,30 @@ class KkMain extends Entity
 
 		return $kdur_ent;
 	}
+
+	public function get_kk_main_acceptorkb(){
+		$kdur_model = new KkMainAcceptorKbModel();
+		$kdur_ent = $kdur_model->where("kk_id",$this->attributes['kk_id'])->findAll();
+		foreach($kdur_ent as $ke){
+			$ke->acceptorkb_string = ucwords(strtolower($ke->get_acceptorkb_string()));
+		}
+
+		return $kdur_ent;
+	}
+
+	public function get_kk_main_cakupan_imunisasi(){
+		$kdur_model = new KkMainCakupanImunisasiModel();
+
+		$kdur_ent = $kdur_model->where("kk_id",$this->attributes['kk_id'])->findAll();
+
+		foreach($kdur_ent as $ke){
+			$ke->cakupan_imunisasi_string = ucwords(strtolower($ke->get_cakupan_imunisasi_string()));
+		}
+
+		return $kdur_ent;
+	}
+
+	
 
 	public function get_kk_main_aset_produksi(){
 		$kdur_model = new KkMainAsetProduksiModel();
@@ -351,7 +378,27 @@ class KkMain extends Entity
 		}
 		return $kdur_ent;
 	}
-		
+
+	public function get_kk_main_persalinan(){
+		$kdur_model = new KkMainPersalinanModel();
+
+		$kdur_ent = $kdur_model->where("kk_id",$this->attributes['kk_id'])->findAll();
+
+		foreach($kdur_ent as $ke){
+		$ke->kualitas_ibu_hamil_string = ucwords(strtolower($ke->get_kualitas_ibu_hamil_string()));
+		$ke->kualitas_bayi_string = ucwords(strtolower($ke->get_kualitas_bayi_string()));
+		$ke->tempat_persalinan_string = ucwords(strtolower($ke->get_tempat_persalinan_string()));
+		$ke->pertolongan_persalinan_string = ucwords(strtolower($ke->get_pertolongan_persalinan_string()));
+		$ke->fasilitas_layanan_kesehatan_string = ucwords(strtolower($ke->get_fasilitas_layanan_kesehatan_string()));
+		$ke->umur_balita_string = ucwords(strtolower($ke->get_umur_balita_string()));
+		$ke->berat_badan_string = ucwords(strtolower($ke->get_berat_badan_string()));
+		$ke->tinggi_badan_string = ucwords(strtolower($ke->get_tinggi_badan_string()));
+		$ke->kondisi_saat_pengukuran_string = ucwords(strtolower($ke->get_kondisi_saat_pengukuran_string()));
+		$ke->status_gizi_balita_string = ucwords(strtolower($ke->get_status_gizi_balita_string()));
+		}
+		return $kdur_ent;
+	}		
+
 	public function get_kelurahan(){
 		$klrh_model = new KelurahanModel();
 

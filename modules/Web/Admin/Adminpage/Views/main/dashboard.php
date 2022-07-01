@@ -417,6 +417,24 @@
 								    		</div>
 								    	</div>
 								    </div>
+								     <div class="tab-pane fade" id="nav-pendata" role="tabpanel" aria-labelledby="nav-pendata-tab">
+								    	<div class="row">
+								    		<div class="col-12">
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Pekerjaan Pendata</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="aset_tanah">Pendata 1</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    		</div>
+								    	</div>
+								    </div>
 
 								      <div class="tab-pane fade" id="nav-pariwisata" role="tabpanel" aria-labelledby="nav-pariwisata-tab">
 								    	<div class="row">
@@ -484,6 +502,157 @@
 								    		</div>
 								    	</div>
 								    </div>	
+
+								       <div class="tab-pane fade" id="nav-persalinan" role="tabpanel" aria-labelledby="nav-persalinan-tab">
+								    	<div class="row">
+								    		<div class="col-12">
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Acceptor KB</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="acceptorkb_multi">Persalinan 1</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Kualitas Ibu Hamil</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="kualitas_ibu_hamil">Persalinan 1</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Kualitas Bayi</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="kualitas_bayi">Persalinan 2</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Tempat Persalinan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="tempat_persalinan">Persalinan 3</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Cakupan Imunisasi </label>
+								    					</div>
+								    				</div>
+								    					<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="cakupan_imunisasi_multi">Persalinan 3</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Pertolongan Persalinan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="pertolongan_persalinan">Persalinan 4</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Fasilitas Layanan Kesehatan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="fasilitas_layanan_kesehatan">Persalinan 5</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Umur Balita</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="umur_balita">Persalinan 6</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Berat Badan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="berat_badan">Persalinan 7</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Tinggi Badan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="tinggi_badan">Persalinan 8</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Kondisi Saat Pengukuran</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="kondisi_saat_pengukuran">Persalinan 9</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Status Gizi Balita</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="status_gizi_balita">Persalinan 10</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			</div>
+								    	</div>
+								    </div>
 
 								      <div class="tab-pane fade" id="nav-kesehatan" role="tabpanel" aria-labelledby="nav-kesehatan-tab">
 								    	<div class="row">
