@@ -434,11 +434,11 @@ $(document).ready(function(){
 				$(".jumlah_aktivitas_wisata_bulanan").html(rd[0]['get_kk_main_pariwisata'][0]['jumlah_aktivitas_wisata_bulanan_string']);
 				$(".jumlah_biaya_wisata_bulanan").html(rd[0]['get_kk_main_pariwisata'][0]['jumlah_biaya_wisata_bulanan_string']);
 				$(".lokasi_objek_wisata").html(rd[0]['get_kk_main_pariwisata'][0]['lokasi_objek_wisata_string']);
-				$(".daya_tarik_wisata_palu").html(rd[0]['get_kk_main_pariwisata'][0]['daya_tarik_wisata_palu']);
-				$(".pengelolaan_pariwisata_palu").html(rd[0]['get_kk_main_pariwisata'][0]['pengelolaan_pariwisata_palu']);
+				$(".daya_tarik_wisata_palu").html(rd[0]['get_kk_main_pariwisata'][0]['daya_tarik_wisata_palu_string']);
+				$(".pengelolaan_pariwisata_palu").html(rd[0]['get_kk_main_pariwisata'][0]['pengelolaan_pariwisata_palu_string']);
 
 				//aset kesehatan
-				$(".penderita_sakit_kelainan").html(rd[0]['get_kk_main_kesehatan'][0]['penderita_sakit_kelainan_string']);
+				$(".penderita_sakit_kelainan").html(rd[0]['get_kk_main_kesehatan'][0]['jumlah_penderita_sakit_kelainan_string']);
 				$(".perilaku_hidup_bersih").html(rd[0]['get_kk_main_kesehatan'][0]['perilaku_hidup_bersih_string']);
 				$(".pola_makan").html(rd[0]['get_kk_main_kesehatan'][0]['pola_makan_string']);
 				$(".kebiasaan_berobat").html(rd[0]['get_kk_main_kesehatan'][0]['kebiasaan_berobat_string']);
@@ -450,6 +450,27 @@ $(document).ready(function(){
 				}
 				lembaga_pemerintahan_list += "</ul>";
 				$(".lembaga_pemerintahan_multi").html(lembaga_pemerintahan_list);
+
+				var transportasi_umum_list = "<ul>";
+				for(var ij=0;ij<rd[0]['get_kk_main_aset_transportasi_umum'].length; ij++){
+					transportasi_umum_list += "<li>"+rd[0]['get_kk_main_aset_transportasi_umum'][ij]['transportasi_umum_string']+"</li>";
+				}
+				transportasi_umum_list += "</ul>";
+				$(".transportasi_umum_multi").html(transportasi_umum_list);
+				
+				var lembaga_pendidikan_list = "<ul>";
+				for(var ij=0;ij<rd[0]['get_kk_main_aset_transportasi_umum'].length; ij++){
+					lembaga_pendidikan_list += "<li>"+rd[0]['get_kk_main_aset_lembaga_pendidikan'][ij]['lembaga_pendidikan_string']+"</li>";
+				}
+				transportasi_umum_list += "</ul>";
+				$(".lembaga_pendidikan_multi").html(lembaga_pendidikan_list);
+				
+				var aset_produksi_list = "<ul>";
+				for(var ij=0;ij<rd[0]['get_kk_main_aset_produksi'].length; ij++){
+					aset_produksi_list += "<li>"+rd[0]['get_kk_main_aset_produksi'][ij]['aset_produksi_string']+"</li>";
+				}
+				transportasi_umum_list += "</ul>";
+				$(".aset_produksi_multi").html(aset_produksi_list);
 
 				var wajib_pajak_list = "<ul>";
 				for(var ij=0;ij<rd[0]['get_kk_main_wajib_pajak'].length; ij++){

@@ -5,6 +5,7 @@ namespace BusinessProcessRoot\Entities;
 use BusinessProcessRoot\Models\JumlahAktivitasWisataBulanan as JumlahAktivitasWisataBulananModel;
 use BusinessProcessRoot\Models\JumlahBiayaWisataBulanan as JumlahBiayaWisataBulananModel;
 use BusinessProcessRoot\Models\LokasiObjekWisata as LokasiObjekWisataModel;
+use BusinessProcessRoot\Models\RatingNilai as RatingNilaiModel;
 
 
 use CodeIgniter\Entity;
@@ -37,4 +38,17 @@ class KkMainPariwisata extends Entity
 			$skm_ent = $skm_model->find($this->attributes['lokasi_objek_wisata']);
 			return $skm_ent->nama_lokasi_objek_wisata;
 	}
+	public function get_daya_tarik_wisata_palu_string(){
+
+			$skm_model = new RatingNilaiModel();
+			$skm_ent = $skm_model->find($this->attributes['daya_tarik_wisata_palu']);
+			return $skm_ent->nama_rating_nilai;
+	}
+	public function get_pengelolaan_pariwisata_palu_string(){
+
+			$skm_model = new RatingNilaiModel();
+			$skm_ent = $skm_model->find($this->attributes['pengelolaan_pariwisata_palu']);
+			return $skm_ent->nama_rating_nilai;
+	}
+
 }

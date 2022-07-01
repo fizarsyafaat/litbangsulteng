@@ -552,6 +552,48 @@
 								    	</div>
 								    </div>	
 
+								          <div class="tab-pane fade" id="nav-aset-lainnya" role="tabpanel" aria-labelledby="nav-aset-lainnya-tab">
+								    	<div class="row">
+								    		<div class="col-12">
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Transportasi Umum</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="col-sm-12 transportasi_umum_multi">aset lainnya 1</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Lembaga Pendidikan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="col-sm-12 lembaga_pendidikan_multi">aset lainnya 2</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Aset Sarana Produksi</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="col-sm-12 aset_produksi_multi">kesehatan 3</p>
+								    					</div>
+								    				</div>
+								    			</div>								    				
+								    		</div>
+								    	</div>
+								    </div>	
 
 								     <div class="tab-pane fade" id="nav-keadaan-rumah" role="tabpanel" aria-labelledby="nav-keadaan-rumah-tab">
 								    	<div class="row">

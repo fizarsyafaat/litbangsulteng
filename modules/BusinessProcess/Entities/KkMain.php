@@ -20,6 +20,9 @@ use BusinessProcessRoot\Models\KkMainAsetIkan as KkMainAsetIkanModel;
 use BusinessProcessRoot\Models\KkMainAsetIkanTangkap as KkMainAsetIkanTangkapModel;
 use BusinessProcessRoot\Models\KkMainPariwisata as KkMainPariwisataModel;
 use BusinessProcessRoot\Models\KkMainKesehatan as KkMainKesehatanModel;
+use BusinessProcessRoot\Models\KkMainAsetTransportasiUmum as KkMainAsetTransportasiUmumModel;
+use BusinessProcessRoot\Models\KkMainLembagaPendidikan as KkMainLembagaPendidikanModel;
+use BusinessProcessRoot\Models\KkMainAsetProduksi as KkMainAsetProduksiModel;
 
 class KkMain extends Entity
 {
@@ -86,6 +89,42 @@ class KkMain extends Entity
 
 		foreach($kdur_ent as $ke){
 			$ke->lembaga_pemerintahan_string = ucwords(strtolower($ke->get_lembaga_pemerintahan_string()));
+		}
+
+		return $kdur_ent;
+	}
+
+	public function get_kk_main_aset_transportasi_umum(){
+		$kdur_model = new KkMainAsetTransportasiUmumModel();
+
+		$kdur_ent = $kdur_model->where("kk_id",$this->attributes['kk_id'])->findAll();
+
+		foreach($kdur_ent as $ke){
+			$ke->transportasi_umum_string = ucwords(strtolower($ke->get_transportasi_umum_string()));
+		}
+
+		return $kdur_ent;
+	}
+
+	public function get_kk_main_aset_lembaga_pendidikan(){
+		$kdur_model = new KkMainLembagaPendidikanModel();
+
+		$kdur_ent = $kdur_model->where("kk_id",$this->attributes['kk_id'])->findAll();
+
+		foreach($kdur_ent as $ke){
+			$ke->lembaga_pendidikan_string = ucwords(strtolower($ke->get_lembaga_pendidikan_string()));
+		}
+
+		return $kdur_ent;
+	}
+
+	public function get_kk_main_aset_produksi(){
+		$kdur_model = new KkMainAsetProduksiModel();
+
+		$kdur_ent = $kdur_model->where("kk_id",$this->attributes['kk_id'])->findAll();
+
+		foreach($kdur_ent as $ke){
+			$ke->aset_produksi_string = ucwords(strtolower($ke->get_aset_produksi_string()));
 		}
 
 		return $kdur_ent;
@@ -291,6 +330,8 @@ class KkMain extends Entity
 		$ke->jumlah_aktivitas_wisata_bulanan_string = ucwords(strtolower($ke->get_jumlah_aktivitas_wisata_bulanan_string()));
 		$ke->jumlah_biaya_wisata_bulanan_string = ucwords(strtolower($ke->get_jumlah_biaya_wisata_bulanan_string()));
 		$ke->lokasi_objek_wisata_string = ucwords(strtolower($ke->get_lokasi_objek_wisata_string()));
+		$ke->daya_tarik_wisata_palu_string = ucwords(strtolower($ke->get_daya_tarik_wisata_palu_string()));
+		$ke->pengelolaan_pariwisata_palu_string = ucwords(strtolower($ke->get_pengelolaan_pariwisata_palu_string()));
 			
 		}
 		return $kdur_ent;

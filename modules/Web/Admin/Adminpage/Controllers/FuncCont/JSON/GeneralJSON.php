@@ -62,7 +62,10 @@ class GeneralJSON extends DefaultAdminFuncController{
 			$kl->get_kk_main_aset_ikan= $kl->get_kk_main_aset_ikan();									
 			$kl->get_kk_main_aset_ikan_tangkap= $kl->get_kk_main_aset_ikan_tangkap();				
 			$kl->get_kk_main_pariwisata= $kl->get_kk_main_pariwisata();						
-			$kl->get_kk_main_kesehatan= $kl->get_kk_main_kesehatan();				
+			$kl->get_kk_main_kesehatan= $kl->get_kk_main_kesehatan();						
+			$kl->get_kk_main_aset_transportasi_umum= $kl->get_kk_main_aset_transportasi_umum();			
+			$kl->get_kk_main_aset_lembaga_pendidikan= $kl->get_kk_main_aset_lembaga_pendidikan();		
+			$kl->get_kk_main_aset_produksi= $kl->get_kk_main_aset_produksi();				
 			
 		}
 
