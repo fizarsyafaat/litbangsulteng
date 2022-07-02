@@ -394,7 +394,8 @@ class KkMain extends Entity
 		$ke->berat_badan_string = ucwords(strtolower($ke->get_berat_badan_string()));
 		$ke->tinggi_badan_string = ucwords(strtolower($ke->get_tinggi_badan_string()));
 		$ke->kondisi_saat_pengukuran_string = ucwords(strtolower($ke->get_kondisi_saat_pengukuran_string()));
-		$ke->status_gizi_balita_string = ucwords(strtolower($ke->get_status_gizi_balita_string()));
+		$ke->status_gizi_balita_string = ucwords(strtolower($ke->get_status_gizi_balita_string()));		
+		$ke->jenis_kelamin_balita_string = ucwords(strtolower($ke->get_jenis_kelamin_balita_string()));
 		}
 		return $kdur_ent;
 	}		

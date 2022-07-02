@@ -593,6 +593,18 @@
 								    			<div class="form-group">
 								    				<div class="row">
 								    					<div class="col-12">
+										    				<label>Jenis Kelamin Balita</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="jenis_kelamin_balita">Persalinan 6</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
 										    				<label>Umur Balita</label>
 								    					</div>
 								    				</div>

@@ -36,6 +36,21 @@ class KkMainPersalinan extends Entity
 		$skm_ent = $skm_model->find($this->attributes['kualitas_ibu_hamil']);
 		return $skm_ent->nama_kualitas_ibu_hamil;
 	}
+
+	public function get_jenis_kelamin_balita_string (){
+		switch ($this->attributes['jenis_kelamin_balita']) {
+			case '1':
+				return 'laki laki';
+				break;
+			case '2':
+				return 'perempuan';
+				break;
+			default:
+				return 'data tidak di ketahui';
+				break;
+		}
+	}
+
 	public function get_kualitas_bayi_string(){
 		$skm_model = new KualitasBayiModel();
 		$skm_ent = $skm_model->find($this->attributes['kualitas_bayi']);

@@ -15,4 +15,5 @@ class Pendata extends Entity
 	protected $no_handphone;
 	protected $nama;
 
+
 }

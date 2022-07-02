@@ -302,6 +302,7 @@ $(document).ready(function(){
 
 				//alamat
 				$(".alamat_lengkap").html(rd[0]['alamat_lengkap']);
+				
 				console.log(rd);
 
 				//data responden
@@ -456,6 +457,7 @@ $(document).ready(function(){
 				$(".tinggi_badan").html(rd[0]['get_kk_main_persalinan'][0]['tinggi_badan_string']);
 				$(".kondisi_saat_pengukuran").html(rd[0]['get_kk_main_persalinan'][0]['kondisi_saat_pengukuran_string']);
 				$(".status_gizi_balita").html(rd[0]['get_kk_main_persalinan'][0]['status_gizi_balita_string']);
+				$(".jenis_kelamin_balita").html(rd[0]['get_kk_main_persalinan'][0]['jenis_kelamin_balita_string']);
 
 				var lembaga_pemerintahan_list = "<ul>";
 				for(var ij=0;ij<rd[0]['get_kk_main_lembaga_pemerintahan'].length; ij++){
