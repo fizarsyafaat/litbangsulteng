@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 			var data = {
 				[page_csrf] : page_csrf_value,
-				'kepala_keluarga' : kepala_keluarga,
+				'kepala_keluarga' : kepala_keluarga, 
 				'no_kk' : no_kk,
 			};
 		}else{

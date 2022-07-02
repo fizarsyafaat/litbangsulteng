@@ -905,7 +905,7 @@
 								    		</div>
 								    	</div>
 
-								    	      <div class="tab-pane fade" id="nav-perkebunan" role="tabpanel" aria-labelledby="nav-perkebunan-tab">
+								    <div class="tab-pane fade" id="nav-perkebunan" role="tabpanel" aria-labelledby="nav-perkebunan-tab">
 							    	<div class="row">
 							    		<div class="col-12">
 							    			<div class="form-group">
@@ -934,19 +934,7 @@
 							    							<tbody>
 							    							</tbody>
 							    							<tfoot>
-							    								<tr>
-							    									<td class="jenis_komoditas">Kom1</td>
-							    									<td class="luas_panen">Kom1</td>
-							    									<td class="jumlah_produksi">Kom1</td>
-							    									<td class="hasil_pemasaran">Kom1</td>
-							    									<td class="jumlah_pohon ">Kom1</td>
-							    									<td class="jenis_bibit">Kom1</td>
-							    									<td class="pestisida">Kom1</td>
-							    									<td class="pupuk_organik">Kom1</td>
-							    									<td class="pupuk_pabrik">kom1</td>
-							    									<td class="lokasi">Lokasi</td>
-
-							    								</tr>
+							    								
 							    							</tfoot>
 							    						</table>
 							    					</div>

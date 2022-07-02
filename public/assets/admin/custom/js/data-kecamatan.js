@@ -11,8 +11,8 @@ $(document).ready(function(){
 		var page_csrf_value = $(".csrf-header-master").attr("value");
 
 		var data = {
-			[page_csrf] : page_csrf_value,
-		};
+			[page_csrf] : page_csrf_value, 
+};
 
 		$.post(config_url + "panel/general/json/get-main-kk-kecamatan",data,function(rd){
 			var bar_data = {
@@ -350,16 +350,24 @@ $(document).ready(function(){
 
 				//aset perkebunan
 
-				$(".jenis_komoditas").html(rd[0]['get_kk_main_aset_perkebunan'][0]['jenis_komoditas_string']); 	
-				$(".luas_panen").html(rd[0]['get_kk_main_aset_perkebunan'][0]['luas_panen_string']); 	
-				$(".jumlah_produksi").html(rd[0]['get_kk_main_aset_perkebunan'][0]['jumlah_produksi_string']); 
-				$(".hasil_pemasaran").html(rd[0]['get_kk_main_aset_perkebunan'][0]['hasil_pemasaran_string']); 
-				$(".jumlah_pohon").html(rd[0]['get_kk_main_aset_perkebunan'][0]['jumlah_pohon_string']); 
-				$(".jenis_bibit").html(rd[0]['get_kk_main_aset_perkebunan'][0]['jenis_bibit_string']); 
-				$(".pestisida").html(rd[0]['get_kk_main_aset_perkebunan'][0]['pestisida_string']); 
-				$(".pupuk_organik").html(rd[0]['get_kk_main_aset_perkebunan'][0]['pupuk_organik_string']); 
-				$(".pupuk_pabrik").html(rd[0]['get_kk_main_aset_perkebunan'][0]['pupuk_pabrik_string']); 				 
-				$(".lokasi").html(rd[0]['get_kk_main_aset_perkebunan'][0]['lokasi']); 
+				var text_perkebunan = "";
+				for(var ij=0;ij<rd[0]['get_kk_main_aset_perkebunan'].length; ij++){
+
+					text_perkebunan += "<tr>"; 
+					text_perkebunan += "<td class='jenis_komoditas'>"+rd[0]['get_kk_main_aset_perkebunan'][ij]['jenis_komoditas_string']+"</td>"
+					text_perkebunan += "<td class='luas_panen'>"+rd[0]['get_kk_main_aset_perkebunan'][ij]['luas_panen_string']+"</td>"
+					text_perkebunan += "<td class='jumlah_produksi'>"+rd[0]['get_kk_main_aset_perkebunan'][ij]['jumlah_produksi_string']+"</td>"
+					text_perkebunan += "<td class='hasil_pemasaran'>"+rd[0]['get_kk_main_aset_perkebunan'][ij]['hasil_pemasaran_string']+"</td>"
+					text_perkebunan +="<td class='jumlah_pohon'>"+rd[0]['get_kk_main_aset_perkebunan'][ij]['jumlah_pohon_string']+"</td>"
+					text_perkebunan +=" <td class='jenis_bibit'>"+rd[0]['get_kk_main_aset_perkebunan'][ij]['jenis_bibit_string']+"</td>"
+					text_perkebunan += "<td class='pestisida'>"+rd[0]['get_kk_main_aset_perkebunan'][ij]['pestisida_string']+"</td>"
+					text_perkebunan += "<td class='pupuk_organik'>"+rd[0]['get_kk_main_aset_perkebunan'][ij]['pupuk_organik_string']+"</td>"
+					text_perkebunan += "<td class='pupuk_pabrik'>"+rd[0]['get_kk_main_aset_perkebunan'][ij]['pupuk_pabrik_string']+"</td>"
+					text_perkebunan += "<td class='lokasi'>"+rd[0]['get_kk_main_aset_perkebunan'][ij]['lokasi']+"</td>"
+					text_perkebunan +=" </tr>"
+				}
+				$(".komoditas-perkebunan-table tbody").html(text_perkebunan);
+
 
 				//aset tanaman pangan
 				$(".jenis_komoditas_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['jenis_komoditas_pangan_string']); 

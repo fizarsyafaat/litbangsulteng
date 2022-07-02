@@ -84,7 +84,7 @@ class GeneralJSON extends DefaultAdminFuncController{
 		$kc_list = $kcModel->findAll();
 		$k_array = [];
 
-		foreach($kc_list as $kc){
+		foreach($kc_list as $kc){ 
 			$m = new \Stdclass();
 			$m->title = $kc->nama_kecamatan;
 			$m->total_kk = sizeof($kModel->join("kelurahan",'kk_main.kelurahan = kelurahan.id_kelurahan')->where("id_kecamatan",$kc->id_kecamatan)->findAll());
