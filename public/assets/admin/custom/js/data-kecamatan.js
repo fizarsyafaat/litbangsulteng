@@ -349,7 +349,6 @@ $(document).ready(function(){
 				$(".lantai_rumah").html(rd[0]['get_kk_main_aset_rumah'][0]['lantai_rumah_string']); 
 
 				//aset perkebunan
-
 				var text_perkebunan = "";
 				for(var ij=0;ij<rd[0]['get_kk_main_aset_perkebunan'].length; ij++){
 
@@ -370,62 +369,103 @@ $(document).ready(function(){
 
 
 				//aset tanaman pangan
-				$(".jenis_komoditas_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['jenis_komoditas_pangan_string']); 
- 				$(".luas_panen_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['luas_panen_pangan_string']); 
-				$(".jumlah_produksi_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['jumlah_produksi_pangan_string']); 
-				$(".hasil_pemasaran_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['hasil_pemasaran_pangan_string']); 
-				$(".jumlah_pohon_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['jumlah_pohon_pangan_string']); 
-				$(".jenis_bibit_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['jenis_bibit_pangan_string']); 
-				$(".pestisida_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['pestisida_pangan_string']); 
-				$(".pupuk_organik_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['pupuk_organik_pangan_string']); 
-				$(".pupuk_pabrik_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['pupuk_pabrik_pangan_string']); 				 
-				$(".lokasi_pangan").html(rd[0]['get_kk_main_aset_tanaman_pangan'][0]['lokasi']); 
+			var text_pangan = "";
+				for(var ij=0;ij<rd[0]['get_kk_main_aset_tanaman_pangan'].length; ij++){
+
+					text_pangan += "<tr>"; 
+					text_pangan += "<td class='jenis_komoditas_pangan'>"+rd[0]['get_kk_main_aset_tanaman_pangan'][ij]['jenis_komoditas_pangan_string']+"</td>"
+					text_pangan += "<td class='luas_panen_pangan'>"+rd[0]['get_kk_main_aset_tanaman_pangan'][ij]['luas_panen_kpangan_string']+"</td>"
+					text_pangan += "<td class='jumlah_produksi_pangan'>"+rd[0]['get_kk_main_aset_tanaman_pangan'][ij]['jumlah_produksi_pangan_string']+"</td>"
+					text_pangan += "<td class='hasil_pemasaran_pangan'>"+rd[0]['get_kk_main_aset_tanaman_pangan'][ij]['hasil_pemasaran_pangan_string']+"</td>"
+					text_pangan +="<td class='jumlah_pohon_pangan'>"+rd[0]['get_kk_main_aset_tanaman_pangan'][ij]['jumlah_pohon_pangan_string']+"</td>"
+					text_pangan +=" <td class='jenis_bibit_pangan'>"+rd[0]['get_kk_main_aset_tanaman_pangan'][ij]['jenis_bibit_pangan_string']+"</td>"
+					text_pangan += "<td class='pestisida_pangan'>"+rd[0]['get_kk_main_aset_tanaman_pangan'][ij]['pestisida_pangan_string']+"</td>"
+					text_pangan += "<td class='pupuk_organik_pangan'>"+rd[0]['get_kk_main_aset_tanaman_pangan'][ij]['pupuk_organik_pangan_string']+"</td>"
+					text_pangan += "<td class='pupuk_pabrik_pangan'>"+rd[0]['get_kk_main_aset_tanaman_pangan'][ij]['pupuk_pabrik_pangan_string']+"</td>"
+					text_pangan += "<td class='lokasi_pangan'>"+rd[0]['get_kk_main_aset_tanaman_pangan'][ij]['lokasi']+"</td>"
+					text_pangan +=" </tr>"
+				}
+				$(".komoditas-tanaman-pangan-table tbody").html(text_pangan);
+
  
 				//aset tanaman Buahan
-				$(".jenis_komoditas_buah_buahan").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['jenis_komoditas_buah_buahan_string']); 
-				$(".luas_panen_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['luas_panen_buah_string']); 
-				$(".jumlah_produksi_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['jumlah_produksi_buah_string']); 
-				$(".hasil_pemasaran_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['hasil_pemasaran_buah_string']); 
-				$(".jumlah_pohon_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['jumlah_pohon_buah_string']); 
-				$(".jenis_bibit_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['jenis_bibit_buah_string']); 
-				$(".pestisida_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['pestisida_buah_string']); 
-				$(".pupuk_organik_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['pupuk_organik_buah_string']); 
-				$(".pupuk_pabrik_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['pupuk_pabrik_buah_string']); 				 
-				$(".lokasi_buah").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['lokasi']); 
+				var text_pertanian = "";
+				for(var ij=0;ij<rd[0]['get_kk_main_aset_buah_buahan'].length; ij++){
+
+					text_pertanian += "<tr>"; 
+					text_pertanian += "<td class='jenis_komoditas_buah_buahan'>"+rd[0]['get_kk_main_aset_buah_buahan'][ij]['jenis_komoditas_buah_buahan_string']+"</td>"
+					text_pertanian += "<td class='luas_panen_buah'>"+rd[0]['get_kk_main_aset_buah_buahan'][ij]['luas_panen_buah_string']+"</td>"
+					text_pertanian += "<td class='jumlah_produksi_buah'>"+rd[0]['get_kk_main_aset_buah_buahan'][ij]['jumlah_produksi_buah_string']+"</td>"
+					text_pertanian += "<td class='hasil_pemasaran_buah'>"+rd[0]['get_kk_main_aset_buah_buahan'][ij]['hasil_pemasaran_buah_string']+"</td>"
+					text_pertanian +="<td class='jumlah_pohon_buah'>"+rd[0]['get_kk_main_aset_buah_buahan'][ij]['jumlah_pohon_buah_string']+"</td>"
+					text_pertanian +=" <td class='jenis_bibit_buah'>"+rd[0]['get_kk_main_aset_buah_buahan'][ij]['jenis_bibit_buah_string']+"</td>"
+					text_pertanian += "<td class='pestisida_buah'>"+rd[0]['get_kk_main_aset_buah_buahan'][ij]['pestisida_buah_string']+"</td>"
+					text_pertanian += "<td class='pupuk_organik_buah'>"+rd[0]['get_kk_main_aset_buah_buahan'][ij]['pupuk_organik_buah_string']+"</td>"
+					text_pertanian += "<td class='pupuk_pabrik_buah'>"+rd[0]['get_kk_main_aset_buah_buahan'][ij]['pupuk_pabrik_buah_string']+"</td>"
+					text_pertanian += "<td class='lokasi_buah'>"+rd[0]['get_kk_main_aset_buah_buahan'][ij]['lokasi']+"</td>"
+					text_pertanian +=" </tr>"
+				}
+				$(".komoditas-pertanian-table tbody").html(text_pertanian);
+
  
 				//aset tanaman Obat
-				$(".jenis_komoditas_tanaman_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['jenis_komoditas_tanaman_obat_string']);
-				$(".luas_panen_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['luas_panen_obat_string']); 
-				$(".jumlah_produksi_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['jumlah_produksi_obat_string']); 
-				$(".hasil_pemasaran_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['hasil_pemasaran_obat_string']); 
-				$(".jumlah_pohon_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['jumlah_pohon_obat_string']); 
-				$(".jenis_bibit_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['jenis_bibit_obat_string']); 
-				$(".pestisida_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['pestisida_obat_string']); 
-				$(".pupuk_organik_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['pupuk_organik_obat_string']); 
-				$(".pupuk_pabrik_obat").html(rd[0]['get_kk_main_aset_tanaman_obat'][0]['pupuk_pabrik_obat_string']); 				 
-				$(".lokasi_obat").html(rd[0]['get_kk_main_aset_buah_buahan'][0]['lokasi']); 
+		
+
+					var text_obat = "";
+				for(var ij=0;ij<rd[0]['get_kk_main_aset_tanaman_obat'].length; ij++){
+
+					text_obat += "<tr>"; 
+					text_obat += "<td class='jenis_komoditas_tanaman_obat'>"+rd[0]['get_kk_main_aset_tanaman_obat'][ij]['jenis_komoditas_tanaman_obat_string']+"</td>"
+					text_obat += "<td class='luas_panen_obat'>"+rd[0]['get_kk_main_aset_tanaman_obat'][ij]['luas_panen_obat_string']+"</td>"
+					text_obat += "<td class='jumlah_produksi_obat'>"+rd[0]['get_kk_main_aset_tanaman_obat'][ij]['jumlah_produksi_obat_string']+"</td>"
+					text_obat += "<td class='hasil_pemasaran_obat'>"+rd[0]['get_kk_main_aset_tanaman_obat'][ij]['hasil_pemasaran_obat_string']+"</td>"
+					text_obat +="<td class='jumlah_pohon_obat'>"+rd[0]['get_kk_main_aset_tanaman_obat'][ij]['jumlah_pohon_obat_string']+"</td>"
+					text_obat +=" <td class='jenis_bibit_obat'>"+rd[0]['get_kk_main_aset_tanaman_obat'][ij]['jenis_bibit_obat_string']+"</td>"
+					text_obat += "<td class='pestisida_obat'>"+rd[0]['get_kk_main_aset_tanaman_obat'][ij]['pestisida_obat_string']+"</td>"
+					text_obat += "<td class='pupuk_organik_obat'>"+rd[0]['get_kk_main_aset_tanaman_obat'][ij]['pupuk_organik_obat_string']+"</td>"
+					text_obat += "<td class='pupuk_pabrik_obat'>"+rd[0]['get_kk_main_aset_tanaman_obat'][ij]['pupuk_pabrik_obat_string']+"</td>"
+					text_obat += "<td class='lokasi_obat'>"+rd[0]['get_kk_main_aset_buah_buahan'][ij]['lokasi']+"</td>"
+					text_obat +=" </tr>"
+				}
+				$(".komoditas-tanaman-obat-table tbody").html(text_obat);
  
 
 				//aset Kehutanan
-				$(".jenis_komoditas_kehutanan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['jenis_komoditas_kehutanan_string']);
-				$(".luas_panen_kehutangan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['luas_panen_kehutangan_string']); 
-				$(".jumlah_produksi_kehutangan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['jumlah_produksi_kehutangan_string']); 
-				$(".hasil_pemasaran_kehutangan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['hasil_pemasaran_kehutangan_string']); 
-				$(".jumlah_pohon_kehutangan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['jumlah_pohon_kehutangan_string']); 
-				$(".jenis_bibit_kehutangan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['jenis_bibit_kehutangan_string']); 
-				$(".pestisida_kehutangan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['pestisida_kehutangan_string']); 
-				$(".pupuk_organik_kehutangan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['pupuk_organik_kehutangan_string']); 
-				$(".pupuk_pabrik_kehutangan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['pupuk_pabrik_kehutangan_string']); 				 
-				$(".lokasi_kehutangan").html(rd[0]['get_kk_main_aset_kehutanan'][0]['lokasi']); 
+					var text_kehutanan = "";
+				for(var ij=0;ij<rd[0]['get_kk_main_aset_kehutanan'].length; ij++){
+
+					text_kehutanan += "<tr>"; 
+					text_kehutanan += "<td class='jenis_komoditas_kehutanan'>"+rd[0]['get_kk_main_aset_kehutanan'][ij]['jenis_komoditas_kehutanan_string']+"</td>"
+					text_kehutanan += "<td class='luas_panen_kehutangan'>"+rd[0]['get_kk_main_aset_kehutanan'][ij]['luas_panen_kehutangan_string']+"</td>"
+					text_kehutanan += "<td class='jumlah_produksi_kehutangan'>"+rd[0]['get_kk_main_aset_kehutanan'][ij]['jumlah_produksi_kehutangan_string']+"</td>"
+					text_kehutanan += "<td class='hasil_pemasaran_kehutangan'>"+rd[0]['get_kk_main_aset_kehutanan'][ij]['hasil_pemasaran_kehutangan_string']+"</td>"
+					text_kehutanan +="<td class='jumlah_pohon_kehutangan'>"+rd[0]['get_kk_main_aset_kehutanan'][ij]['jumlah_pohon_kehutangan_string']+"</td>"
+					text_kehutanan +=" <td class='jenis_bibit_kehutangan'>"+rd[0]['get_kk_main_aset_kehutanan'][ij]['jenis_bibit_kehutangan_string']+"</td>"
+					text_kehutanan += "<td class='pestisida_kehutangan'>"+rd[0]['get_kk_main_aset_kehutanan'][ij]['pestisida_kehutangan_string']+"</td>"
+					text_kehutanan += "<td class='pupuk_organik_kehutangan'>"+rd[0]['get_kk_main_aset_kehutanan'][ij]['pupuk_organik_kehutangan_string']+"</td>"
+					text_kehutanan += "<td class='pupuk_pabrik_kehutangan'>"+rd[0]['get_kk_main_aset_kehutanan'][ij]['pupuk_pabrik_kehutangan_string']+"</td>"
+					text_kehutanan += "<td class='lokasi_kehutangan'>"+rd[0]['get_kk_main_aset_kehutanan'][ij]['lokasi']+"</td>"
+					text_kehutanan +=" </tr>"
+				}
+				$(".komoditas-kehutanan-table tbody").html(text_kehutanan);
 
 				//aset ternak
-				$(".jenis_ternak").html(rd[0]['get_kk_main_aset_ternak'][0]['jenis_ternak_string']);
-				$(".luas_kandang").html(rd[0]['get_kk_main_aset_ternak'][0]['luas_kandang_string']);
-				$(".jumlah_ekor").html(rd[0]['get_kk_main_aset_ternak'][0]['jumlah_ekor_string']);
-				$(".jenis_hasil_ternak").html(rd[0]['get_kk_main_aset_ternak'][0]['jenis_hasil_ternak_string']);
-				$(".jumlah_produksi_hasil_ternak").html(rd[0]['get_kk_main_aset_ternak'][0]['jumlah_produksi_hasil_ternak_string']);
-				$(".pemasaran_hasil_ternak").html(rd[0]['get_kk_main_aset_ternak'][0]['pemasaran_hasil_ternak_string']);
-				$(".jenis_pakan_ternak").html(rd[0]['get_kk_main_aset_ternak'][0]['jenis_pakan_ternak_string']);
+				
+
+				var text_ternak = "";
+				for(var ij=0;ij<rd[0]['get_kk_main_aset_ternak'].length; ij++){
+
+					text_ternak += "<tr>"; 
+					text_ternak += "<td class='jenis_ternak'>"+rd[0]['get_kk_main_aset_ternak'][ij]['jenis_ternak_string']+"</td>"
+					text_ternak += "<td class='luas_kandang'>"+rd[0]['get_kk_main_aset_ternak'][ij]['luas_kandang_string']+"</td>"
+					text_ternak += "<td class='jumlah_ekor'>"+rd[0]['get_kk_main_aset_ternak'][ij]['jumlah_ekor_string']+"</td>"
+					text_ternak += "<td class='jenis_hasil_ternak'>"+rd[0]['get_kk_main_aset_ternak'][ij]['jenis_hasil_ternak_string']+"</td>"
+					text_ternak +="<td class='jumlah_produksi_hasil_ternak'>"+rd[0]['get_kk_main_aset_ternak'][ij]['jumlah_produksi_hasil_ternak_string']+"</td>"
+					text_ternak +=" <td class='pemasaran_hasil_ternak'>"+rd[0]['get_kk_main_aset_ternak'][ij]['pemasaran_hasil_ternak_string']+"</td>"
+					text_ternak += "<td class='jenis_pakan_ternak'>"+rd[0]['get_kk_main_aset_ternak'][ij]['jenis_pakan_ternak_string']+"</td>"
+					text_ternak +=" </tr>"
+				}
+				$(".komoditas-ternak-table tbody").html(text_ternak);
 
 				//aset ikan
 				$(".komoditas_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['komoditas_ikan_string']);
@@ -436,9 +476,31 @@ $(document).ready(function(){
 				$(".jenis_bibit_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['jenis_bibit_ikan_string']);
 				$(".jenis_pakan_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['jenis_pakan_ikan_string']);
 
+					var text_ikan = "";
+				for(var ij=0;ij<rd[0]['get_kk_main_aset_ternak'].length; ij++){
+
+					text_ikan += "<tr>"; 
+					text_ikan += "<td class='komoditas_ikan'>"+rd[0]['get_kk_main_aset_ikan'][ij]['komoditas_ikan_string']+"</td>"
+					text_ikan += "<td class='luas_panen_ikan'>"+rd[0]['get_kk_main_aset_ikan'][ij]['luas_panen_ikan_string']+"</td>"
+					text_ikan += "<td class='jumlah_produksi_ikan'>"+rd[0]['get_kk_main_aset_ikan'][ij]['jumlah_produksi_ikan_string']+"</td>"
+					text_ikan += "<td class='hasil_pemasaran_ikan'>"+rd[0]['get_kk_main_aset_ikan'][ij]['hasil_pemasaran_ikan_string']+"</td>"
+					text_ikan +="<td class='jumlah_ikan'>"+rd[0]['get_kk_main_aset_ikan'][ij]['jumlah_ikan_string']+"</td>"
+					text_ikan +=" <td class='jenis_bibit_ikan'>"+rd[0]['get_kk_main_aset_ikan'][ij]['jenis_bibit_ikan_string']+"</td>"
+					text_ikan += "<td class='jenis_pakan_ikan'>"+rd[0]['get_kk_main_aset_ikan'][ij]['jenis_pakan_ikan_string']+"</td>"
+					text_ikan +=" </tr>"
+				}
+				$(".komoditas-perikanan-table tbody").html(text_ikan);
+
 				//aset ikan tangkap
-				$(".alat_tangkap_media_ikan").html(rd[0]['get_kk_main_aset_ikan_tangkap'][0]['alat_tangkap_media_ikan_string']);
-				$(".jumlah_unit").html(rd[0]['get_kk_main_aset_ikan_tangkap'][0]['jumlah_unit_string']);
+				var text_ikan = "";
+				for(var ij=0;ij<rd[0]['get_kk_main_aset_ikan_tangkap'].length; ij++){
+
+					text_ikan += "<tr>"; 
+					text_ikan += "<td class='alat_tangkap_media_ikan'>"+rd[0]['get_kk_main_aset_ikan_tangkap'][ij]['alat_tangkap_media_ikan_string']+"</td>"
+					text_ikan += "<td class='jumlah_unit'>"+rd[0]['get_kk_main_aset_ikan_tangkap'][ij]['jumlah_unit_string']+"</td>"
+					text_ikan +=" </tr>"
+				}
+				$(".komoditas-perikanan-tangkap-table tbody").html(text_ikan);
 
 				//aset Pariwisata
 				$(".jumlah_aktivitas_wisata_bulanan").html(rd[0]['get_kk_main_pariwisata'][0]['jumlah_aktivitas_wisata_bulanan_string']);
@@ -466,6 +528,9 @@ $(document).ready(function(){
 				$(".kondisi_saat_pengukuran").html(rd[0]['get_kk_main_persalinan'][0]['kondisi_saat_pengukuran_string']);
 				$(".status_gizi_balita").html(rd[0]['get_kk_main_persalinan'][0]['status_gizi_balita_string']);
 				$(".jenis_kelamin_balita").html(rd[0]['get_kk_main_persalinan'][0]['jenis_kelamin_balita_string']);
+
+				
+				$(".nama").html(rd[0]['get_pendata']['nama_string']);
 
 				var lembaga_pemerintahan_list = "<ul>";
 				for(var ij=0;ij<rd[0]['get_kk_main_lembaga_pemerintahan'].length; ij++){

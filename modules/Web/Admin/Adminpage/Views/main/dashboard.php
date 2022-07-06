@@ -423,12 +423,12 @@
 								    			<div class="form-group">
 								    				<div class="row">
 								    					<div class="col-12">
-										    				<label>Pekerjaan Pendata</label>
+										    				<label>Nama Pendata</label>
 								    					</div>
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="aset_tanah">Pendata 1</p>
+								    						<p class="nama">Pendata 1</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -973,19 +973,7 @@
 							    							<tbody>
 							    							</tbody>
 							    							<tfoot>
-							    								<tr>
-							    									<td class="jenis_komoditas_buah_buahan">Kom1</td>
-							    									<td class="luas_panen_buah">Kom1</td>
-							    									<td class="jumlah_produksi_buah">Kom1</td>
-							    									<td class="hasil_pemasaran_buah">Kom1</td>
-							    									<td class="jumlah_pohon_buah ">Kom1</td>
-							    									<td class="jenis_bibit_buah">Kom1</td>
-							    									<td class="pestisida_buah">Kom1</td>
-							    									<td class="pupuk_organik_buah">Kom1</td>
-							    									<td class="pupuk_pabrik_buah">kom1</td>
-							    									<td class="lokasi_buah">Lokasi</td>
-
-							    								</tr>
+							    								
 							    							</tfoot>
 							    						</table>
 							    					</div>
@@ -1025,19 +1013,7 @@
 							    							<tbody>
 							    							</tbody>
 							    							<tfoot>
-							    								<tr>
-							    									<td class="jenis_komoditas_pangan">Kom1</td>
-							    									<td class="luas_panen_pangan">Kom1</td>
-							    									<td class="jumlah_produksi_pangan">Kom1</td>
-							    									<td class="hasil_pemasaran_pangan">Kom1</td>
-							    									<td class="jumlah_pohon_pangan ">Kom1</td>
-							    									<td class="jenis_bibit_pangan">Kom1</td>
-							    									<td class="pestisida_pangan">Kom1</td>
-							    									<td class="pupuk_organik_pangan">Kom1</td>
-							    									<td class="pupuk_pabrik_pangan">kom1</td>
-							    									<td class="lokasi_pangan">Lokasi</td>
-
-							    								</tr>
+							    							
 							    							</tfoot>
 							    						</table>
 							    					</div>
@@ -1076,19 +1052,7 @@
 							    							<tbody>
 							    							</tbody>
 							    							<tfoot>
-							    								<tr>
-							    									<td class="jenis_komoditas_tanaman_obat">Kom1</td>
-							    									<td class="luas_panen_obat">Kom1</td>
-							    									<td class="jumlah_produksi_obat">Kom1</td>
-							    									<td class="hasil_pemasaran_obat">Kom1</td>
-							    									<td class="jumlah_pohon_obat">Kom1</td>
-							    									<td class="jenis_bibit_kehutangan">Kom1</td>
-							    									<td class="pestisida_obat">Kom1</td>
-							    									<td class="pupuk_organik_obat">Kom1</td>
-							    									<td class="pupuk_pabrik_obat">kom1</td>
-							    									<td class="lokasi_obat">Lokasi</td>
-
-							    								</tr>
+							    							
 							    							</tfoot>
 							    						</table>
 							    					</div>
@@ -1109,7 +1073,7 @@
 							    				</div>
 							    				<div class="row">
 							    					<div class="col-12 table-responsive">
-							    						<table class="table table-striped komoditas-tanaman-obat-table">
+							    						<table class="table table-striped komoditas-kehutanan-table">
 							    							<thead class="thead-dark">
 							    								<tr>
 								    								<th>Jenis Komoditas kehutanan</th>
@@ -1127,19 +1091,7 @@
 							    							<tbody>
 							    							</tbody>
 							    							<tfoot>
-							    								<tr>
-							    									<td class="jenis_komoditas_kehutanan">Kom1</td>
-							    									<td class="luas_panen_kehutangan">Kom1</td>
-							    									<td class="jumlah_produksi_kehutangan">Kom1</td>
-							    									<td class="hasil_pemasaran_kehutangan">Kom1</td>
-							    									<td class="jumlah_pohon_kehutangan ">Kom1</td>
-							    									<td class="jenis_bibit_kehutangan">Kom1</td>
-							    									<td class="pestisida_kehutangan">Kom1</td>
-							    									<td class="pupuk_organik_kehutangan">Kom1</td>
-							    									<td class="pupuk_pabrik_kehutangan">kom1</td>
-							    									<td class="lokasi_kehutangan">Lokasi</td>
-
-							    								</tr>
+							    							
 							    							</tfoot>
 							    						</table>
 							    					</div>
@@ -1176,16 +1128,7 @@
 							    							<tbody>
 							    							</tbody>
 							    							<tfoot>
-							    								<tr>
-							    									<td class="jenis_ternak">Kom1</td>
-							    									<td class="luas_kandang">Kom2</td>
-							    									<td class="jumlah_ekor">Kom1</td>
-							    									<td class="jenis_hasil_ternak">Kom1</td>
-							    									<td class="jumlah_produksi_hasil_ternak">Kom1</td>
-							    									<td class="pemasaran_hasil_ternak">Kom1</td>
-							    									<td class="jenis_pakan_ternak">Kom1</td>
-							    							
-							    								</tr>
+							    						
 							    							</tfoot>
 							    						</table>
 							    					</div>
@@ -1221,16 +1164,7 @@
 							    							<tbody>
 							    							</tbody>
 							    							<tfoot>
-							    								<tr>
-							    									
-							    									<td class="komoditas_ikan">Kom1</td>
-							    									<td class="luas_panen_ikan">Kom2</td>
-							    									<td class="jumlah_produksi_ikan">Kom1</td>
-							    									<td class="hasil_pemasaran_ikan">Kom1</td>
-							    									<td class="jumlah_ikan">Kom1</td>
-							    									<td class="jenis_bibit_ikan">Kom1</td>
-							    									<td class="jenis_pakan_ikan">Kom1</td>
-							    								</tr>
+							    								
 							    							</tfoot>
 							    						</table>
 							    					</div>
@@ -1258,11 +1192,7 @@
 							    							<tbody>
 							    							</tbody>
 							    							<tfoot>
-							    								<tr>
-							    									
-							    									<td class="alat_tangkap_media_ikan">Kom1</td>
-							    									<td class="jumlah_unit">Kom1</td>
-							    								</tr>
+							    								
 							    							</tfoot>
 							    						</table>
 							    					</div>

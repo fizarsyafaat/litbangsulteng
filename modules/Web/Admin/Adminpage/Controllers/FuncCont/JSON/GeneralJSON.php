@@ -45,8 +45,7 @@ class GeneralJSON extends DefaultAdminFuncController{
 		foreach($kk_list as $kl){
 			$kl->alamat_lengkap = $kl->obtain_alamat_lengkap();
 
-			//KK MAIN
-
+	//KK MAIN
 			$kl->get_kk_main_data_responden = $kl->get_kk_main_data_responden();
 			$kl->get_kk_main_data_pekerjaan = $kl->get_kk_main_data_pekerjaan();
 			$kl->get_kk_main_lembaga_pemerintahan = $kl->get_kk_main_lembaga_pemerintahan();

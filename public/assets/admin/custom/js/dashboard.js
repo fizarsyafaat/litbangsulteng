@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 			var data = {
 				[page_csrf] : page_csrf_value,
-				'kepala_keluarga' : kepala_keluarga, 
+				'kepala_keluarga' : kepala_keluarga,  
 				'no_kk' : no_kk,
 			};
 		}else{
@@ -85,6 +85,8 @@ $(document).ready(function(){
 				$(".mata_pencaharian_pokok").html(rd[0]['get_kk_main_data_pekerjaan']['mata_pencaharian_pokok_string']);
 				$(".jumlah_penghasilan").html(rd[0]['get_kk_main_data_pekerjaan']['penghasilan_per_bulan_string']);
 				$(".jumlah_pengeluaran").html(rd[0]['get_kk_main_data_pekerjaan']['pengeluaran_per_bulan_string']);
+
+				//Pendata
 
 				var lembaga_pemerintahan_list = "<ul>";
 				for(var ij=0;ij<rd[0]['get_kk_main_lembaga_pemerintahan'].length; ij++){
