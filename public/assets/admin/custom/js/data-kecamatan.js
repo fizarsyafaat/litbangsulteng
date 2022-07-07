@@ -12,7 +12,7 @@ $(document).ready(function(){
 
 		var data = {
 			[page_csrf] : page_csrf_value, 
-};
+		};
 
 		$.post(config_url + "panel/general/json/get-main-kk-kecamatan",data,function(rd){
 			var bar_data = {
@@ -262,7 +262,7 @@ $(document).ready(function(){
 				'no_kk' : no_kk,
 			};
 		}else{
-			id = $("#dashboard").attr("meta-id");
+			id = $("#kk-paging-view").attr("meta-id");
 
 			var data = {
 				[page_csrf] : page_csrf_value,
@@ -467,17 +467,9 @@ $(document).ready(function(){
 				}
 				$(".komoditas-ternak-table tbody").html(text_ternak);
 
-				//aset ikan
-				$(".komoditas_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['komoditas_ikan_string']);
-				$(".luas_panen_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['luas_panen_ikan_string']);
-				$(".jumlah_produksi_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['jumlah_produksi_ikan_string']);
-				$(".hasil_pemasaran_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['hasil_pemasaran_ikan_string']);
-				$(".jumlah_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['jumlah_ikan_string']);
-				$(".jenis_bibit_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['jenis_bibit_ikan_string']);
-				$(".jenis_pakan_ikan").html(rd[0]['get_kk_main_aset_ikan'][0]['jenis_pakan_ikan_string']);
 
-					var text_ikan = "";
-				for(var ij=0;ij<rd[0]['get_kk_main_aset_ternak'].length; ij++){
+				var text_ikan = "";
+				for(var ij=0;ij<rd[0]['get_kk_main_aset_ikan'].length; ij++){
 
 					text_ikan += "<tr>"; 
 					text_ikan += "<td class='komoditas_ikan'>"+rd[0]['get_kk_main_aset_ikan'][ij]['komoditas_ikan_string']+"</td>"
@@ -530,7 +522,7 @@ $(document).ready(function(){
 				$(".jenis_kelamin_balita").html(rd[0]['get_kk_main_persalinan'][0]['jenis_kelamin_balita_string']);
 
 				
-				$(".nama").html(rd[0]['get_pendata']['nama_string']);
+				$(".nama_pendata").html(rd[0]['get_pendata']['nama']);
 
 				var lembaga_pemerintahan_list = "<ul>";
 				for(var ij=0;ij<rd[0]['get_kk_main_lembaga_pemerintahan'].length; ij++){

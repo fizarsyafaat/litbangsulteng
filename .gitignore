@@ -125,3 +125,6 @@ public/assets/general/config.js
 /phpunit*.xml
 /.phpunit.*.cache
 
+app/config/App.php
+app/config/Database.php
+filezilla.txt

@@ -26,6 +26,7 @@ use BusinessProcessRoot\Models\KkMainAsetProduksi as KkMainAsetProduksiModel;
 use BusinessProcessRoot\Models\KkMainPersalinan as KkMainPersalinanModel;
 use BusinessProcessRoot\Models\KkMainAcceptorKb as KkMainAcceptorKbModel;
 use BusinessProcessRoot\Models\KkMainCakupanImunisasi as KkMainCakupanImunisasiModel;
+use BusinessProcessRoot\Models\Pendata as PendataModel;
 
 class KkMain extends Entity
 {
@@ -64,6 +65,14 @@ class KkMain extends Entity
 		$kdur_ent[0]->pendidikan_terakhir_string = ucwords(strtolower($kdur_ent[0]->get_pendidikan_terakhir_string()));
 		$kdur_ent[0]->jenis_kelamin_responden_string = ucwords(strtolower($kdur_ent[0]->get_jenis_kelamin_responden_string()));
 		$kdur_ent[0]->kewarganegaraan_string = ucwords(strtolower($kdur_ent[0]->get_kewarganegaraan_string()));
+
+		return $kdur_ent[0];
+	}
+
+	public function get_pendata(){
+		$kdur_model = new PendataModel();
+
+		$kdur_ent = $kdur_model->where("kk_id",$this->attributes['kk_id'])->findAll();
 
 		return $kdur_ent[0];
 	}

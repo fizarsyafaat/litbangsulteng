@@ -428,7 +428,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="nama">Pendata 1</p>
+								    						<p class="nama_pendata">Pendata 1</p>
 								    					</div>
 								    				</div>
 								    			</div>
