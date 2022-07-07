@@ -432,6 +432,54 @@
 								    					</div>
 								    				</div>
 								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Pekerjaaan Pendata</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="pekerjaan_pendata">Pendata 2</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Jabatan Pendata</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="jabatan_pendata">Pendata 3</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Sumber Data</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="sumber_data">Pendata 4</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Nomor HP </label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="no_handphone">Pendata 5</p>
+								    					</div>
+								    				</div>
+								    			</div>
 								    		</div>
 								    	</div>
 								    </div>

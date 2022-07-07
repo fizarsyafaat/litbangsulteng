@@ -523,6 +523,10 @@ $(document).ready(function(){
 
 				
 				$(".nama_pendata").html(rd[0]['get_pendata']['nama']);
+				$(".pekerjaan_pendata").html(rd[0]['get_pendata']['pekerjaan']);
+				$(".jabatan_pendata").html(rd[0]['get_pendata']['jabatan']);
+				$(".sumber_data").html(rd[0]['get_pendata']['sumber_data']);
+				$(".no_handphone").html(rd[0]['get_pendata']['no_handphone']);
 
 				var lembaga_pemerintahan_list = "<ul>";
 				for(var ij=0;ij<rd[0]['get_kk_main_lembaga_pemerintahan'].length; ij++){
