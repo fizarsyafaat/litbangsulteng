@@ -502,7 +502,7 @@ $(document).ready(function(){
 				$(".pengelolaan_pariwisata_palu").html(rd[0]['get_kk_main_pariwisata'][0]['pengelolaan_pariwisata_palu_string']);
 
 				//aset kesehatan
-				$(".penderita_sakit_kelainan").html(rd[0]['get_kk_main_kesehatan'][0]['jumlah_penderita_sakit_kelainan_string']);
+				$(".penderita_sakit_kelainan").html(rd[0]['get_kk_main_kesehatan'][0]['penderita_sakit_kelainan_string']);
 				$(".perilaku_hidup_bersih").html(rd[0]['get_kk_main_kesehatan'][0]['perilaku_hidup_bersih_string']);
 				$(".pola_makan").html(rd[0]['get_kk_main_kesehatan'][0]['pola_makan_string']);
 				$(".kebiasaan_berobat").html(rd[0]['get_kk_main_kesehatan'][0]['kebiasaan_berobat_string']);
@@ -567,7 +567,7 @@ $(document).ready(function(){
 				for(var ij=0;ij<rd[0]['get_kk_main_aset_produksi'].length; ij++){
 					aset_produksi_list += "<li>"+rd[0]['get_kk_main_aset_produksi'][ij]['aset_produksi_string']+"</li>";
 				}
-				transportasi_umum_list += "</ul>";
+				aset_produksi_list += "</ul>";
 				$(".aset_produksi_multi").html(aset_produksi_list);
 
 				var wajib_pajak_list = "<ul>";
