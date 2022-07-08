@@ -436,6 +436,855 @@
 								    		</div>
 								    	</div>
 								    </div>
+
+								    <div class="tab-pane fade" id="nav-house" role="tabpanel" aria-labelledby="nav-house-tab">
+								    	<div class="row">
+								    		<div class="col-12">
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Sumber Air Minum</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="sumber_air_minum">LOK</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Keterangan Sumber Air Minum</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="ket_sumber_air_minum">Lok2</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Status Kepemilikan Rumah</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="status_kepemilikan_rumah">Lok3</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Sarana Mck</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="sarana_mck">Lok4</p>
+								    					</div>
+								    				</div>
+								    			</div>
+
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Daya Listrik</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="daya_listrik">Lok5</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Luas Pekarangan Rumah</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="luas_pekarangan_rumah">Lok6</p>
+								    					</div>
+								    				</div>
+								    			</div>
+
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Pemanfaatan Danau DKK</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="pemanfaatan_danau_dkk">Lok7</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Dinding Rumah</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="dinding_rumah">Lok8</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Atap Rumah</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="atap_rumah">Lok9</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Lantai Rumah</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="lantai_rumah">Lok10</p>
+								    					</div>
+								    				</div>
+								    			</div>
+											</div>
+								    		</div>
+								    	</div>
+
+								    	 <div class="tab-pane fade" id="nav-aset-tanah" role="tabpanel" aria-labelledby="nav-aset-tanah-tab">
+								    	<div class="row">
+								    		<div class="col-12">
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Aset Tanah</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="aset_tanah">ALAMAT LENGKAP</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    		</div>
+								    	</div>
+								    </div>
+								    <div class="tab-pane fade" id="nav-perkebunan" role="tabpanel" aria-labelledby="nav-perkebunan-tab">
+							    	<div class="row">
+							    		<div class="col-12">
+							    			<div class="form-group">
+							    				<div class="row">
+							    					<div class="col-12">
+									    				<label>Data Aset Perkebunan</label>
+							    					</div>
+							    				</div>
+							    				<div class="row">
+							    					<div class="col-12 table-responsive">
+							    						<table class="table table-striped komoditas-perkebunan-table">
+							    							<thead class="thead-dark">
+							    								<tr>
+								    								<th>Jenis Perkebunan</th>
+								    								<th>Luas Panen</th>
+								    								<th>Jumlah Produksi</th>
+								    								<th>Hasil Pemasaran</th>
+								    								<th>Jumlah Pohon</th>
+								    								<th>Jenis Bibit</th>
+								    								<th>Pestisida</th>
+								    								<th>Pupuk Organik</th>
+								    								<th>Pupuk Pabrik</th>
+								    								<th>Lokasi Lahan</th>
+							    								</tr>
+							    							</thead>
+							    							<tbody>
+							    							</tbody>
+							    							<tfoot>
+							    								
+							    							</tfoot>
+							    						</table>
+							    					</div>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    </div>			
+
+							    <div class="tab-pane fade" id="nav-pertanian" role="tabpanel" aria-labelledby="nav-pertanian-tab">
+							    	<div class="row">
+							    		<div class="col-12">
+							    			<div class="form-group">
+							    				<div class="row">
+							    					<div class="col-12">
+									    				<label>Data Aset Pertanian</label>
+							    					</div>
+							    				</div>
+							    				<div class="row">
+							    					<div class="col-12 table-responsive">
+							    						<table class="table table-striped komoditas-pertanian-table">
+							    							<thead class="thead-dark">
+							    								<tr>
+								    								<th>Jenis Komoditas Pertanian</th>
+								    								<th>Luas Panen</th>
+								    								<th>Jumlah Produksi</th>
+								    								<th>Hasil Pemasaran</th>
+								    								<th>Jumlah Pohon</th>
+								    								<th>Jenis Bibit</th>
+								    								<th>Pestisida</th>
+								    								<th>Pupuk Organik</th>
+								    								<th>Pupuk Pabrik</th>
+								    								<th>Lokasi Lahan</th>
+							    								</tr>
+							    							</thead>
+							    							<tbody>
+							    							</tbody>
+							    							<tfoot>
+							    								
+							    							</tfoot>
+							    						</table>
+							    					</div>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    </div>			
+   	
+
+							    <div class="tab-pane fade" id="nav-tanaman-pangan" role="tabpanel" aria-labelledby="nav-tanaman-pangan-tab">
+							    	<div class="row">
+							    		<div class="col-12">
+							    			<div class="form-group">
+							    				<div class="row">
+							    					<div class="col-12">
+									    				<label>Data Aset Tanaman Pangan</label>
+							    					</div>
+							    				</div>
+							    				<div class="row">
+							    					<div class="col-12 table-responsive">
+							    						<table class="table table-striped komoditas-tanaman-pangan-table">
+							    							<thead class="thead-dark">
+							    								<tr>
+								    								<th>Jenis Komoditas Tanaman Pangan</th>
+								    								<th>Luas Panen</th>
+								    								<th>Jumlah Produksi</th>
+								    								<th>Hasil Pemasaran</th>
+								    								<th>Jumlah Pohon</th>
+								    								<th>Jenis Bibit</th>
+								    								<th>Pestisida</th>
+								    								<th>Pupuk Organik</th>
+								    								<th>Pupuk Pabrik</th>
+								    								<th>Lokasi Lahan</th>
+							    								</tr>
+							    							</thead>
+							    							<tbody>
+							    							</tbody>
+							    							<tfoot>
+							    							
+							    							</tfoot>
+							    						</table>
+							    					</div>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    </div>							
+
+							     <div class="tab-pane fade" id="nav-tanaman-obat" role="tabpanel" aria-labelledby="nav-tanaman-obat-tab">
+							    	<div class="row">
+							    		<div class="col-12">
+							    			<div class="form-group">
+							    				<div class="row">
+							    					<div class="col-12">
+									    				<label>Data Aset Tanaman Obat</label>
+							    					</div>
+							    				</div>
+							    				<div class="row">
+							    					<div class="col-12 table-responsive">
+							    						<table class="table table-striped komoditas-tanaman-obat-table">
+							    							<thead class="thead-dark">
+							    								<tr>
+								    								<th>Jenis Komoditas Tanaman Obat</th>
+								    								<th>Luas Panen</th>
+								    								<th>Jumlah Produksi</th>
+								    								<th>Hasil Pemasaran</th>
+								    								<th>Jumlah Pohon</th>
+								    								<th>Jenis Bibit</th>
+								    								<th>Pestisida</th>
+								    								<th>Pupuk Organik</th>
+								    								<th>Pupuk Pabrik</th>
+								    								<th>Lokasi Lahan</th>
+							    								</tr>
+							    							</thead>
+							    							<tbody>
+							    							</tbody>
+							    							<tfoot>
+							    							
+							    							</tfoot>
+							    						</table>
+							    					</div>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    </div>		
+
+							    <div class="tab-pane fade" id="nav-kehutanan" role="tabpanel" aria-labelledby="nav-kehutanan-tab">
+							    	<div class="row">
+							    		<div class="col-12">
+							    			<div class="form-group">
+							    				<div class="row">
+							    					<div class="col-12">
+									    				<label>Data Aset Kehutanan</label>
+							    					</div>
+							    				</div>
+							    				<div class="row">
+							    					<div class="col-12 table-responsive">
+							    						<table class="table table-striped komoditas-kehutanan-table">
+							    							<thead class="thead-dark">
+							    								<tr>
+								    								<th>Jenis Komoditas kehutanan</th>
+								    								<th>Luas Panen</th>
+								    								<th>Jumlah Produksi</th>
+								    								<th>Hasil Pemasaran</th>
+								    								<th>Jumlah Pohon</th>
+								    								<th>Jenis Bibit</th>
+								    								<th>Pestisida</th>
+								    								<th>Pupuk Organik</th>
+								    								<th>Pupuk Pabrik</th>
+								    								<th>Lokasi Lahan</th>
+							    								</tr>
+							    							</thead>
+							    							<tbody>
+							    							</tbody>
+							    							<tfoot>
+							    							
+							    							</tfoot>
+							    						</table>
+							    					</div>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    </div>
+
+							        <div class="tab-pane fade" id="nav-ternak" role="tabpanel" aria-labelledby="nav-ternak-tab">
+							    	<div class="row">
+							    		<div class="col-12">
+							    			<div class="form-group">
+							    				<div class="row">
+							    					<div class="col-12">
+									    				<label>Data Komoditas Hewan Ternak </label>
+							    					</div>
+							    				</div>
+							    				<div class="row">
+							    					<div class="col-12 table-responsive">
+							    						<table class="table table-striped komoditas-ternak-table">
+							    							<thead class="thead-dark">
+							    								<tr>
+								    								<th>Jenis Komoditas Ternak</th>
+								    								<th>Luas Kandang</th>
+								    								<th>Jumlah Ekor</th>
+								    								<th>Jenis Hasil Ternak</th>
+								    								<th>Jumlah Produksi Hasil Ternak</th>
+								    								<th>Pemasaran Hasil Ternak</th>
+								    								<th>Jenis Pakan Ternak</th>
+								    								
+							    								</tr>
+							    							</thead>
+							    							<tbody>
+							    							</tbody>
+							    							<tfoot>
+							    						
+							    							</tfoot>
+							    						</table>
+							    					</div>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    </div>
+
+							   <div class="tab-pane fade" id="nav-perikanan" role="tabpanel" aria-labelledby="nav-perikanan-tab">
+							    	<div class="row">
+							    		<div class="col-12">
+							    			<div class="form-group">
+							    				<div class="row">
+							    					<div class="col-12">
+									    				<label>Data Komoditas Perikanan</label>
+							    					</div>
+							    				</div>
+							    				<div class="row">
+							    					<div class="col-12 table-responsive">
+							    						<table class="table table-striped komoditas-perikanan-table">
+							    							<thead class="thead-dark">
+							    								<tr>
+								    								<th>Jenis perikanan</th>
+								    								<th>Luas Panen</th>
+								    								<th>Jumlah Ikan</th>
+								    								<th>Jumlah Produksi Hasil Ternak</th>
+								    								<th>Jenis Bibit Perikanan</th>
+								    								<th>Pemasaran Hasil Ternak</th>
+								    								<th>Jenis Pakan Ikan</th>
+							    								</tr>
+							    							</thead>
+							    							<tbody>
+							    							</tbody>
+							    							<tfoot>
+							    								
+							    							</tfoot>
+							    						</table>
+							    					</div>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    	<div class="row">
+							    		<div class="col-12">
+							    			<div class="form-group">
+							    				<div class="row">
+							    					<div class="col-12">
+									    				<label>Data Perikanan Tangkap</label>
+							    					</div>
+							    				</div>
+							    				<div class="row">
+							    					<div class="col-lg-6 col-sm-8 col-12 table-responsive">
+							    						<table class="table table-striped komoditas-perikanan-tangkap-table">
+							    							<thead class="thead-dark">
+							    								<tr>
+								    								<th>Alat Tangkap Media Budidaya Ikan</th>
+								    								<th>Jumlah Unit</th>
+							    								</tr>
+							    							</thead>
+							    							<tbody>
+							    							</tbody>
+							    							<tfoot>
+							    								
+							    							</tfoot>
+							    						</table>
+							    					</div>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    </div>
+							     <div class="tab-pane fade" id="nav-persalinan" role="tabpanel" aria-labelledby="nav-persalinan-tab">
+								    	<div class="row">
+								    		<div class="col-12">
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Acceptor KB</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="acceptorkb_multi">Persalinan 1</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Kualitas Ibu Hamil</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="kualitas_ibu_hamil">Persalinan 1</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Kualitas Bayi</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="kualitas_bayi">Persalinan 2</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Tempat Persalinan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="tempat_persalinan">Persalinan 3</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Cakupan Imunisasi </label>
+								    					</div>
+								    				</div>
+								    					<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="cakupan_imunisasi_multi">Persalinan 3</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Pertolongan Persalinan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="pertolongan_persalinan">Persalinan 4</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Fasilitas Layanan Kesehatan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="fasilitas_layanan_kesehatan">Persalinan 5</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Jenis Kelamin Balita</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="jenis_kelamin_balita">Persalinan 6</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Umur Balita</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="umur_balita">Persalinan 6</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Berat Badan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="berat_badan">Persalinan 7</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Tinggi Badan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="tinggi_badan">Persalinan 8</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Kondisi Saat Pengukuran</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="kondisi_saat_pengukuran">Persalinan 9</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Status Gizi Balita</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="status_gizi_balita">Persalinan 10</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			</div>
+								    	</div>
+								    </div>
+
+								      <div class="tab-pane fade" id="nav-kesehatan" role="tabpanel" aria-labelledby="nav-kesehatan-tab">
+								    	<div class="row">
+								    		<div class="col-12">
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Penderita Sakit Kelainan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="penderita_sakit_kelainan">kesehatan 1</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Perilaku Hidup Bersih</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="perilaku_hidup_bersih">kesehatan 2</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Pola Makan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="pola_makan">kesehatan 3</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Kebiasan Berobat</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="kebiasaan_berobat">kesehatan 4</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Jenis Penyakit</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="jenis_penyakit">kesehatan 5</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    		</div>
+								    	</div>
+								    </div>	
+
+								          <div class="tab-pane fade" id="nav-aset-lainnya" role="tabpanel" aria-labelledby="nav-aset-lainnya-tab">
+								    	<div class="row">
+								    		<div class="col-12">
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Transportasi Umum</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="col-sm-12 transportasi_umum_multi">aset lainnya 1</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Lembaga Pendidikan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="col-sm-12 lembaga_pendidikan_multi">aset lainnya 2</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Aset Sarana Produksi</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="col-sm-12 aset_produksi_multi">kesehatan 3</p>
+								    					</div>
+								    				</div>
+								    			</div>								    				
+								    		</div>
+								    	</div>
+								    </div>	
+								        <div class="tab-pane fade" id="nav-pariwisata" role="tabpanel" aria-labelledby="nav-pariwisata-tab">
+								    	<div class="row">
+								    		<div class="col-12">
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Jumlah Aktivitas Wisata Bulanan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="jumlah_aktivitas_wisata_bulanan">Wisata 1</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Jumlah Biaya Wisata Bulanan</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="jumlah_biaya_wisata_bulanan">Wisata 2</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Lokasi Objek Wisata</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="lokasi_objek_wisata">Wisata 3</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Daya Tarik Wisata Palu</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="daya_tarik_wisata_palu">Wisata 4</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    				<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Pengelolaan Pariwisata Palu</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="pengelolaan_pariwisata_palu">Wisata 5</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    		</div>
+								    	</div>
+								    </div>	
+								     <div class="tab-pane fade" id="nav-pendata" role="tabpanel" aria-labelledby="nav-pendata-tab">
+								    	<div class="row">
+								    		<div class="col-12">
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Nama Pendata</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="nama_pendata">Pendata 1</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Pekerjaaan Pendata</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="pekerjaan_pendata">Pendata 2</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Jabatan Pendata</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="jabatan_pendata">Pendata 3</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Sumber Data</label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="sumber_data">Pendata 4</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="form-group">
+								    				<div class="row">
+								    					<div class="col-12">
+										    				<label>Nomor HP </label>
+								    					</div>
+								    				</div>
+								    				<div class="row">
+								    					<div class="col-sm-6">
+								    						<p class="no_handphone">Pendata 5</p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    		</div>
+								    	</div>
+								    </div>
+
 								    <div class="tab-pane fade" id="nav-pekerjaan" role="tabpanel" aria-labelledby="nav-pekerjaan-tab">
 								    	<div class="row">
 								    		<div class="col-12">
