@@ -424,7 +424,7 @@ $(document).ready(function(){
 					text_obat += "<td class='pestisida_obat'>"+rd[0]['get_kk_main_aset_tanaman_obat'][ij]['pestisida_obat_string']+"</td>"
 					text_obat += "<td class='pupuk_organik_obat'>"+rd[0]['get_kk_main_aset_tanaman_obat'][ij]['pupuk_organik_obat_string']+"</td>"
 					text_obat += "<td class='pupuk_pabrik_obat'>"+rd[0]['get_kk_main_aset_tanaman_obat'][ij]['pupuk_pabrik_obat_string']+"</td>"
-					text_obat += "<td class='lokasi_obat'>"+rd[0]['get_kk_main_aset_buah_buahan'][ij]['lokasi']+"</td>"
+					text_obat += "<td class='lokasi_obat'>"+rd[0]['get_kk_main_aset_tanaman_obat'][ij]['lokasi']+"</td>"
 					text_obat +=" </tr>"
 				}
 				$(".komoditas-tanaman-obat-table tbody").html(text_obat);
@@ -557,7 +557,7 @@ $(document).ready(function(){
 				$(".cakupan_imunisasi_multi").html(cakupan_imunisasi_list);
 
 				var lembaga_pendidikan_list = "<ul>";
-				for(var ij=0;ij<rd[0]['get_kk_main_aset_transportasi_umum'].length; ij++){
+				for(var ij=0;ij<rd[0]['get_kk_main_aset_lembaga_pendidikan'].length; ij++){
 					lembaga_pendidikan_list += "<li>"+rd[0]['get_kk_main_aset_lembaga_pendidikan'][ij]['lembaga_pendidikan_string']+"</li>";
 				}
 				transportasi_umum_list += "</ul>";
