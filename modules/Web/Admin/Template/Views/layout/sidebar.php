@@ -80,9 +80,13 @@
                                     </li>
                                 </ul>
                             </li>
+
+
+
                             <li class="nav-item <?php if($menu == "health"){ echo "menu-open"; }?>">
                                 <a href="#" class="nav-link <?php if($menu == "health"){ echo "active"; }?>">
                                     <i class="nav-icon fas fa-copy"></i>
+
                                     <p>
                                         Kesehatan
                                         <i class="fas fa-angle-left right"></i>
@@ -92,41 +96,18 @@
                                     <li class="nav-item">
                                         <a href="<?php echo route_to('user.panel.dashboard.health'); ?>" class="nav-link <?php if($submenu == "disease"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>Penyakit di kota Palu</p>
+                                            <p>Grafik Kesehatan </p>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Vaksinasi</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Persalinan</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Menu - 1</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Menu - 2</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Menu - 3</p>
-                                        </a>
-                                    </li>
+
+                                                                  
                                 </ul>
                             </li>
+
+
+
+
+
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     <i class="nav-icon fas fa-chart-pie"></i>

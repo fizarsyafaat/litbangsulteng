@@ -79,7 +79,14 @@ $routes->setAutoRoute(true);
 			$routes->group('health',function($routes)
 			{
 			    $routes->get('disease', '\AdminpageViewCont\Health::disease',['as'=>'user.panel.dashboard.health']);
+				$routes->group('json',function($routes)
+				{
+				    $routes->post('get-penyakit/(:num)', '\AdminpageFuncCont\JSON\KesehatanJSON::json_get_kesehatan/$1',['as'=>'user.panel.health.get_kesehatan']);
+				});
 			});
+			
+
+
 
 			$routes->group('address',function($routes)
 			{
@@ -88,6 +95,9 @@ $routes->setAutoRoute(true);
 				    $routes->post('get-subdistrict/(:num)', '\AdminpageFuncCont\JSON\AlamatJSON::json_get_kelurahan/$1',['as'=>'user.panel.alamata.get-kelurahan']);
 				});
 			});
+
+
+			
 			$routes->group('plant',function($routes)
 			{
 				$routes->group('json',function($routes)

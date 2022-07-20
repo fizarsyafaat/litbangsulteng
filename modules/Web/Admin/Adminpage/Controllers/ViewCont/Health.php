@@ -24,6 +24,6 @@ class Health extends DefaultAdminViewController{
 
 		$this->set_js_data($data_pl_top,"bottom","last","assets/admin/plugins/");
 
-		return $this->tc_view("AdminpageView\main\health\disease");
+		return $this->tc_view("AdminpageView\main\health\grafikkesehatan");
 	}
 }
