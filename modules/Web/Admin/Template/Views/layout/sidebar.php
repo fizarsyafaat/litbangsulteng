@@ -104,45 +104,32 @@
                                 </ul>
                             </li>
 
+                          
 
-
-
-
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="nav-icon fas fa-chart-pie"></i>
+                              <li class="nav-item <?php if($menu == "pekerjaan"){ echo "menu-open"; }?>">
+                                <a href="#" class="nav-link <?php if($menu == "pekerjaan"){ echo "active"; }?>">
+                                  <i class="nav-icon fas fa-chart-pie"></i>
                                     <p>
-                                        Pendidikan
+                                        Pekerjaan 
                                         <i class="right fas fa-angle-left"></i>
                                     </p>
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="<?php echo route_to('user.panel.pekerjaan.pekerjaan'); ?>" class="nav-link <?php if($submenu == "pekerjaan"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>SD</p>
+                                            <p>Pencarian Pokok Grafik</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>SMP</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>SMA</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Universitas</p>
+                                            <p>Keadaan Rumah</p>
                                         </a>
                                     </li>
                                 </ul>
                             </li>
+
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     <i class="nav-icon fas fa-tree"></i>

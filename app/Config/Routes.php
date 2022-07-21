@@ -85,6 +85,16 @@ $routes->setAutoRoute(true);
 				    $routes->post('get-penyakit', '\AdminpageFuncCont\JSON\KesehatanJSON::json_get_kesehatan',['as'=>'user.panel.health.get_kesehatan']);
 				});
 			});
+
+			$routes->group('pekerjaan',function($routes)
+			{
+			    $routes->get('pekerjaan', '\AdminpageViewCont\pekerjaan::pekerjaan',['as'=>'user.panel.pekerjaan.pekerjaan']);
+			    $routes->get('pekerjaan-example', '\AdminpageViewCont\pekerjaan::pekerjaan_example',['as'=>'user.panel.dashboard.pekerjaan_example']);
+				$routes->group('json',function($routes)
+				{
+				    $routes->post('get-pekerjaan', '\AdminpageFuncCont\JSON\PekerjaanJSON::json_get_pekerjaan',['as'=>'user.panel.pekerjaan.get_pekerjaan']);
+				});
+			});
 			
 
 

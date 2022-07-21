@@ -57,6 +57,7 @@
 			                	
 			                </div>
             			</div>
+
             			<div class="col-sm-6">
 			                <div class="container-fluid">
 			                	<div class="row">
@@ -76,7 +77,7 @@
 			                                    </div>
 			                                </div>
 			                                <div class="card-body">
-			                                    <div id="bar-chart-kelurahan" style="height: 600px;"></div>
+			                                    <div id="bar-chart2" style="height: 600px;"></div>
 			                                </div>
 			                                <!-- /.card-body-->
 			                            </div>
