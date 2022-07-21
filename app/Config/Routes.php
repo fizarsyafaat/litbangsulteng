@@ -79,9 +79,10 @@ $routes->setAutoRoute(true);
 			$routes->group('health',function($routes)
 			{
 			    $routes->get('disease', '\AdminpageViewCont\Health::disease',['as'=>'user.panel.dashboard.health']);
+			    $routes->get('disease-example', '\AdminpageViewCont\Health::disease_example',['as'=>'user.panel.dashboard.disease_example']);
 				$routes->group('json',function($routes)
 				{
-				    $routes->post('get-penyakit/(:num)', '\AdminpageFuncCont\JSON\KesehatanJSON::json_get_kesehatan/$1',['as'=>'user.panel.health.get_kesehatan']);
+				    $routes->post('get-penyakit', '\AdminpageFuncCont\JSON\KesehatanJSON::json_get_kesehatan',['as'=>'user.panel.health.get_kesehatan']);
 				});
 			});
 			

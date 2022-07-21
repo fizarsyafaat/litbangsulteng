@@ -8,10 +8,8 @@ use Config\Services as SVC;
 use CodeIgniter\API\ResponseTrait;
 
 use BusinessProcessRoot\Models\PenderitaSakitKelainan as PenderitaSakitKelainanModel;
+use BusinessProcessRoot\Models\KkMainKesehatan as KkMainKesehatanModel;
 
-
-
-use BusinessProcessRoot\Models\LuasKandang as LuasKandangModel;
 
 class KesehatanJSON extends DefaultAdminFuncController{
 	use ResponseTrait;
@@ -22,11 +20,18 @@ class KesehatanJSON extends DefaultAdminFuncController{
 
 	public function json_get_kesehatan(){
 		$kModel = new PenderitaSakitKelainanModel();
+		$kkmModel = new KkMainKesehatanModel();
 
 		$k_list = $kModel->findAll();
 
+		foreach($k_list as $m){
+			$m->total_data = sizeof($kkmModel->where("penderita_sakit_kelainan",$m->penderita_sakit_kelainan_id)->findAll());
+		}
+
 		$data = array(
-			'KomoditasSakitKelaian' => $k_list,
+			'sakit_kelainan' => $k_list,
 		);
-}
+
+		echo json_encode($data);
+	}
 }
