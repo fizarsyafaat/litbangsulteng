@@ -2,7 +2,7 @@
             <aside class="main-sidebar sidebar-dark-primary elevation-4">
                 <!-- Brand Logo -->
                 <a href="<?php echo route_to('user.panel.dashboard'); ?>" class="brand-link">
-                    <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: 0.8;" />
+                    <img src="dist/img/avatar.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: 0.8;" />
                     <span class="brand-text font-weight-light">AdminLTE 3</span>
                 </a>
 
@@ -118,13 +118,13 @@
                                     <li class="nav-item">
                                         <a href="<?php echo route_to('user.panel.pekerjaan.pekerjaan'); ?>" class="nav-link <?php if($submenu == "pekerjaan"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>Pencarian Pokok Grafik</p>
+                                            <p>Grafik Pencarian Pokok</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="<?php echo route_to('user.panel.ekonomi.ekonomi'); ?>" class="nav-link <?php if($submenu == "ekonomi"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>Keadaan Rumah</p>
+                                            <p>Grafik Modal & Laba</p>
                                         </a>
                                     </li>
                                 </ul>

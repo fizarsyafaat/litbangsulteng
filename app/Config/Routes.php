@@ -92,7 +92,17 @@ $routes->setAutoRoute(true);
 			    $routes->get('pekerjaan-example', '\AdminpageViewCont\pekerjaan::pekerjaan_example',['as'=>'user.panel.dashboard.pekerjaan_example']);
 				$routes->group('json',function($routes)
 				{
-				    $routes->post('get-pekerjaan', '\AdminpageFuncCont\JSON\PekerjaanJSON::json_get_pekerjaan',['as'=>'user.panel.pekerjaan.get_pekerjaan']);
+				    $routes->post('get-pekerjaan', '\AdminpageFuncCont\JSON\PekerjaanJSON::json_get_pekerjaan',['as'=>'user.panel.pekerjaan.get_ekonomi']);
+				});
+			});
+
+			$routes->group('ekonomi',function($routes)
+			{
+			    $routes->get('ekonomi', '\AdminpageViewCont\ekonomi::ekonomi',['as'=>'user.panel.ekonomi.ekonomi']);
+			    $routes->get('ekonomi-example', '\AdminpageViewCont\ekonomi::ekonomi_example',['as'=>'user.panel.dashboard.ekonomi_example']);
+				$routes->group('json',function($routes)
+				{
+				    $routes->post('get-ekonomi', '\AdminpageFuncCont\JSON\EkonomiJSON::json_get_ekonomi',['as'=>'user.panel.ekonomi.get_ekonomi']);
 				});
 			});
 			

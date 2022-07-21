@@ -43,17 +43,15 @@
                                     </div>
                                     <div class="card-body">
                                         <div id="bar-chart" style="height: 600px;"></div>
-                                    </div>
-                                    <!-- /.card-body-->
-                                </div>
-                                <!-- /.card -->
-                            </div>
-                            <!-- /.col -->
-                        </div>
-                        <!-- /.row -->
-
-            		</div>
-            	</div>
+                                   </div>
+			                                <!-- /.card-body-->
+			                            </div>
+			                            <!-- /.card -->
+			                        </div>
+			                	</div>
+			                	
+			                </div>
+            			
                 <!-- /.container-fluid -->
             </section>
             <!-- /.content -->
