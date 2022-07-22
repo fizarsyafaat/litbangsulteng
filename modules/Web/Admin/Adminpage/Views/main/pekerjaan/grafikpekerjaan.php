@@ -42,7 +42,7 @@
                                         </div>
                                     </div>
                                     <div class="card-body">
-                                        <div id="bar-chart-kelurahan" style="height: 600px;"></div>
+                                        <div id="bar-chart" style="height: 600px;"></div>
                                    </div>
 			                                <!-- /.card-body-->
 			                            </div>

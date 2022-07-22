@@ -105,6 +105,16 @@ $routes->setAutoRoute(true);
 				    $routes->post('get-ekonomi', '\AdminpageFuncCont\JSON\EkonomiJSON::json_get_ekonomi',['as'=>'user.panel.ekonomi.get_ekonomi']);
 				});
 			});
+
+			$routes->group('rumah',function($routes)
+			{
+			    $routes->get('rumah', '\AdminpageViewCont\rumah::rumah',['as'=>'user.panel.rumah.rumah']);
+			    $routes->get('rumah-example', '\AdminpageViewCont\rumah::rumah_example',['as'=>'user.panel.dashboard.rumah_example']);
+				$routes->group('json',function($routes)
+				{
+				    $routes->post('get-rumah', '\AdminpageFuncCont\JSON\RumahJSON::json_get_rumah',['as'=>'user.panel.rumah.get_rumah']);
+				});
+			});
 			
 
 

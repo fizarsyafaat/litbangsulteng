@@ -22,24 +22,32 @@ class PekerjaanJSON extends DefaultAdminFuncController{
 		parent::__construct();
 	}
 
-	public function json_get_pekerjaan(){
-		$request = $this->request;
-
+		public function json_get_pekerjaan(){
 		$kModel = new MataPencaharianPokokModel();
-		$klModel = new KkMainDataPekerjaanDanOrganisasiModel();
+		$kcModel = new LabaPerBulanModel();
+		$ksModel = new ModalModel();
+		$kkmModel = new KkMainDataPekerjaanDanOrganisasiModel();
 
-		$kl_list = $klModel->findAll();
-		$k_array = [];
+		$k_list = $kModel->findAll();	
+		$kc_list = $kcModel->findAll();	
+		$ks_list = $ksModel->findAll();		
 
-		foreach($kl_list as $kc){
-			$m = new \Stdclass();
-			$m->title = $kc->nama_mata_pencaharian_pokok;
-			$m->mata_pencaharian_pokok_id = $kc->mata_pencaharian_pokok_id;
-			$m->total_kk = sizeof($kModel->where("mata_pencaharian_pokok",$kc->mata_pencaharian_pokok_id)->findAll());
-			$k_array[] = $m;
+		foreach($k_list as $m){
+			$m->total_data = sizeof($kkmModel->where("mata_pencaharian_pokok",$m->mata_pencaharian_pokok_id)->findAll());
+		}
+		foreach($kc_list as $m){
+			$m->total_data = sizeof($kkmModel->where("laba_per_bulan",$m->laba_per_bulan_id)->findAll());
+		}
+		foreach($ks_list as $m){
+			$m->total_data = sizeof($kkmModel->where("modal",$m->modal_id)->findAll());
 		}
 
-		echo json_encode($k_array);
+		$data = array(
+			'mata_pencaharian_pokok' => $k_list,
+			'laba_per_bulan' => $kc_list,
+			'modal' => $ks_list,
+		);
+		echo json_encode($data);
 	}
 
 			

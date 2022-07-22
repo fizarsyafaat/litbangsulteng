@@ -7,7 +7,7 @@ namespace AdminpageViewCont;
 use AdminTemplateViewCont\DefaultAdminViewController;
 use BusinessProcessRoot\Models\User as UserModel;
 
-class Pekerjaan extends DefaultAdminViewController{
+class Rumah extends DefaultAdminViewController{
 	
 	public function __construct(){
 		parent::__construct();
@@ -21,21 +21,21 @@ class Pekerjaan extends DefaultAdminViewController{
 		$this->set_data_view("menu","pekerjaan");
 	}
 
-	public function pekerjaan_example(){
-		$this->set_data_view("submenu","ekonomi");
-		return $this->tc_view("AdminpageView\main\pekerjaan\grafikpekerjaan");
+	public function rumah_example(){
+		$this->set_data_view("submenu","rumah");
+		return $this->tc_view("AdminpageView\main\pekerjaan\grafikrumah");
 	}
 
-	public function pekerjaan(){
+	public function rumah(){
 		$data_js_rd = array(
-			'pekerjaan.js'
+			'rumah.js'
 		);
 
 		$this->set_js_data($data_js_rd,"bottom","last","assets/admin/custom/js/");
 
 
-		$this->set_data_view("submenu","pekerjaan");
-		return $this->tc_view("AdminpageView\main\pekerjaan\grafikpekerjaan");
+		$this->set_data_view("submenu","rumah");
+		return $this->tc_view("AdminpageView\main\pekerjaan\grafikrumah");
 	}
 
 
