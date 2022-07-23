@@ -7,13 +7,13 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Grafik Kesehatan Di Kota Palu</h1>
+                            <h1 class="m-0">Grafik Modal Dan Laba Masyarakat Kota Palu</h1>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Kesehatan</a></li>
-                                <li class="breadcrumb-item active">Grafik Kesehatan</li>
+                                <li class="breadcrumb-item"><a href="#">Modal & Laba</a></li>
+                                <li class="breadcrumb-item active">Grafik</li>
                             </ol>
                         </div>
                         <!-- /.col -->
@@ -37,7 +37,7 @@
 			                                <div class="card-header">
 			                                    <h3 class="card-title">
 			                                        <i class="far fa-chart-bar"></i>
-			                                        Penderita Sakit Kelainan di (Grafik)
+			                                        Rata-Rata Modal Masyarakat Kota Palu (Grafik)
 			                                    </h3>
 
 			                                    <div class="card-tools">
@@ -47,7 +47,7 @@
 			                                    </div>
 			                                </div>
 			                                <div class="card-body">
-			                                    <div id="bar-chart" style="height: 600px;"></div>
+			                                    <div id="bar-chart2" style="height: 600px;"></div>
 			                                </div>
 			                                <!-- /.card-body-->
 			                            </div>
@@ -67,7 +67,7 @@
 			                                <div class="card-header">
 			                                    <h3 class="card-title">
 			                                        <i class="far fa-chart-bar"></i>
-			                                        Jenis Penyakit di Kota Palu (Grafik)
+			                                        Rata-Rata Laba Masyarakat Kota Palu (Grafik)
 			                                    </h3>
 
 			                                    <div class="card-tools">
@@ -77,7 +77,7 @@
 			                                    </div>
 			                                </div>
 			                                <div class="card-body">
-			                                    <div id="bar-chart2" style="height: 600px;"></div>
+			                                    <div id="bar-chart3" style="height: 600px;"></div>
 			                                </div>
 			                                <!-- /.card-body-->
 			                            </div>

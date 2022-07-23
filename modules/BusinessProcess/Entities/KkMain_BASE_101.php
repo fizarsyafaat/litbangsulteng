@@ -28,8 +28,6 @@ use BusinessProcessRoot\Models\KkMainAcceptorKb as KkMainAcceptorKbModel;
 use BusinessProcessRoot\Models\KkMainCakupanImunisasi as KkMainCakupanImunisasiModel;
 use BusinessProcessRoot\Models\Pendata as PendataModel;
 
-use BusinessProcessRoot\Entities\KkMainDataUtamaResponden as KkMainDataUtamaRespondenEntities;
-
 class KkMain extends Entity
 {
 	protected $kk_id;
@@ -49,7 +47,9 @@ class KkMain extends Entity
 	//GET ALL KK MAIN
 	public function get_kk_main_data_responden(){
 		$kdur_model = new KkMainDataUtamaRespondenModel();
+
 		$kdur_ent = $kdur_model->where("kk_id",$this->attributes['kk_id'])->findAll();
+
 		$kdur_ent[0]->status_kemiskinan_string = ucwords(strtolower($kdur_ent[0]->get_status_kemiskinan_string()));
 		$kdur_ent[0]->pengguna_bpjs_string = ucwords(strtolower($kdur_ent[0]->get_pengguna_bpjs_string()));
 		$kdur_ent[0]->jenis_jaminan_sosial_string = strtoupper(strtolower($kdur_ent[0]->get_jenis_jaminan_sosial_string()));
@@ -67,7 +67,6 @@ class KkMain extends Entity
 		$kdur_ent[0]->kewarganegaraan_string = ucwords(strtolower($kdur_ent[0]->get_kewarganegaraan_string()));
 
 		return $kdur_ent[0];
-
 	}
 
 	public function get_pendata(){

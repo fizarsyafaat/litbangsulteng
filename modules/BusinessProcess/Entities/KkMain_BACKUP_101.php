@@ -48,6 +48,34 @@ class KkMain extends Entity
 
 	//GET ALL KK MAIN
 	public function get_kk_main_data_responden(){
+<<<<<<< HEAD
+		try{
+			$kdur_model = new KkMainDataUtamaRespondenModel();
+
+			$kdur_ent = $kdur_model->where("kk_id",$this->attributes['kk_id'])->findAll();
+
+			$kdur_ent[0]->status_kemiskinan_string = ucwords(strtolower($kdur_ent[0]->get_status_kemiskinan_string()));
+			$kdur_ent[0]->pengguna_bpjs_string = ucwords(strtolower($kdur_ent[0]->get_pengguna_bpjs_string()));
+			$kdur_ent[0]->jenis_jaminan_sosial_string = strtoupper(strtolower($kdur_ent[0]->get_jenis_jaminan_sosial_string()));
+			$kdur_ent[0]->lama_waktu_string = ucwords(strtolower($kdur_ent[0]->get_lama_waktu_string()));
+			$kdur_ent[0]->wajib_iuran_string = ucwords(strtolower($kdur_ent[0]->get_wajib_iuran_string()));
+			$kdur_ent[0]->cacat_fisik_string = ucwords(strtolower($kdur_ent[0]->get_cacat_fisik_string()));
+			$kdur_ent[0]->cacat_mental_string = ucwords(strtolower($kdur_ent[0]->get_cacat_mental_string()));
+			$kdur_ent[0]->status_domisili_string = ucwords(strtolower($kdur_ent[0]->get_status_domisili_string()));
+			$kdur_ent[0]->golongan_darah_string = ucwords(strtolower($kdur_ent[0]->get_golongan_darah_string()));
+			$kdur_ent[0]->status_perkawinan_string = ucwords(strtolower($kdur_ent[0]->get_status_perkawinan_string()));
+			$kdur_ent[0]->agama_string = ucwords(strtolower($kdur_ent[0]->get_agama_string()));
+			$kdur_ent[0]->hubungan_dengan_keluarga_string = ucwords(strtolower($kdur_ent[0]->get_hubungan_dengan_kepala_keluarga_string()));
+			$kdur_ent[0]->pendidikan_terakhir_string = ucwords(strtolower($kdur_ent[0]->get_pendidikan_terakhir_string()));
+			$kdur_ent[0]->jenis_kelamin_responden_string = ucwords(strtolower($kdur_ent[0]->get_jenis_kelamin_responden_string()));
+			$kdur_ent[0]->kewarganegaraan_string = ucwords(strtolower($kdur_ent[0]->get_kewarganegaraan_string()));
+
+			return $kdur_ent[0];
+		}catch(\Exception $e){
+			$kdur_ent = new KkMainDataUtamaRespondenEntities;
+			return $kdur_ent;
+		}
+=======
 		$kdur_model = new KkMainDataUtamaRespondenModel();
 		$kdur_ent = $kdur_model->where("kk_id",$this->attributes['kk_id'])->findAll();
 		$kdur_ent[0]->status_kemiskinan_string = ucwords(strtolower($kdur_ent[0]->get_status_kemiskinan_string()));
@@ -67,7 +95,7 @@ class KkMain extends Entity
 		$kdur_ent[0]->kewarganegaraan_string = ucwords(strtolower($kdur_ent[0]->get_kewarganegaraan_string()));
 
 		return $kdur_ent[0];
-
+>>>>>>> aac874a2d10fcbe2ee3dadfb7adf621effd7f0d5
 	}
 
 	public function get_pendata(){
