@@ -138,8 +138,8 @@
                                 </ul>
                             </li>
 
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
+                            <li class="nav-item <?php if($menu == "kebun"){ echo "menu-open"; }?>">
+                                <a href="#" class="nav-link <?php if($menu == "kebun"){ echo "active"; }?>">
                                     <i class="nav-icon fa fa-leaf" aria-hidden="true"></i>
                                     <p>
                                         Kebun & Pertanian
@@ -148,35 +148,30 @@
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="pages/UI/general.html" class="nav-link">
+                                        <a href="<?php echo route_to('user.panel.kebun.kebun'); ?>" class="nav-link <?php if($submenu == "kebun"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>Umum</p>
+                                            <p>Grafik Perkebunan</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>Komoditas Utama</p>
+                                            <p>Grafik Pertanian</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>Perkebunan</p>
+                                            <p>Grafik Pangan & Obat</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>Pertanian</p>
+                                            <p>Grafik Kehutanan</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Kehutanan</p>
-                                        </a>
-                                    </li>
+                                  
                                 </ul>
                             </li>
                             <li class="nav-item">

@@ -116,6 +116,16 @@ $routes->setAutoRoute(true);
 				});
 			});
 			
+			$routes->group('kebun',function($routes)
+			{
+			    $routes->get('kebun', '\AdminpageViewCont\kebun::kebun',['as'=>'user.panel.kebun.kebun']);
+			    $routes->get('kebun-example', '\AdminpageViewCont\kebun::kebun_example',['as'=>'user.panel.dashboard.kebun_example']);
+				$routes->group('json',function($routes)
+				{
+				    $routes->post('get-kebun', '\AdminpageFuncCont\JSON\KebunJSON::json_get_kebun',['as'=>'user.panel.kebun.get_kebun']);
+				});
+			});
+			
 
 
 
