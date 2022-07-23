@@ -92,7 +92,7 @@ class KkMain extends Entity
 
 			return $kdur_ent[0];
 		}catch(\Exception $e){
-			$kdur_ent = new KkMainDataUtamaRespondenEntities;
+			$kdur_ent = new KkMainDataUtamaRespondenModel;
 			return $kdur_ent;
 		}
 	}
@@ -105,7 +105,7 @@ class KkMain extends Entity
 
 			return $kdur_ent[0];
 	    }catch(\Exception $e){
-			$kdur_ent = new PendataEntities;
+			$kdur_ent = new PendataModel;
 			return $kdur_ent;
 	    }
 	}
@@ -127,7 +127,7 @@ class KkMain extends Entity
 
 			return $kdur_ent[0];
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainDataPekerjaanDanOrganisasiEntities;
+			$kdur_ent = new KkMainDataPekerjaanDanOrganisasiModel;
 			return $kdur_ent;
 		}
 	}
@@ -144,7 +144,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainLembagaPemerintahanEntities;
+			$kdur_ent = new KkMainLembagaPemerintahanModel;
 			return $kdur_ent;
 		}
 	}
@@ -161,7 +161,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainAsetTransportasiUmumEntities;
+			$kdur_ent = new KkMainAsetTransportasiUmumModel;
 			return $kdur_ent;
 		}
 	}
@@ -178,7 +178,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainLembagaPendidikanEntities;
+			$kdur_ent = new KkMainLembagaPendidikanModel;
 			return $kdur_ent;
 		}
 	}
@@ -193,7 +193,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 		}catch(\Exception $e){
-			$kdur_ent = new KkMainAcceptorKbEntities;
+			$kdur_ent = new KkMainAcceptorKbModel;
 			return $kdur_ent;
 		}
 	}
@@ -210,7 +210,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainCakupanImunisasiEntities;
+			$kdur_ent = new KkMainCakupanImunisasiModel;
 			return $kdur_ent;
 		}
 	}
@@ -229,7 +229,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainAsetProduksiEntities;
+			$kdur_ent = new KkMainAsetProduksiModel;
 			return $kdur_ent;
 		}
 	}
@@ -246,7 +246,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainWajibPajakEntities;
+			$kdur_ent = new KkMainWajibPajakModel;
 			return $kdur_ent;
 		}
 	}
@@ -263,7 +263,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainAsetTanahEntities;
+			$kdur_ent = new KkMainAsetTanahModel;
 			return $kdur_ent;
 		}
 	}
@@ -289,7 +289,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainAsetRumahEntities;
+			$kdur_ent = new KkMainAsetRumahModel;
 			return $kdur_ent;
 		}
 	}
@@ -314,7 +314,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainPerkebunanEntities;
+			$kdur_ent = new KkMainPerkebunanModel;
 			return $kdur_ent;
 		}
 	}
@@ -339,7 +339,7 @@ class KkMain extends Entity
 			}
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainTanamanPanganEntities;
+			$kdur_ent = new KkMainTanamanPanganModel;
 			return $kdur_ent;
 		}
 	}
@@ -364,7 +364,7 @@ class KkMain extends Entity
 			}
 		return $kdur_ent;
 		}catch(\Exception $e){
-			$kdur_ent = new KkMainBuahBuahanEntities;
+			$kdur_ent = new KkMainBuahBuahanModel;
 			return $kdur_ent;
 		}
 	}
@@ -389,7 +389,7 @@ class KkMain extends Entity
 			}
 			return $kdur_ent;
 		}catch(\Exception $e){
-			$kdur_ent = new KkMainTanamanObatEntities;
+			$kdur_ent = new KkMainTanamanObatModel;
 			return $kdur_ent;
 		}
 	}
@@ -413,7 +413,7 @@ class KkMain extends Entity
 			}
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainKehutananEntities;
+			$kdur_ent = new KkMainKehutananModel;
 			return $kdur_ent;
 		}
 	}
@@ -435,7 +435,7 @@ class KkMain extends Entity
 			}
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainAsetTernakEntities;
+			$kdur_ent = new KkMainAsetTernakModel;
 			return $kdur_ent;
 		}
 	}
@@ -457,7 +457,7 @@ class KkMain extends Entity
 			}
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainAsetIkanEntities;
+			$kdur_ent = new KkMainAsetIkanModel;
 			return $kdur_ent;
 		}
 	}
@@ -475,7 +475,7 @@ class KkMain extends Entity
 			}
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainAsetIkanTangkapEntities;
+			$kdur_ent = new KkMainAsetIkanTangkapModel;
 			return $kdur_ent;
 		}
 	}
@@ -496,7 +496,7 @@ class KkMain extends Entity
 			}
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainPariwisataEntities;
+			$kdur_ent = new KkMainPariwisataModel;
 			return $kdur_ent;
 		}
 	}
@@ -516,7 +516,7 @@ class KkMain extends Entity
 			}
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainKesehatanEntities;
+			$kdur_ent = new KkMainKesehatanModel;
 			return $kdur_ent;
 		}
 	}
@@ -543,7 +543,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainPersalinanEntities;
+			$kdur_ent = new KkMainPersalinanModel;
 			return $kdur_ent;
 		}
 	}		
@@ -556,7 +556,7 @@ class KkMain extends Entity
 
 			return $klrh_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KelurahanEntities;
+			$kdur_ent = new KelurahanModel;
 			return $kdur_ent;
 		}
 	}
