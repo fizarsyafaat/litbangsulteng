@@ -108,6 +108,8 @@ $(document).ready(function(){
 				wajib_pajak_list += "</ul>";
 
 				$(".wajib_pajak_retribusi_multi").html(wajib_pajak_list);
+
+				$("#kk-view").modal("show");
 			}
 		},"json")
 		.fail(function(rd){
@@ -119,7 +121,6 @@ $(document).ready(function(){
 		e.preventDefault();
 		var id = $(this).attr("meta-id");
 		$("#dashboard").attr("meta-id",id);
-		$("#kk-view").modal("show");
 		get_main_kk();
 	});
 

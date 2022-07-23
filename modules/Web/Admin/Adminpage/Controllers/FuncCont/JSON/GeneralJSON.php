@@ -56,7 +56,7 @@ class GeneralJSON extends DefaultAdminFuncController{
             $kk_list = $kModel->limit(DATA_PER_PAGE,$start)->get()->getResult("BusinessProcessRoot\Entities\KkMain");
             $kk_total = $kModel->findAll();
         }else{
-			$kk_list = $kModel->findAll();
+			$kk_list = $kModel->get()->getResult("BusinessProcessRoot\Entities\KkMain");
 			$kk_total = $kk_list;
         }
 
@@ -65,7 +65,7 @@ class GeneralJSON extends DefaultAdminFuncController{
 		foreach($kk_list as $kl){
 			$kl->alamat_lengkap = $kl->obtain_alamat_lengkap();
 
-	//KK MAIN
+			//KK MAIN
 			$kl->get_kk_main_data_responden = $kl->get_kk_main_data_responden();
 			$kl->get_kk_main_data_pekerjaan = $kl->get_kk_main_data_pekerjaan();
 			$kl->get_kk_main_lembaga_pemerintahan = $kl->get_kk_main_lembaga_pemerintahan();

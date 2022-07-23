@@ -608,8 +608,6 @@ $(document).ready(function(){
 		$("#kk-paging-view").attr("meta-id",id);
 		$("#kk-paging-view").modal("hide");
 		var p = setTimeout(function(){
-			$("#kk-single-view").modal("show");
-
 			clearTimeout(p);
 		},700)
 
