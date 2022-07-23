@@ -1,0 +1,16 @@
+.pagination{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pagination a{
+  padding:10px;
+  border:1px solid #EEEEEE;
+}
+
+.pagination-wrapper{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  background-color: #FFFFFF;
+}

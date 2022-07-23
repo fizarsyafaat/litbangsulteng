@@ -100,6 +100,8 @@
                 				</tfoot>
                 			</table>
                 		</div>
+                		<div class="pagination pagination-kk">
+                		</div>
                 	</div>
                 </div>
                 <!-- /.container-fluid -->

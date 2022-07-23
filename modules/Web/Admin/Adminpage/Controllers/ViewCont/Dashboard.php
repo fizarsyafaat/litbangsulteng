@@ -78,7 +78,7 @@ class Dashboard extends DefaultAdminViewController{
 		$this->set_data_view("menu","general");
 
 		$data_css_rd = array(
-			'dashboard.css'
+			'dashboard.css','master.css'
 		);
 
 		$this->set_css_data($data_css_rd,"top","last","assets/admin/custom/css/");

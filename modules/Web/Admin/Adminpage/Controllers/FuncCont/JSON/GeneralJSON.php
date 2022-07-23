@@ -26,6 +26,17 @@ class GeneralJSON extends DefaultAdminFuncController{
 		$no_kk = htmlspecialchars(strip_tags($request->getPost("no_kk")));
 		$kelurahan = (int) ($request->getPost("kelurahan"));
 		$kk_id = (int) ($request->getPost("kk_id"));
+		$paging = ($request->getPost("paging"));
+
+		try{
+			$page = (int) ($request->getPost("page"));
+
+			if($page <= 0){
+				$page = 1;
+			}
+		}catch(\Exception $e){
+			$page = 1;
+		}
 
 		if(strlen($kepala_keluarga)>=1){
 			$kModel = $kModel->like("kepala_keluarga",$kepala_keluarga);
@@ -40,7 +51,16 @@ class GeneralJSON extends DefaultAdminFuncController{
 			$kModel = $kModel->where("kk_id",$kk_id);
 		}
 
-		$kk_list = $kModel->paginate(10);
+        if($paging){
+            $start = ($page - 1) * DATA_PER_PAGE;
+            $kk_list = $kModel->limit(DATA_PER_PAGE,$start)->get()->getResult("BusinessProcessRoot\Entities\KkMain");
+            $kk_total = $kModel->findAll();
+        }else{
+			$kk_list = $kModel->findAll();
+			$kk_total = $kk_list;
+        }
+
+		$pager = $this->json_pagination($page,sizeof($kk_total),DATA_PER_PAGE);
 
 		foreach($kk_list as $kl){
 			$kl->alamat_lengkap = $kl->obtain_alamat_lengkap();
@@ -71,7 +91,12 @@ class GeneralJSON extends DefaultAdminFuncController{
 			$kl->get_pendata= $kl->get_pendata();
 		}
 
-		echo json_encode($kk_list);
+		$data = array(
+			'pager' => $pager,
+			'kk_list' => $kk_list
+		);
+
+		echo json_encode($data);
 	}
 
 	public function json_get_main_kk_kecamatan(){

@@ -3,7 +3,7 @@ $(document).ready(function(){
 		get_main_kk();
 	}
 
-	function get_main_kk(){
+	function get_main_kk(page = 1){
 		var id = 0;
 		if($("#dashboard").attr("meta-id") == 0){
 			$("#kk-table tbody").empty();
@@ -17,6 +17,8 @@ $(document).ready(function(){
 				[page_csrf] : page_csrf_value,
 				'kepala_keluarga' : kepala_keluarga,  
 				'no_kk' : no_kk,
+				'paging' : true,
+				'page' : page,
 			};
 		}else{
 			id = $("#dashboard").attr("meta-id");
@@ -27,7 +29,9 @@ $(document).ready(function(){
 			};
 		}
 
-		$.post(config_url + "panel/general/json/get-main-kk",data,function(rd){
+		$.post(config_url + "panel/general/json/get-main-kk",data,function(red){
+			console.log(red);
+			rd = red['kk_list'];
 			if(id == 0){
 				teks_tr = "";
 
@@ -45,6 +49,7 @@ $(document).ready(function(){
 
 				$("#kk-table tbody").html(teks_total);
 				$("#kk-table tfoot").hide();
+				$(".pagination-kk").html(red['pager']);
 			}else{
 				//umum
 				$(".kode_pum").html(rd[0]['kode_pum']);
@@ -107,7 +112,6 @@ $(document).ready(function(){
 		},"json")
 		.fail(function(rd){
 			console.log(rd);
-		
 		});
 	}
 
@@ -122,5 +126,12 @@ $(document).ready(function(){
 	$(".search-kk").click(function(){
 		$("#dashboard").attr("meta-id",0);
 		get_main_kk();
+	});
+
+	$(document.body).on("click",".pagination.pagination-kk a.page_item",function(e){
+		e.preventDefault();
+		var page_l = $(this).attr("meta-page");
+
+		get_main_kk(page_l);
 	});
 });
