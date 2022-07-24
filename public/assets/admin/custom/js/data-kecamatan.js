@@ -537,32 +537,38 @@ $(document).ready(function(){
 				$(".komoditas-perikanan-tangkap-table tbody").html(text_ikan);
 
 				//aset Pariwisata
-				$(".jumlah_aktivitas_wisata_bulanan").html(rd[0]['get_kk_main_pariwisata'][0]['jumlah_aktivitas_wisata_bulanan_string']);
-				$(".jumlah_biaya_wisata_bulanan").html(rd[0]['get_kk_main_pariwisata'][0]['jumlah_biaya_wisata_bulanan_string']);
-				$(".lokasi_objek_wisata").html(rd[0]['get_kk_main_pariwisata'][0]['lokasi_objek_wisata_string']);
-				$(".daya_tarik_wisata_palu").html(rd[0]['get_kk_main_pariwisata'][0]['daya_tarik_wisata_palu_string']);
-				$(".pengelolaan_pariwisata_palu").html(rd[0]['get_kk_main_pariwisata'][0]['pengelolaan_pariwisata_palu_string']);
+				if(rd[0]['get_kk_main_pariwisata'].length >= 1){
+					$(".jumlah_aktivitas_wisata_bulanan").html(rd[0]['get_kk_main_pariwisata'][0]['jumlah_aktivitas_wisata_bulanan_string']);
+					$(".jumlah_biaya_wisata_bulanan").html(rd[0]['get_kk_main_pariwisata'][0]['jumlah_biaya_wisata_bulanan_string']);
+					$(".lokasi_objek_wisata").html(rd[0]['get_kk_main_pariwisata'][0]['lokasi_objek_wisata_string']);
+					$(".daya_tarik_wisata_palu").html(rd[0]['get_kk_main_pariwisata'][0]['daya_tarik_wisata_palu_string']);
+					$(".pengelolaan_pariwisata_palu").html(rd[0]['get_kk_main_pariwisata'][0]['pengelolaan_pariwisata_palu_string']);
+				}
 
 				//aset kesehatan
-				$(".penderita_sakit_kelainan").html(rd[0]['get_kk_main_kesehatan'][0]['penderita_sakit_kelainan_string']);
-				$(".perilaku_hidup_bersih").html(rd[0]['get_kk_main_kesehatan'][0]['perilaku_hidup_bersih_string']);
-				$(".pola_makan").html(rd[0]['get_kk_main_kesehatan'][0]['pola_makan_string']);
-				$(".kebiasaan_berobat").html(rd[0]['get_kk_main_kesehatan'][0]['kebiasaan_berobat_string']);
-				$(".jenis_penyakit").html(rd[0]['get_kk_main_kesehatan'][0]['jenis_penyakit_string']);
+				if(rd[0]['get_kk_main_kesehatan'].length >= 1){
+					$(".penderita_sakit_kelainan").html(rd[0]['get_kk_main_kesehatan'][0]['penderita_sakit_kelainan_string']);
+					$(".perilaku_hidup_bersih").html(rd[0]['get_kk_main_kesehatan'][0]['perilaku_hidup_bersih_string']);
+					$(".pola_makan").html(rd[0]['get_kk_main_kesehatan'][0]['pola_makan_string']);
+					$(".kebiasaan_berobat").html(rd[0]['get_kk_main_kesehatan'][0]['kebiasaan_berobat_string']);
+					$(".jenis_penyakit").html(rd[0]['get_kk_main_kesehatan'][0]['jenis_penyakit_string']);
+				}
+
 
 				//aset Persalinan
-				$(".kualitas_ibu_hamil").html(rd[0]['get_kk_main_persalinan'][0]['kualitas_ibu_hamil_string']);
-				$(".kualitas_bayi").html(rd[0]['get_kk_main_persalinan'][0]['kualitas_bayi_string']);
-				$(".tempat_persalinan").html(rd[0]['get_kk_main_persalinan'][0]['tempat_persalinan_string']);
-				$(".pertolongan_persalinan").html(rd[0]['get_kk_main_persalinan'][0]['pertolongan_persalinan_string']);
-				$(".fasilitas_layanan_kesehatan").html(rd[0]['get_kk_main_persalinan'][0]['fasilitas_layanan_kesehatan_string']);
-				$(".umur_balita").html(rd[0]['get_kk_main_persalinan'][0]['umur_balita_string']);
-				$(".berat_badan").html(rd[0]['get_kk_main_persalinan'][0]['berat_badan_string']);
-				$(".tinggi_badan").html(rd[0]['get_kk_main_persalinan'][0]['tinggi_badan_string']);
-				$(".kondisi_saat_pengukuran").html(rd[0]['get_kk_main_persalinan'][0]['kondisi_saat_pengukuran_string']);
-				$(".status_gizi_balita").html(rd[0]['get_kk_main_persalinan'][0]['status_gizi_balita_string']);
-				$(".jenis_kelamin_balita").html(rd[0]['get_kk_main_persalinan'][0]['jenis_kelamin_balita_string']);
-
+				if(rd[0]['get_kk_main_persalinan'].length >= 1){
+					$(".kualitas_ibu_hamil").html(rd[0]['get_kk_main_persalinan'][0]['kualitas_ibu_hamil_string']);
+					$(".kualitas_bayi").html(rd[0]['get_kk_main_persalinan'][0]['kualitas_bayi_string']);
+					$(".tempat_persalinan").html(rd[0]['get_kk_main_persalinan'][0]['tempat_persalinan_string']);
+					$(".pertolongan_persalinan").html(rd[0]['get_kk_main_persalinan'][0]['pertolongan_persalinan_string']);
+					$(".fasilitas_layanan_kesehatan").html(rd[0]['get_kk_main_persalinan'][0]['fasilitas_layanan_kesehatan_string']);
+					$(".umur_balita").html(rd[0]['get_kk_main_persalinan'][0]['umur_balita_string']);
+					$(".berat_badan").html(rd[0]['get_kk_main_persalinan'][0]['berat_badan_string']);
+					$(".tinggi_badan").html(rd[0]['get_kk_main_persalinan'][0]['tinggi_badan_string']);
+					$(".kondisi_saat_pengukuran").html(rd[0]['get_kk_main_persalinan'][0]['kondisi_saat_pengukuran_string']);
+					$(".status_gizi_balita").html(rd[0]['get_kk_main_persalinan'][0]['status_gizi_balita_string']);
+					$(".jenis_kelamin_balita").html(rd[0]['get_kk_main_persalinan'][0]['jenis_kelamin_balita_string']);
+				}
 				
 				$(".nama_pendata").html(rd[0]['get_pendata']['nama']);
 				$(".pekerjaan_pendata").html(rd[0]['get_pendata']['pekerjaan']);
