@@ -16,4 +16,4 @@ class KkMainLembagaPendidikan extends Entity
 		$skm_ent = $skm_model->find($this->attributes['lembaga_pendidikan']);
 		return $skm_ent->nama_lembaga_pendidikan;
 	}
-}
+} 

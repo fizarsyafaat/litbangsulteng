@@ -174,8 +174,8 @@
                                   
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
+                            <li class="nav-item <?php if($menu == "peternak"){ echo "menu-open"; }?>">
+                                <a href="#" class="nav-link <?php if($menu == "peternak"){ echo "active"; }?>">
                                     <i class="nav-icon fa fa-paw"></i>
                                     <p>
                                         Peternakan
@@ -184,13 +184,13 @@
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="<?php echo route_to('user.panel.peternak.peternak'); ?>" class="nav-link <?php if($submenu == "peternak"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Grafik Peternakan</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="<?php echo route_to('user.panel.ikan.ikan'); ?>" class="nav-link <?php if($submenu == "ikan"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Grafik Perikanan</p>
                                         </a>
@@ -198,8 +198,8 @@
                                     
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
+                            <li class="nav-item <?php if($menu == "transportasi"){ echo "menu-open"; }?>">
+                                <a href="#" class="nav-link <?php if($menu == "transportasi"){ echo "active"; }?>">
                                     <i class="nav-icon fa fa-list-alt"></i>
                                     <p>
                                         Aset Lainnya
@@ -208,19 +208,19 @@
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="<?php echo route_to('user.panel.transportasi.transportasi'); ?>" class="nav-link <?php if($submenu == "transportasi"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Aset Transportasi Umum</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="<?php echo route_to('user.panel.pendidikan.pendidikan'); ?>" class="nav-link <?php if($submenu == "pendidikan"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Aset Lembaga Pendidkan</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="<?php echo route_to('user.panel.produksi.produksi'); ?>" class="nav-link <?php if($submenu == "produksi"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Aset Sarana Produksi</p>
                                         </a>

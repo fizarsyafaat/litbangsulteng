@@ -116,6 +116,57 @@ $routes->setAutoRoute(true);
 				});
 			});
 
+			$routes->group('peternak',function($routes)
+			{
+			    $routes->get('peternak', '\AdminpageViewCont\peternak::peternak',['as'=>'user.panel.peternak.peternak']);
+			    $routes->get('peternak-example', '\AdminpageViewCont\peternak::peternak_example',['as'=>'user.panel.dashboard.peternak_example']);
+				$routes->group('json',function($routes)
+				{
+				    $routes->post('get-peternak', '\AdminpageFuncCont\JSON\PeternakJSON::json_get_peternak',['as'=>'user.panel.peternak.get_peternak']);
+				});
+			});
+
+		
+
+			$routes->group('ikan',function($routes)
+			{
+			    $routes->get('ikan', '\AdminpageViewCont\ikan::ikan',['as'=>'user.panel.ikan.ikan']);
+			    $routes->get('ikan-example', '\AdminpageViewCont\ikan::ikan_example',['as'=>'user.panel.dashboard.ikan_example']);
+				$routes->group('json',function($routes)
+				{
+				    $routes->post('get-ikan', '\AdminpageFuncCont\JSON\IkanJSON::json_get_ikan',['as'=>'user.panel.ikan.get_ikan']);
+				});
+			});
+
+			$routes->group('transportasi',function($routes)
+			{
+			    $routes->get('transportasi', '\AdminpageViewCont\transportasi::transportasi',['as'=>'user.panel.transportasi.transportasi']);
+			    $routes->get('transportasi-example', '\AdminpageViewCont\transportasi::transportasi_example',['as'=>'user.panel.dashboard.transportasi_example']);
+				$routes->group('json',function($routes)
+				{
+				    $routes->post('get-transportasi', '\AdminpageFuncCont\JSON\TransportasiJSON::json_get_transportasi',['as'=>'user.panel.transportasi.get_transportasi']);
+				});
+			});
+
+			$routes->group('pendidikan',function($routes)
+			{
+			    $routes->get('pendidikan', '\AdminpageViewCont\pendidikan::pendidikan',['as'=>'user.panel.pendidikan.pendidikan']);
+			    $routes->get('pendidikan-example', '\AdminpageViewCont\pendidikan::pendidikan_example',['as'=>'user.panel.dashboard.pendidikan_example']);
+				$routes->group('json',function($routes)
+				{
+				    $routes->post('get-pendidikan', '\AdminpageFuncCont\JSON\PendidikanJSON::json_get_pendidikan',['as'=>'user.panel.pendidikan.get_pendidikan']);
+				});
+			});
+
+			$routes->group('produksi',function($routes)
+			{
+			    $routes->get('produksi', '\AdminpageViewCont\produksi::produksi',['as'=>'user.panel.produksi.produksi']);
+			    $routes->get('produksi-example', '\AdminpageViewCont\produksi::produksi_example',['as'=>'user.panel.dashboard.produksi_example']);
+				$routes->group('json',function($routes)
+				{
+				    $routes->post('get-produksi', '\AdminpageFuncCont\JSON\ProduksiJSON::json_get_produksi',['as'=>'user.panel.produksi.get_produksi']);
+				});
+			});
 
 			$routes->group('panganobat',function($routes)
 			{
