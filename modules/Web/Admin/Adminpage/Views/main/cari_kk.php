@@ -1,9 +1,9 @@
 <?php $this->extend('Admin\Template\Views\master\master_admin') ?>
 
 <?= $this->section('main') ?>
-        <div id="dashboard" class="content-wrapper" meta-id="0">
+        <div id="cari-kk" class="content-wrapper" meta-id="0">
             <!-- Content Header (Page header) -->
-            <div class="content-header">
+            <div class="content-header" id="kk-paging-view" meta-id="0">
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">

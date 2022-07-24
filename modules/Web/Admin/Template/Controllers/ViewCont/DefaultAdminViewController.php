@@ -88,7 +88,7 @@ class DefaultAdminViewController extends ViewController{
 		$this->set_js_data($data_pl_top,"bottom","first","assets/admin/plugins/");
 
 		$data_dist_top = array(
-			'js/adminlte.js','js/pages/dashboard.js'
+			'js/adminlte.js'
 		);
 
 		$this->set_js_data($data_dist_top,"bottom","last","assets/admin/dist/");

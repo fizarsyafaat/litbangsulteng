@@ -1,10 +1,9 @@
 $(document).ready(function(){
 
-
-
-	kk_kecamatan();
-	kk_kelurahan();
-
+	if($("#dashboard").length >= 1){
+		kk_kecamatan();
+		kk_kelurahan();
+	}
 
 	function kk_kecamatan(){
 		var page_csrf = $(".csrf-header-master").attr("name");
@@ -242,53 +241,96 @@ $(document).ready(function(){
 		});
 	}
 
-	function get_main_kk(kelurahan=0){
+	function get_main_kk(kelurahan=0,paging=1){
 		var id = 0;
 
-		if($("#kk-paging-view").attr("meta-id") == 0){
+		if(kelurahan==0){
+			if($("#kk-paging-view").attr("meta-id") == 0){
+				$("#kk-table tbody").empty();
+				$("#kk-table tfoot").show();
+				var page_csrf = $(".csrf-header-master").attr("name");
+				var page_csrf_value = $(".csrf-header-master").attr("value");
+				var kepala_keluarga = $(".kepala-keluarga").val();
+				var no_kk = $(".no_kk").val();
+
+				var data = {
+					[page_csrf] : page_csrf_value,
+					'kepala_keluarga' : kepala_keluarga,
+					'kelurahan' : kelurahan,
+					'no_kk' : no_kk,
+				};
+
+				if(paging==1){
+					data['paging'] = 1;
+				}
+			}else{
+				id = $("#kk-paging-view").attr("meta-id");
+
+				var data = {
+					[page_csrf] : page_csrf_value,
+					'kk_id' : id,
+				};
+			}
+		}else{
 			$("#kk-table-kelurahan tfoot").show();
 			$("#kk-table-kelurahan tbody").empty();
-			$("#kk-table tbody").empty();
-			$("#kk-table tfoot").show();
+
 			var page_csrf = $(".csrf-header-master").attr("name");
 			var page_csrf_value = $(".csrf-header-master").attr("value");
-			var kepala_keluarga = $(".kepala-keluarga").val();
-			var no_kk = $(".no_kk").val();
 
 			var data = {
 				[page_csrf] : page_csrf_value,
-				'kepala_keluarga' : kepala_keluarga,
 				'kelurahan' : kelurahan,
-				'no_kk' : no_kk,
 			};
-		}else{
-			id = $("#kk-paging-view").attr("meta-id");
 
-			var data = {
-				[page_csrf] : page_csrf_value,
-				'kk_id' : id,
-			};
+			if(paging==1){
+				data['paging'] = 1;
+			}
 		}
 
-		$.post(config_url + "panel/general/json/get-main-kk",data,function(rd){
+		$.post(config_url + "panel/general/json/get-main-kk",data,function(red){
+			rd=red['kk_list'];
 			if(id == 0){
-				teks_tr = "";
+				if(kelurahan==0){
+					teks_tr = "";
 
-				for(var i = 0; i<rd.length;i++){
-					teks_tr += "<tr>";
-					teks_tr += "<td>"+(i+1)+"</td>";
-					teks_tr += "<td><a class='get-detail-kk' href='#' meta-id='"+rd[i]['kk_id']+"'>"+rd[i]['no_kk']+"</a></td>";
-					teks_tr += "<td>"+rd[i]['kepala_keluarga']+"</td>";
-					teks_tr += "<td>"+rd[i]['alamat_lengkap']+"</td>";
-					teks_tr += "<td>"+rd[i]['data_collection_time']+"</td>";
-					teks_tr += "</tr>";
+					for(var i = 0; i<rd.length;i++){
+						teks_tr += "<tr>";
+						teks_tr += "<td>"+(i+1)+"</td>";
+						teks_tr += "<td><a class='get-detail-kk' href='#' meta-id='"+rd[i]['kk_id']+"'>"+rd[i]['no_kk']+"</a></td>";
+						teks_tr += "<td>"+rd[i]['kepala_keluarga']+"</td>";
+						teks_tr += "<td>"+rd[i]['alamat_lengkap']+"</td>";
+						teks_tr += "<td>"+rd[i]['data_collection_time']+"</td>";
+						teks_tr += "</tr>";
+					}
+
+					teks_total = teks_tr;
+
+					$("#kk-table tbody").html(teks_total);
+					$(".pagination-kk").html(red['pager']);
+					$("#kk-table tfoot").hide();
+				}else{
+					teks_tr = "";
+
+					for(var i = 0; i<rd.length;i++){
+						teks_tr += "<tr>";
+						teks_tr += "<td>"+(i+1)+"</td>";
+						teks_tr += "<td><a class='get-detail-kk' href='#' meta-id='"+rd[i]['kk_id']+"'>"+rd[i]['no_kk']+"</a></td>";
+						teks_tr += "<td>"+rd[i]['kepala_keluarga']+"</td>";
+						teks_tr += "<td>"+rd[i]['alamat_lengkap']+"</td>";
+						teks_tr += "<td>"+rd[i]['data_collection_time']+"</td>";
+						teks_tr += "</tr>";
+					}
+
+					teks_total = teks_tr;
+
+					$("#kk-table-kelurahan tbody").html(teks_total);
+					$(".pagination-kk-kelurahan").html(red['pager']);
+					$("#kk-table-kelurahan tfoot").hide();
 				}
-
-				teks_total = teks_tr;
-
-				$("#kk-table-kelurahan tbody").html(teks_total);
-				$("#kk-table-kelurahan tfoot").hide();
 			}else{
+				console.log(rd);
+				
 				//umum
 				$(".kode_pum").html(rd[0]['kode_pum']);
 				$(".no_kk").html(rd[0]['no_kk']);
@@ -577,12 +619,19 @@ $(document).ready(function(){
 				wajib_pajak_list += "</ul>";
 
 				$(".wajib_pajak_retribusi_multi").html(wajib_pajak_list);
+				
+
+				$("#kk-view").modal("show");
 			}
 		},"json")
 		.fail(function(rd){
 			console.log(rd);
 			
 		});
+	}
+
+	if($("#cari-kk").length >= 1){
+		get_main_kk();
 	}
 
 	$(".search-kk").click(function(){
@@ -599,7 +648,7 @@ $(document).ready(function(){
 		$("#kk-paging-view").attr("data-id-kelurahan",id);
 		$("#kk-paging-view").attr("meta-id",0);
 		$("#kk-paging-view").modal("show");
-		get_main_kk(id);
+		get_main_kk(id,1);
 	})
 
 	$(document.body).on("click","a.get-detail-kk",function(e){
@@ -614,4 +663,15 @@ $(document).ready(function(){
 		get_main_kk(0);
 	});
 
+	$(".search-kk").click(function(){
+		$("#dashboard").attr("meta-id",0);
+		get_main_kk_page();
+	});
+
+	$(document.body).on("click",".pagination.pagination-kk a.page_item",function(e){
+		e.preventDefault();
+		var page_l = $(this).attr("meta-page");
+
+		get_main_kk(page_l);
+	});
 });

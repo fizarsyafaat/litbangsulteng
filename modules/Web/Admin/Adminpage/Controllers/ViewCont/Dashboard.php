@@ -83,18 +83,11 @@ class Dashboard extends DefaultAdminViewController{
 
 		$this->set_css_data($data_css_rd,"top","last","assets/admin/custom/css/");
 
-		$data_pl_top = array(
-			'flot/jquery.flot.js','flot/plugins/jquery.flot.resize.js',
-			'flot/plugins/jquery.flot.pie.js'
-		);
-
 		$data_js_rd = array(
 			'data-kecamatan.js'
 		);
 
 		$this->set_js_data($data_js_rd,"bottom","last","assets/admin/custom/js/");
-
-		$this->set_js_data($data_pl_top,"bottom","last","assets/admin/plugins/");
 	}
 
 	public function cari_kk(){
@@ -109,6 +102,12 @@ class Dashboard extends DefaultAdminViewController{
 	}
 
 	public function landing_page(){
+		$data_pl_top = array(
+			'flot/jquery.flot.js','flot/plugins/jquery.flot.resize.js',
+			'flot/plugins/jquery.flot.pie.js'
+		);
+		$this->set_js_data($data_pl_top,"bottom","last","assets/admin/plugins/");
+
 		$data_js_rd = array(
 			'dashboard.js'
 		);

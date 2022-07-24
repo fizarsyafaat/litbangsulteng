@@ -232,7 +232,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="modal fade" id="kk-single-view">
+		<div class="modal fade" id="kk-view">
 			<div class="modal-dialog modal-xl">
 				<div class="modal-content" method="post">
 					<div class="modal-header">
