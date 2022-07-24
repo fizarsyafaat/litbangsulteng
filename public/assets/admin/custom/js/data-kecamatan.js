@@ -241,7 +241,7 @@ $(document).ready(function(){
 		});
 	}
 
-	function get_main_kk(kelurahan=0,paging=1){
+	function get_main_kk(kelurahan=0,paging=1,page=1){
 		var id = 0;
 
 		if(kelurahan==0){
@@ -262,6 +262,7 @@ $(document).ready(function(){
 
 				if(paging==1){
 					data['paging'] = 1;
+					data['page'] = page;
 				}
 			}else{
 				id = $("#kk-paging-view").attr("meta-id");
@@ -677,7 +678,8 @@ $(document).ready(function(){
 	$(document.body).on("click",".pagination.pagination-kk a.page_item",function(e){
 		e.preventDefault();
 		var page_l = $(this).attr("meta-page");
+		$("#kk-paging-view").attr("meta-id",0);
 
-		get_main_kk(page_l);
+		get_main_kk(0,1,page_l);
 	});
 });
