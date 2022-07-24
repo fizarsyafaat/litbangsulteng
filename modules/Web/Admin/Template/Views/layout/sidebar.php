@@ -186,21 +186,16 @@
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>Galian C</p>
+                                            <p>Grafik Peternakan</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>SDA Yang Bisa Diperbaharui</p>
+                                            <p>Grafik Perikanan</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>SDA Yang Tidak Bisa Diperbaharui</p>
-                                        </a>
-                                    </li>
+                                    
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -215,19 +210,19 @@
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>Berbasis Sungai</p>
+                                            <p>Aset Transportasi Umum</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>Berbasis Pantai</p>
+                                            <p>Aset Lembaga Pendidkan</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>Berbasis Gunung</p>
+                                            <p>Aset Sarana Produksi</p>
                                         </a>
                                     </li>
                                 </ul>
