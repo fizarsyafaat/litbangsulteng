@@ -154,19 +154,19 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="<?php echo route_to('user.panel.tani.tani'); ?>" class="nav-link <?php if($submenu == "tani"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Grafik Pertanian</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="<?php echo route_to('user.panel.panganobat.panganobat'); ?>" class="nav-link <?php if($submenu == "panganobat"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Grafik Pangan & Obat</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">
+                                        <a href="<?php echo route_to('user.panel.hutan.hutan'); ?>" class="nav-link <?php if($submenu == "hutan"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Grafik Kehutanan</p>
                                         </a>

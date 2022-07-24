@@ -106,6 +106,38 @@ $routes->setAutoRoute(true);
 				});
 			});
 
+			$routes->group('tani',function($routes)
+			{
+			    $routes->get('tani', '\AdminpageViewCont\tani::tani',['as'=>'user.panel.tani.tani']);
+			    $routes->get('tani-example', '\AdminpageViewCont\tani::tani_example',['as'=>'user.panel.dashboard.tani_example']);
+				$routes->group('json',function($routes)
+				{
+				    $routes->post('get-tani', '\AdminpageFuncCont\JSON\TaniJSON::json_get_tani',['as'=>'user.panel.tani.get_tani']);
+				});
+			});
+
+
+			$routes->group('panganobat',function($routes)
+			{
+			    $routes->get('panganobat', '\AdminpageViewCont\panganobat::panganobat',['as'=>'user.panel.panganobat.panganobat']);
+			    $routes->get('panganobat-example', '\AdminpageViewCont\panganobat::panganobat_example',['as'=>'user.panel.dashboard.panganobat_example']);
+				$routes->group('json',function($routes)
+				{
+				    $routes->post('get-panganobat', '\AdminpageFuncCont\JSON\PanganobatJSON::json_get_panganobat',['as'=>'user.panel.panganobat.get_panganobat']);
+				});
+			});
+
+			$routes->group('hutan',function($routes)
+			{
+			    $routes->get('hutan', '\AdminpageViewCont\hutan::hutan',['as'=>'user.panel.hutan.hutan']);
+			    $routes->get('hutan-example', '\AdminpageViewCont\hutan::hutan_example',['as'=>'user.panel.dashboard.hutan_example']);
+				$routes->group('json',function($routes)
+				{
+				    $routes->post('get-hutan', '\AdminpageFuncCont\JSON\HutanJSON::json_get_hutan',['as'=>'user.panel.hutan.get_hutan']);
+				});
+			});
+
+
 			$routes->group('rumah',function($routes)
 			{
 			    $routes->get('rumah', '\AdminpageViewCont\rumah::rumah',['as'=>'user.panel.rumah.rumah']);

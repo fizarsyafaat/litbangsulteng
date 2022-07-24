@@ -1,14 +1,14 @@
 $(document).ready(function(){
 
 
-	get_komoditas();
+	get_tani();
 	
+
 
 	var previousPoint = null,
     	previousLabel = null;
 	
-	
-	function get_komoditas(){
+	function get_tani(){
 		var id = 0;
 		var page_csrf = $(".csrf-header-master").attr("name");
 		var page_csrf_value = $(".csrf-header-master").attr("value");
@@ -17,7 +17,7 @@ $(document).ready(function(){
 			[page_csrf] : page_csrf_value,
 		};
 
-		$.post(config_url + "panel/kebun/json/get-kebun",data,function(rd){
+		$.post(config_url + "panel/tani/json/get-tani",data,function(rd){
 			var bar_data = {
 				data : [],
 				bars : {show:true},
@@ -29,7 +29,7 @@ $(document).ready(function(){
 				ar = [];
 				tick = [];
 				ar.push(i,rd['jenis_komoditas'][i]['total_data']);
-				tick.push(i,rd['jenis_komoditas'][i]['nama_komoditas_perkebunan']);
+				tick.push(i,rd['jenis_komoditas'][i]['nama_komoditas_buah_buahan']);
 
 				ticks_ar.push(tick);
 				bar_data.data.push(ar);
@@ -107,10 +107,10 @@ $(document).ready(function(){
 		    }
 		});
 	}
-
 	
 
 	
+
 	                
 	                /* END BAR CHART */
 });
