@@ -28,6 +28,7 @@ use BusinessProcessRoot\Models\KkMainAcceptorKb as KkMainAcceptorKbModel;
 use BusinessProcessRoot\Models\KkMainCakupanImunisasi as KkMainCakupanImunisasiModel;
 use BusinessProcessRoot\Models\Pendata as PendataModel;
 
+use BusinessProcessRoot\Entities\KkMainDataUtamaResponden as KkMainDataUtamaRespondenEntities;
 use BusinessProcessRoot\Entities\KkMainDataPekerjaanDanOrganisasi as KkMainDataPekerjaanDanOrganisasiEntities;
 use BusinessProcessRoot\Entities\KkMainLembagaPemerintahan as KkMainLembagaPemerintahanEntities;
 use BusinessProcessRoot\Entities\KkMainWajibPajak as KkMainWajibPajakEntities;
@@ -92,7 +93,7 @@ class KkMain extends Entity
 
 			return $kdur_ent[0];
 		}catch(\Exception $e){
-			$kdur_ent = new KkMainDataUtamaRespondenModel;
+			$kdur_ent = new KkMainDataUtamaRespondenEntities;
 			return $kdur_ent;
 		}
 	}
@@ -105,7 +106,7 @@ class KkMain extends Entity
 
 			return $kdur_ent[0];
 	    }catch(\Exception $e){
-			$kdur_ent = new PendataModel;
+			$kdur_ent = new PendataEntities;
 			return $kdur_ent;
 	    }
 	}
@@ -127,7 +128,7 @@ class KkMain extends Entity
 
 			return $kdur_ent[0];
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainDataPekerjaanDanOrganisasiModel;
+			$kdur_ent = new KkMainDataPekerjaanDanOrganisasiEntities;
 			return $kdur_ent;
 		}
 	}
@@ -144,7 +145,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainLembagaPemerintahanModel;
+			$kdur_ent = new KkMainLembagaPemerintahanEntities;
 			return $kdur_ent;
 		}
 	}
@@ -161,7 +162,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainAsetTransportasiUmumModel;
+			$kdur_ent = new KkMainAsetTransportasiUmumEntities;
 			return $kdur_ent;
 		}
 	}
@@ -178,7 +179,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainLembagaPendidikanModel;
+			$kdur_ent = new KkMainLembagaPendidikanEntities;
 			return $kdur_ent;
 		}
 	}
@@ -193,7 +194,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 		}catch(\Exception $e){
-			$kdur_ent = new KkMainAcceptorKbModel;
+			$kdur_ent = new KkMainAcceptorKbEntities;
 			return $kdur_ent;
 		}
 	}
@@ -210,7 +211,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainCakupanImunisasiModel;
+			$kdur_ent = new KkMainCakupanImunisasiEntities;
 			return $kdur_ent;
 		}
 	}
@@ -229,7 +230,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainAsetProduksiModel;
+			$kdur_ent = new KkMainAsetProduksiEntities;
 			return $kdur_ent;
 		}
 	}
@@ -246,7 +247,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainWajibPajakModel;
+			$kdur_ent = new KkMainWajibPajakEntities;
 			return $kdur_ent;
 		}
 	}
@@ -263,7 +264,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainAsetTanahModel;
+			$kdur_ent = new KkMainAsetTanahEntities;
 			return $kdur_ent;
 		}
 	}
@@ -289,7 +290,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainAsetRumahModel;
+			$kdur_ent = new KkMainAsetRumahEntities;
 			return $kdur_ent;
 		}
 	}
@@ -314,7 +315,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainPerkebunanModel;
+			$kdur_ent = new KkMainPerkebunanEntities;
 			return $kdur_ent;
 		}
 	}
@@ -339,7 +340,7 @@ class KkMain extends Entity
 			}
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainTanamanPanganModel;
+			$kdur_ent = new KkMainTanamanPanganEntities;
 			return $kdur_ent;
 		}
 	}
@@ -364,7 +365,7 @@ class KkMain extends Entity
 			}
 		return $kdur_ent;
 		}catch(\Exception $e){
-			$kdur_ent = new KkMainBuahBuahanModel;
+			$kdur_ent = new KkMainBuahBuahanEntities;
 			return $kdur_ent;
 		}
 	}
@@ -389,7 +390,7 @@ class KkMain extends Entity
 			}
 			return $kdur_ent;
 		}catch(\Exception $e){
-			$kdur_ent = new KkMainTanamanObatModel;
+			$kdur_ent = new KkMainTanamanObatEntities;
 			return $kdur_ent;
 		}
 	}
@@ -413,7 +414,7 @@ class KkMain extends Entity
 			}
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainKehutananModel;
+			$kdur_ent = new KkMainKehutananEntities;
 			return $kdur_ent;
 		}
 	}
@@ -435,7 +436,7 @@ class KkMain extends Entity
 			}
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainAsetTernakModel;
+			$kdur_ent = new KkMainAsetTernakEntities;
 			return $kdur_ent;
 		}
 	}
@@ -457,7 +458,7 @@ class KkMain extends Entity
 			}
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainAsetIkanModel;
+			$kdur_ent = new KkMainAsetIkanEntities;
 			return $kdur_ent;
 		}
 	}
@@ -475,7 +476,7 @@ class KkMain extends Entity
 			}
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainAsetIkanTangkapModel;
+			$kdur_ent = new KkMainAsetIkanTangkapEntities;
 			return $kdur_ent;
 		}
 	}
@@ -496,7 +497,7 @@ class KkMain extends Entity
 			}
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainPariwisataModel;
+			$kdur_ent = new KkMainPariwisataEntities;
 			return $kdur_ent;
 		}
 	}
@@ -516,7 +517,7 @@ class KkMain extends Entity
 			}
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainKesehatanModel;
+			$kdur_ent = new KkMainKesehatanEntities;
 			return $kdur_ent;
 		}
 	}
@@ -543,7 +544,7 @@ class KkMain extends Entity
 
 			return $kdur_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KkMainPersalinanModel;
+			$kdur_ent = new KkMainPersalinanEntities;
 			return $kdur_ent;
 		}
 	}		
@@ -556,13 +557,13 @@ class KkMain extends Entity
 
 			return $klrh_ent;
 	    }catch(\Exception $e){
-			$kdur_ent = new KelurahanModel;
+			$kdur_ent = new KelurahanEntities;
 			return $kdur_ent;
 		}
 	}
 
 	public function obtain_alamat_lengkap(){
-		$alamat_a =  $this->attributes['alamat'] . ", " . " RT " . $this->attributes['rt'] . " RW " . $this->attributes['rt'];
+		$alamat_a =  $this->attributes['alamat'] . ", " . " RT " . $this->attributes['rt'] . " RW " . $this->attributes['rw'];
 		$alamat_b = $this->get_kelurahan()->get_full_address();
 
 		return $alamat_a . " " . $alamat_b;
