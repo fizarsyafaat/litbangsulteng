@@ -51,6 +51,9 @@
                                                     <div class="col-12 col-md-6">
                                                         <select class="form-control">
                                                             <option value="0">Semua Kecamatan</option>
+                                                            <?php foreach($kecamatan as $kc){?>
+                                                            	<option value="<?php echo $kc->id_kecamatan;?>"><?php echo $kc->nama_kecamatan;?></option>
+                                                            <?php } ?>
                                                         </select>
                                                     </div>
                                                     <div class="col-12 col-md-6">
