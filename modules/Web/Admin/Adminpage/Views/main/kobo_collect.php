@@ -26,29 +26,25 @@
 
             <!-- Main content -->
             <section class="content">
-                <div class="container-fluid">
+                <div class="embed-responsive embed-responsive-16by9">
                     <div class="row">
                         <div class="col-12">
-                            JUMLAH DATA :
-                            <iframe width="100%" height="100%" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQaG06HnsTzddZpS4UPzaSOPhMntGDwZLi1Vai77IOTbgwzxmWvBybjbVK0tljR0519z82EAl-I9Ji3/pubchart?oid=1472615049&amp;format=interactive"></iframe>
+                            <iframe class="embed-responsive-item" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_MKZnASXlyoKeIY7ShUSZNIFA56wKk8ipkPFS-AQ27vs5fz_NE8uyqL4iozF1Ow/pubchart?oid=1591681499&amp;format=interactive"></iframe>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            Data Tervalidasi :
-                            <iframe width="100%" height="100%" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQaG06HnsTzddZpS4UPzaSOPhMntGDwZLi1Vai77IOTbgwzxmWvBybjbVK0tljR0519z82EAl-I9Ji3/pubchart?oid=466334091&amp;format=interactive"  style="height: 500px"></iframe>
+                            <iframe class="embed-responsive-item" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_MKZnASXlyoKeIY7ShUSZNIFA56wKk8ipkPFS-AQ27vs5fz_NE8uyqL4iozF1Ow/pubchart?oid=269976700&amp;format=interactive"></iframe>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            Data Per Kecamatan : 
-                            <iframe width="100%" height="100%" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQaG06HnsTzddZpS4UPzaSOPhMntGDwZLi1Vai77IOTbgwzxmWvBybjbVK0tljR0519z82EAl-I9Ji3/pubchart?oid=1753115381&amp;format=interactive"  style="height: 500px"></iframe>
+                            <iframe class="embed-responsive-item" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_MKZnASXlyoKeIY7ShUSZNIFA56wKk8ipkPFS-AQ27vs5fz_NE8uyqL4iozF1Ow/pubchart?oid=926984273&amp;format=interactive"></iframe>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            Data Per Kelurahan : 
-                            <iframe width="100%" height="100%" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQaG06HnsTzddZpS4UPzaSOPhMntGDwZLi1Vai77IOTbgwzxmWvBybjbVK0tljR0519z82EAl-I9Ji3/pubchart?oid=1594172787&amp;format=interactive" style="height: 700px"></iframe>
+                            <iframe width="1518" height="602" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_MKZnASXlyoKeIY7ShUSZNIFA56wKk8ipkPFS-AQ27vs5fz_NE8uyqL4iozF1Ow/pubchart?oid=394081531&amp;format=interactive"></iframe>
                         </div>
                     </div>
                 </div>
