@@ -26,6 +26,7 @@ class Rumah extends DefaultAdminViewController{
 		$k_list = $kModel->findAll();
 
 		$this->set_data_view("kecamatan",$k_list);
+		$this->set_data_view("buksing",$k_list);
 	}
 
 	public function rumah_example(){
