@@ -12,7 +12,7 @@ use BusinessProcessRoot\Models\KkMainAsetTernak as KkMainAsetTernakModel;
 
 
 class PeternakJSON extends DefaultAdminFuncController{
-	use ResponseTrait;
+	use ResponseTrait; 
 
 	public function __construct(){
 		parent::__construct();
@@ -25,7 +25,7 @@ class PeternakJSON extends DefaultAdminFuncController{
 		$k_list = $kModel->findAll();	
 
 		foreach($k_list as $m){
-			$m->total_data = sizeof($kkmModel->where("jenis_ternak",$m->jenis_komoditas_id)->findAll());
+			$m->total_data = sizeof($kkmModel->where("jenis_ternak",$m->komoditas_ternak_id)->findAll());
 		}
 		
 

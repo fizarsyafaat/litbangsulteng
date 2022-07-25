@@ -25,7 +25,7 @@ class ProduksiJSON extends DefaultAdminFuncController{
 		$k_list = $kModel->findAll();	
 
 		foreach($k_list as $m){
-			$m->total_data = sizeof($kkmModel->where("aset_produksi",$m->aset_produksi_id)->findAll());
+			$m->total_data = sizeof($kkmModel->where("aset_produksi",$m->aset_sarana_produksi_id)->findAll());
 		}
 		
 

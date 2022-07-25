@@ -45,6 +45,20 @@
                                                         <i class="fas fa-minus"></i>
                                                     </button>
                                                 </div>
+                                                <br>
+
+                                                <div class="row">
+                                                    <div class="col-12 col-md-6">
+                                                        <select class="form-control">
+                                                            <option value="0">Semua Kecamatan</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <select class="form-control">
+                                                            <option value="0">Semua Kelurahan</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="card-body">
                                                 <div id="bar-chart" style="height: 600px;"></div>

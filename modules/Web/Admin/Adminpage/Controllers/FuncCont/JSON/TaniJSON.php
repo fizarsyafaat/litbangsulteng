@@ -25,7 +25,7 @@ class TaniJSON extends DefaultAdminFuncController{
 		$k_list = $kModel->findAll();	
 
 		foreach($k_list as $m){
-			$m->total_data = sizeof($kkmModel->where("jenis_komoditas",$m->jenis_komoditas_id)->findAll());
+			$m->total_data = sizeof($kkmModel->where("jenis_komoditas",$m->komoditas_buah_buahan_id)->findAll());
 		}
 		
 

@@ -25,7 +25,7 @@ class TransportasiJSON extends DefaultAdminFuncController{
 		$k_list = $kModel->findAll();	
 
 		foreach($k_list as $m){
-			$m->total_data = sizeof($kkmModel->where("aset_transportasi",$m->aset_transportasi_id)->findAll());
+			$m->total_data = sizeof($kkmModel->where("aset_transportasi",$m->aset_transportasi_umum_id)->findAll());
 		}
 		
 
