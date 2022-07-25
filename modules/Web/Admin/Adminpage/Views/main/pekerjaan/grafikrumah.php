@@ -47,9 +47,9 @@
                                                 </div>
                                                 <br>
 
-                                                <div class="row">
+                                                <div class="row" style="margin-top:10px;">
                                                     <div class="col-12 col-md-6">
-                                                        <select class="form-control">
+                                                        <select class="form-control all-districts-house-owner">
                                                             <option value="0">Semua Kecamatan</option>
                                                             <?php foreach($kecamatan as $kc){?>
                                                             	<option value="<?php echo $kc->id_kecamatan;?>"><?php echo $kc->nama_kecamatan;?></option>
@@ -57,9 +57,14 @@
                                                         </select>
                                                     </div>
                                                     <div class="col-12 col-md-6">
-                                                        <select class="form-control">
+                                                        <select class="form-control all-subdistricts-house-owner">
                                                             <option value="0">Semua Kelurahan</option>
                                                         </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="margin-top:10px;">
+                                                    <div class="col-12 col-md-6">
+                                                    	<button class="btn btn-primary filter-house-owner">Filter Data</button>
                                                     </div>
                                                 </div>
                                             </div>

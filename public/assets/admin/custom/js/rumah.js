@@ -2,9 +2,9 @@ $(document).ready(function(){
 
 
 	get_status_rumah();
-	get_dinding_rumah();
-	get_lantai_rumah();
-	get_atap_rumah();
+	// get_dinding_rumah();
+	// get_lantai_rumah();
+	// get_atap_rumah();
 
 	var previousPoint = null,
     	previousLabel = null;
@@ -13,9 +13,13 @@ $(document).ready(function(){
 		var id = 0;
 		var page_csrf = $(".csrf-header-master").attr("name");
 		var page_csrf_value = $(".csrf-header-master").attr("value");
+		var kecamatan_id = $(".all-districts-house-owner").find(":selected").attr("value");
+		var kelurahan_id = $(".all-subdistricts-house-owner").find(":selected").attr("value");
 
 		var data = {
 			[page_csrf] : page_csrf_value,
+			'kelurahan' : kelurahan_id,
+			'kecamatan' : kecamatan_id,
 		};
 
 		$.post(config_url + "panel/rumah/json/get-rumah",data,function(rd){
@@ -408,4 +412,53 @@ $(document).ready(function(){
 		    }
 		});
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+	///TAMBAHAN FILTER
+
+	$(".all-districts-house-owner").on("change",function(){
+		get_kelurahan_house_owner();
+	});
+
+	function get_kelurahan_house_owner(){
+		var kecamatan_id = $(".all-districts-house-owner").find(":selected").attr("value");
+		var page_csrf = $(".csrf-header-master").attr("name");
+		var page_csrf_value = $(".csrf-header-master").attr("value");
+
+		var data = {
+			[page_csrf] : page_csrf_value,
+		};
+
+		console.log(data);
+
+		$.post(config_url + "panel/address/json/get-subdistrict/"+kecamatan_id,data,function(rd){
+			var text = "<option value='0'>Semua Kelurahan</option>";
+			for(var i=0;i<rd.length;i++){
+				text += "<option value="+rd[i]['id_kelurahan']+">"+rd[i]['nama_kelurahan']+"</option>";
+			}
+
+			$(".all-subdistricts-house-owner").html(text);
+		},"json")
+		.fail(function(rd){
+			console.log(rd);
+			Toast.fire({
+				type: 'error',
+				title: "Something wrong in the server"
+			});
+		});
+	}
+
+	$(".filter-house-owner").on("click",function(){
+		get_status_rumah();
+	});
 });

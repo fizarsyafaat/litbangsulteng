@@ -22,6 +22,8 @@ class RumahJSON extends DefaultAdminFuncController{
 	}
 
 	public function json_get_rumah(){
+		$request = $this->request;
+
 		$kModel = new StatusKepemilikanRumahModel();
 		$kcModel = new DindingRumahModel();
 		$kdModel = new LantaiRumahModel();
@@ -33,27 +35,32 @@ class RumahJSON extends DefaultAdminFuncController{
 		$kd_list = $kdModel->findAll();	
 		$ke_list = $keModel->findAll();	
 
+		$kkmModel->join("kk_main",'kk_main_aset_rumah.kk_id = kk_main.kk_id');
+		$kkmModel->join("kelurahan","kk_main.kelurahan = kelurahan.id_kelurahan");
+
+		$kecamatan = (int) ($request->getPost("kecamatan"));
+		$kelurahan = (int) ($request->getPost("kelurahan"));
+
+
+		//KEPEMILIKAN RUMAH
+
+		if($kecamatan > 0){
+			$kkmModel->where("id_kecamatan",$kecamatan);
+		}
+
+		if($kelurahan > 0){
+			$kkmModel->where("id_kelurahan",$kelurahan);
+		}
+
 		foreach($k_list as $m){
 			$m->total_data = sizeof($kkmModel->where("status_kepemilikan_rumah",$m->status_kepemilikan_rumah_id)->findAll());
 		}
-		foreach($kc_list as $m){
-			$m->total_data = sizeof($kkmModel->where("dinding_rumah",$m->dinding_rumah_id)->findAll());
-		}
-		foreach($kd_list as $m){
-			$m->total_data = sizeof($kkmModel->where("lantai_rumah",$m->lantai_rumah_id)->findAll());
-		}
-		foreach($ke_list as $m){
-			$m->total_data = sizeof($kkmModel->where("atap_rumah",$m->atap_rumah_id)->findAll());
-		}
-		
 
 		$data = array(
-			'status_kepemilikan_rumah' => $k_list,
-			'dinding_rumah' => $kc_list,
-			'lantai_rumah' => $kd_list,
-			'atap_rumah' => $ke_list,
+			'status_kepemilikan_rumah' => $k_list
 			
 		);
+
 		echo json_encode($data);
 	}
 
