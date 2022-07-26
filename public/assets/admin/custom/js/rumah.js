@@ -3,8 +3,8 @@ $(document).ready(function(){
 
 	get_status_rumah();
 
-	get_status_dindi();
-	//get_dinding_rumah();
+	//get_status_dindi();
+	get_dinding_rumah();
 	//get_lantai_rumah(); 
 	//get_atap_rumah();
 
@@ -115,16 +115,17 @@ $(document).ready(function(){
 		});
 	}
 
-
-
-
 	function get_dinding_rumah(){
 		var id = 0;
 		var page_csrf = $(".csrf-header-master").attr("name");
 		var page_csrf_value = $(".csrf-header-master").attr("value");
+		var kecamatan_id = $(".all-districts-house-owner").find(":selected").attr("value");
+		var kelurahan_id = $(".all-subdistricts-house-owner").find(":selected").attr("value");
 
 		var data = {
 			[page_csrf] : page_csrf_value,
+			'kelurahan' : kelurahan_id,
+			'kecamatan' : kecamatan_id,
 		};
 
 		$.post(config_url + "panel/rumah/json/get-rumah",data,function(rd){
@@ -217,6 +218,9 @@ $(document).ready(function(){
 		    }
 		});
 	}
+
+
+	
 
 	function get_lantai_rumah(){
 		var id = 0;
@@ -464,6 +468,8 @@ $(document).ready(function(){
 	}
 
 	$(".filter-house-owner").on("click",function(){
+		get_dinding_rumah();
 		get_status_rumah();
+		
 	});
 });

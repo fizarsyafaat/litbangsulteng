@@ -41,7 +41,6 @@ class RumahJSON extends DefaultAdminFuncController{
 		$kecamatan = (int) ($request->getPost("kecamatan"));
 		$kelurahan = (int) ($request->getPost("kelurahan"));
 
-
 		//KEPEMILIKAN RUMAH
 
 		if($kecamatan > 0){
@@ -56,9 +55,13 @@ class RumahJSON extends DefaultAdminFuncController{
 			$m->total_data = sizeof($kkmModel->where("status_kepemilikan_rumah",$m->status_kepemilikan_rumah_id)->findAll());
 		}
 
-			
+		foreach($kc_list as $m){
+			$m->total_data = sizeof($kkmModel->where("dinding_rumah",$m->dinding_rumah_id)->findAll());
+		}
+
 		$data = array(
-			'status_kepemilikan_rumah' => $k_list
+			'status_kepemilikan_rumah' => $k_list,
+			'dinding_rumah' => $kc_list
 			
 		);
 
