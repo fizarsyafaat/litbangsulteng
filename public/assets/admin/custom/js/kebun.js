@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
 
-	//get_komoditas();
-	get_komoditas1();
+	get_komoditas();
+	//get_komoditas1();
 	
 
 	var previousPoint = null,

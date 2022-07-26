@@ -18,44 +18,24 @@ class KebunJSON extends DefaultAdminFuncController{
 		parent::__construct();
 	}
 
-	public function json_get_rumah(){
-		$request = $this->request;
+		public function json_get_kebun(){
+		$kModel = new KomoditasPerkebunanModel();
+		$kkmModel = new KkMainPerkebunanModel();
 
-		$kModel = new StatusKepemilikanRumahModel();
-
-		$kkmModel = new KkMainAsetRumahModel();
-
-		$k_list = $kModel->findAll();
-
-		$kkmModel->join("kk_main",'kk_main_aset_rumah.kk_id = kk_main.kk_id');
-		$kkmModel->join("kelurahan","kk_main.kelurahan = kelurahan.id_kelurahan");
-
-		$kecamatan = (int) ($request->getPost("kecamatan"));
-		$kelurahan = (int) ($request->getPost("kelurahan"));
-
-
-		//KEPEMILIKAN RUMAH
-
-		if($kecamatan > 0){
-			$kkmModel->where("id_kecamatan",$kecamatan);
-		}
-
-		if($kelurahan > 0){
-			$kkmModel->where("id_kelurahan",$kelurahan);
-		}
+		$k_list = $kModel->findAll();		
 
 		foreach($k_list as $m){
-			$m->total_data = sizeof($kkmModel->where("status_kepemilikan_rumah",$m->status_kepemilikan_rumah_id)->findAll());
+			$m->total_data = sizeof($kkmModel->where("jenis_komoditas",$m->komoditas_perkebunan_id)->findAll());
 		}
-
-			
+	
 		$data = array(
-			'status_kepemilikan_rumah' => $k_list
-			
-		);
+			'jenis_komoditas' => $k_list,
 
+		);
 		echo json_encode($data);
 	}
+
+			
 
 
 
