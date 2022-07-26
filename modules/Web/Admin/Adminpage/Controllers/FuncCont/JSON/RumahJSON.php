@@ -56,6 +56,7 @@ class RumahJSON extends DefaultAdminFuncController{
 			$m->total_data = sizeof($kkmModel->where("status_kepemilikan_rumah",$m->status_kepemilikan_rumah_id)->findAll());
 		}
 
+			
 		$data = array(
 			'status_kepemilikan_rumah' => $k_list
 			

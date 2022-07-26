@@ -11,10 +11,9 @@
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Perkebunan</a></li>
-                                <li class="breadcrumb-item active">Grafik Perkebunan</li>
-                            </ol>
+                           
+
+                           
                         </div>
                         <!-- /.col -->
                     </div>

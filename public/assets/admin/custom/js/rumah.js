@@ -2,9 +2,11 @@ $(document).ready(function(){
 
 
 	get_status_rumah();
-	// get_dinding_rumah();
-	// get_lantai_rumah();
-	// get_atap_rumah();
+
+	get_status_dindi();
+	//get_dinding_rumah();
+	//get_lantai_rumah(); 
+	//get_atap_rumah();
 
 	var previousPoint = null,
     	previousLabel = null;
@@ -112,6 +114,9 @@ $(document).ready(function(){
 		    }
 		});
 	}
+
+
+
 
 	function get_dinding_rumah(){
 		var id = 0;

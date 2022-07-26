@@ -12,8 +12,16 @@
                         <!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Keadaan Rumah</a></li>
-                                <li class="breadcrumb-item active">Grafik</li>
+                                  <li style="margin-left:10px;"> <select class="form-control all-districts-house-owner">
+                                                            <option value="0">Semua Kecamatan</option>
+                                                            <?php foreach($kecamatan as $kc){?>
+                                                                <option value="<?php echo $kc->id_kecamatan;?>"><?php echo $kc->nama_kecamatan;?></option>
+                                                            <?php } ?>
+                                                        </select></li>
+                                <li  style="margin-left:10px;"> <select class="form-control all-subdistricts-house-owner">
+                                                            <option value="0">Semua Kelurahan</option>
+                                                        </select> </li>
+                             <li class="breadcrumb-item active" style="margin-left:10px;" style="margin-left:20px;"><button class="btn btn-primary filter-house-owner">Filter Data</button></li>
                             </ol>
                         </div>
                         <!-- /.col -->
@@ -25,14 +33,19 @@
             <!-- /.content-header -->
 
             <!-- Main content -->
+           
             <section class="content">
+                
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
+
                             <div class="container-fluid">
+
                                 <div class="row">
                                     <div class="col-md-12">
                                         <!-- Bar chart -->
+
                                         <div class="card card-primary card-outline ">
                                             <div class="card-header">
                                                 <h3 class="card-title">
@@ -45,28 +58,7 @@
                                                         <i class="fas fa-minus"></i>
                                                     </button>
                                                 </div>
-                                                <br>
-
-                                                <div class="row" style="margin-top:10px;">
-                                                    <div class="col-12 col-md-6">
-                                                        <select class="form-control all-districts-house-owner">
-                                                            <option value="0">Semua Kecamatan</option>
-                                                            <?php foreach($kecamatan as $kc){?>
-                                                            	<option value="<?php echo $kc->id_kecamatan;?>"><?php echo $kc->nama_kecamatan;?></option>
-                                                            <?php } ?>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <select class="form-control all-subdistricts-house-owner">
-                                                            <option value="0">Semua Kelurahan</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="row" style="margin-top:10px;">
-                                                    <div class="col-12 col-md-6">
-                                                    	<button class="btn btn-primary filter-house-owner">Filter Data</button>
-                                                    </div>
-                                                </div>
+                                               
                                             </div>
                                             <div class="card-body">
                                                 <div id="bar-chart" style="height: 600px;"></div>

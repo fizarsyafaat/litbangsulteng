@@ -33,11 +33,11 @@ class PanganobatJSON extends DefaultAdminFuncController{
 		$k_listc = $kModelc->findAll();	
 
 		foreach($k_list as $m){
-			$m->total_data = sizeof($kkmModel->where("jenis_komoditas",$m->jenis_komoditas_id)->findAll());
+			$m->total_data = sizeof($kkmModel->where("jenis_komoditas",$m->komoditas_tanaman_pangan_id)->findAll());
 		}
 
 		foreach($k_listc as $m){
-			$m->total_data = sizeof($kkmModelc->where("jenis_komoditas",$m->jenis_komoditas_id)->findAll());
+			$m->total_data = sizeof($kkmModelc->where("jenis_komoditas",$m->komoditas_tanaman_obat_id)->findAll());
 		}
 		
 
