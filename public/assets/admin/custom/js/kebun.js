@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
 
-	get_komoditas();
-	//get_komoditas1();
+	//get_komoditas();
+	get_komoditas1();
 	
 
 	var previousPoint = null,
@@ -13,8 +13,8 @@ $(document).ready(function(){
 		var id = 0;
 		var page_csrf = $(".csrf-header-master").attr("name");
 		var page_csrf_value = $(".csrf-header-master").attr("value");
-		var kecamatan_id = $(".all-districts-house-owner").find(":selected").attr("value");
-		var kelurahan_id = $(".all-subdistricts-house-owner").find(":selected").attr("value");
+		var kecamatan_id = $(".all-districts-kebun").find(":selected").attr("value");
+		var kelurahan_id = $(".all-subdistricts-kebun").find(":selected").attr("value");
 
 		var data = {
 			[page_csrf] : page_csrf_value,
@@ -22,7 +22,7 @@ $(document).ready(function(){
 			'kecamatan' : kecamatan_id,
 		};
 
-		$.post(config_url + "panel/kebun/json/get-kebu",data,function(rd){
+		$.post(config_url + "panel/kebun/json/get-kebun",data,function(rd){
 			var bar_data = {
 				data : [],
 				bars : {show:true},
@@ -214,7 +214,41 @@ $(document).ready(function(){
 	}
 
 	
+	$(".all-districts-kebun").on("change",function(){
+		get_kelurahan_kebun();
+	});
 
+	function get_kelurahan_kebun(){
+		var kecamatan_id = $(".all-districts-kebun").find(":selected").attr("value");
+		var page_csrf = $(".csrf-header-master").attr("name");
+		var page_csrf_value = $(".csrf-header-master").attr("value");
+
+		var data = {
+			[page_csrf] : page_csrf_value,
+		};
+
+		console.log(data);
+
+		$.post(config_url + "panel/address/json/get-subdistrict/"+kecamatan_id,data,function(rd){
+			var text = "<option value='0'>Semua Kelurahan</option>";
+			for(var i=0;i<rd.length;i++){
+				text += "<option value="+rd[i]['id_kelurahan']+">"+rd[i]['nama_kelurahan']+"</option>";
+			}
+
+			$(".all-subdistricts-kebun").html(text);
+		},"json")
+		.fail(function(rd){
+			console.log(rd);
+			Toast.fire({
+				type: 'error',
+				title: "Something wrong in the server"
+			});
+		});
+	}
+
+	$(".filter-kebun").on("click",function(){
+		get_status_komoditas1();
+	});
 	
 	                
 	                /* END BAR CHART */
