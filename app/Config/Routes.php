@@ -178,6 +178,16 @@ $routes->setAutoRoute(true);
 				});
 			});
 
+			$routes->group('obat',function($routes)
+			{
+			    $routes->get('obat', '\AdminpageViewCont\obat::obat',['as'=>'user.panel.obat.obat']);
+			    $routes->get('obat-example', '\AdminpageViewCont\obat::obat_example',['as'=>'user.panel.dashboard.obat_example']);
+				$routes->group('json',function($routes)
+				{
+				    $routes->post('get-obat', '\AdminpageFuncCont\JSON\ObatJSON::json_get_obat',['as'=>'user.panel.obat.get_obat']);
+				});
+			});
+
 			$routes->group('hutan',function($routes)
 			{
 			    $routes->get('hutan', '\AdminpageViewCont\hutan::hutan',['as'=>'user.panel.hutan.hutan']);

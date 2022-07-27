@@ -162,7 +162,13 @@
                                     <li class="nav-item">
                                         <a href="<?php echo route_to('user.panel.panganobat.panganobat'); ?>" class="nav-link <?php if($submenu == "panganobat"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>Grafik Pangan & Obat</p>
+                                            <p>Grafik Tanaman Pangan</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?php echo route_to('user.panel.obat.obat'); ?>" class="nav-link <?php if($submenu == "obat"){ echo "active"; }?>">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Grafik Tanaman Obat</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">

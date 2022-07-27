@@ -7,13 +7,13 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Grafik Tanaman Pangan Masyarakat di Kota Palu</h1>
+                            <h1 class="m-0">Grafik Tanaman Obat Masyarakat di Kota Palu</h1>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Tanaman Pangan</a></li>
-                                <li class="breadcrumb-item active">Grafik Tanaman Pangan</li>
+                                <li class="breadcrumb-item"><a href="#">Tanaman Obat</a></li>
+                                <li class="breadcrumb-item active">Grafik Tanaman Obat</li>
                             </ol>
                         </div>
                         <!-- /.col -->
@@ -34,7 +34,7 @@
                                     <div class="card-header">
                                         <h3 class="card-title">
                                             <i class="far fa-chart-bar"></i>
-                                            Tanaman Pangan Masyarakat di Kota Palu (Grafik)
+                                            Tanaman Obat Masyarakat di Kota Palu (Grafik)
                                         </h3>
                                          <div class="card-tools">
 			                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">

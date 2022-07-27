@@ -7,7 +7,7 @@ namespace AdminpageViewCont;
 use AdminTemplateViewCont\DefaultAdminViewController;
 use BusinessProcessRoot\Models\User as UserModel;
 
-class Panganobat extends DefaultAdminViewController{
+class Obat extends DefaultAdminViewController{
 	
 	public function __construct(){
 		parent::__construct(); 
@@ -21,21 +21,21 @@ class Panganobat extends DefaultAdminViewController{
 		$this->set_data_view("menu","kebun");
 	}
 
-	public function panganobat_example(){
-		$this->set_data_view("submenu","panganobat");
-		return $this->tc_view("AdminpageView\main\kebun\grafikpanganobat");
+	public function obat_example(){
+		$this->set_data_view("submenu","obat");
+		return $this->tc_view("AdminpageView\main\kebun\grafikobat");
 	}
 
-	public function panganobat(){
+	public function obat(){
 		$data_js_rd = array(
-			'panganobat.js'
+			'obat.js'
 		);
 
 		$this->set_js_data($data_js_rd,"bottom","last","assets/admin/custom/js/");
 
 
-		$this->set_data_view("submenu","panganobat");
-		return $this->tc_view("AdminpageView\main\kebun\grafikpanganobat");
+		$this->set_data_view("submenu","obat");
+		return $this->tc_view("AdminpageView\main\kebun\grafikobat");
 	}
 
 
