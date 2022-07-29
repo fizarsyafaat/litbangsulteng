@@ -7,6 +7,7 @@ namespace AdminpageViewCont;
 use AdminTemplateViewCont\DefaultAdminViewController;
 use BusinessProcessRoot\Models\User as UserModel;
 
+use BusinessProcessRoot\Models\Kecamatan as KecamatanModel;
 class Tani extends DefaultAdminViewController{
 	
 	public function __construct(){
@@ -19,6 +20,9 @@ class Tani extends DefaultAdminViewController{
 		$this->set_js_data($data_pl_top,"bottom","last","assets/admin/plugins/");
 
 		$this->set_data_view("menu","kebun");
+		$kModel = new KecamatanModel();
+		$k_list = $kModel->findAll();
+		$this->set_data_view("kecamatan",$k_list);
 	}
 
 	public function tani_example(){

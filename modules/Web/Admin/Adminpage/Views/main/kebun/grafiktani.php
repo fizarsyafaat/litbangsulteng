@@ -12,8 +12,16 @@
                         <!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Pertanian</a></li>
-                                <li class="breadcrumb-item active">Grafik Pertanian</li>
+                                  <li style="margin-left:10px;"> <select class="form-control all-districts-tani">
+                                                            <option value="0">Semua Kecamatan</option>
+                                                            <?php foreach($kecamatan as $kc){?>
+                                                                <option value="<?php echo $kc->id_kecamatan;?>"><?php echo $kc->nama_kecamatan;?></option>
+                                                            <?php } ?>
+                                                        </select></li>
+                                <li  style="margin-left:10px;"> <select class="form-control all-subdistricts-tani">
+                                                            <option value="0">Semua Kelurahan</option>
+                                                        </select> </li>
+                             <li class="breadcrumb-item active" style="margin-left:10px;" style="margin-left:20px;"><button class="btn btn-primary filter-tani">Filter Data</button></li>
                             </ol>
                         </div>
                         <!-- /.col -->

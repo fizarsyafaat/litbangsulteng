@@ -5,8 +5,8 @@ $(document).ready(function(){
 
 	//get_status_dindi();
 	get_dinding_rumah();
-	//get_lantai_rumah(); 
-	//get_atap_rumah();
+	get_lantai_rumah(); 
+	get_atap_rumah();
 
 	var previousPoint = null,
     	previousLabel = null;
@@ -226,9 +226,13 @@ $(document).ready(function(){
 		var id = 0;
 		var page_csrf = $(".csrf-header-master").attr("name");
 		var page_csrf_value = $(".csrf-header-master").attr("value");
+		var kecamatan_id = $(".all-districts-house-owner").find(":selected").attr("value");
+		var kelurahan_id = $(".all-subdistricts-house-owner").find(":selected").attr("value");
 
 		var data = {
 			[page_csrf] : page_csrf_value,
+			'kelurahan' : kelurahan_id,
+			'kecamatan' : kecamatan_id,
 		};
 
 		$.post(config_url + "panel/rumah/json/get-rumah",data,function(rd){
@@ -259,15 +263,15 @@ $(document).ready(function(){
 		            hoverable: true,
 		            clickable: true,
 	            },
-	            valueLabels: {
-	                show: true
-	            },
 	            series: {
 	                bars: {
 	                    show: true,
 	                    barWidth: 0.5,
 	                    align: "center",
 	                },
+	            },
+	            valueLabels: {
+	                show: true
 	            },
 	            colors: ["#3c8dbc"],
 		        xaxis: {
@@ -326,9 +330,13 @@ $(document).ready(function(){
 		var id = 0;
 		var page_csrf = $(".csrf-header-master").attr("name");
 		var page_csrf_value = $(".csrf-header-master").attr("value");
+		var kecamatan_id = $(".all-districts-house-owner").find(":selected").attr("value");
+		var kelurahan_id = $(".all-subdistricts-house-owner").find(":selected").attr("value");
 
 		var data = {
 			[page_csrf] : page_csrf_value,
+			'kelurahan' : kelurahan_id,
+			'kecamatan' : kecamatan_id,
 		};
 
 		$.post(config_url + "panel/rumah/json/get-rumah",data,function(rd){
@@ -359,15 +367,15 @@ $(document).ready(function(){
 		            hoverable: true,
 		            clickable: true,
 	            },
-	            valueLabels: {
-	                show: true
-	            },
 	            series: {
 	                bars: {
 	                    show: true,
 	                    barWidth: 0.5,
 	                    align: "center",
 	                },
+	            },
+	            valueLabels: {
+	                show: true
 	            },
 	            colors: ["#3c8dbc"],
 		        xaxis: {
@@ -423,16 +431,6 @@ $(document).ready(function(){
 	}
 
 
-
-
-
-
-
-
-
-
-
-
 	///TAMBAHAN FILTER
 
 	$(".all-districts-house-owner").on("change",function(){
@@ -470,6 +468,8 @@ $(document).ready(function(){
 	$(".filter-house-owner").on("click",function(){
 		get_dinding_rumah();
 		get_status_rumah();
+		get_atap_rumah();
+		get_lantai_rumah();
 		
 	});
 });
