@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 
-	//get_komoditas();
+	
 	get_komoditas1();
 	
 
