@@ -31,19 +31,24 @@ class KebunJSON extends DefaultAdminFuncController{
 		$kecamatan = (int) ($request->getPost("kecamatan"));
 		$kelurahan = (int) ($request->getPost("kelurahan"));
 
+		$data = array();
+
 
 		//KEPEMILIKAN RUMAH
 
 		if($kecamatan > 0){
-			$kkmModel->where("id_kecamatan",$kecamatan);
+			$data['kecamatan'] = $kecamatan;
 		}
 
 		if($kelurahan > 0){
-			$kkmModel->where("id_kelurahan",$kelurahan);
+			$data['kelurahan'] = $kelurahan;
 		}
 
+
 		foreach($k_list as $m){
-			$m->total_data = sizeof($kkmModel->where("jenis_komoditas",$m->komoditas_perkebunan_id)->findAll());
+			$data['jenis_komoditas'] = $m->komoditas_perkebunan_id;
+			$kkm_ent = $kkmModel->get_filter_data($data);
+			$m->total_data = sizeof($kkm_ent);
 		}
 
 			

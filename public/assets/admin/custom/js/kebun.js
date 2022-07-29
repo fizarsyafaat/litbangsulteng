@@ -247,7 +247,7 @@ $(document).ready(function(){
 	}
 
 	$(".filter-kebun").on("click",function(){
-		get_status_komoditas1();
+		get_komoditas1();
 	});
 	
 	                
