@@ -7,7 +7,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Data Masuk </h1>
+                            <h1 class="m-0"> </h1>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
@@ -26,20 +26,20 @@
 
             <!-- Main content -->
             <section class="content">
-                <div class="embed-responsive embed-responsive-16by9">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
-                            <iframe class="embed-responsive-item" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_MKZnASXlyoKeIY7ShUSZNIFA56wKk8ipkPFS-AQ27vs5fz_NE8uyqL4iozF1Ow/pubchart?oid=1591681499&amp;format=interactive"></iframe>
+                            <iframe width="1239" height="213" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_MKZnASXlyoKeIY7ShUSZNIFA56wKk8ipkPFS-AQ27vs5fz_NE8uyqL4iozF1Ow/pubchart?oid=1591681499&amp;format=interactive"></iframe>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <iframe class="embed-responsive-item" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_MKZnASXlyoKeIY7ShUSZNIFA56wKk8ipkPFS-AQ27vs5fz_NE8uyqL4iozF1Ow/pubchart?oid=269976700&amp;format=interactive"></iframe>
+                            <iframe width="1237" height="491" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_MKZnASXlyoKeIY7ShUSZNIFA56wKk8ipkPFS-AQ27vs5fz_NE8uyqL4iozF1Ow/pubchart?oid=269976700&amp;format=interactive"></iframe>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <iframe class="embed-responsive-item" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_MKZnASXlyoKeIY7ShUSZNIFA56wKk8ipkPFS-AQ27vs5fz_NE8uyqL4iozF1Ow/pubchart?oid=926984273&amp;format=interactive"></iframe>
+                            <iframe width="1237" height="465" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_MKZnASXlyoKeIY7ShUSZNIFA56wKk8ipkPFS-AQ27vs5fz_NE8uyqL4iozF1Ow/pubchart?oid=926984273&amp;format=interactive"></iframe>
                         </div>
                     </div>
                     <div class="row">

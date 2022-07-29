@@ -428,7 +428,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="nama_pendata">Pendata 1</p>
+								    						<p class="nama_pendata">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -440,7 +440,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="pekerjaan_pendata">Pendata 2</p>
+								    						<p class="pekerjaan_pendata">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -452,7 +452,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="jabatan_pendata">Pendata 3</p>
+								    						<p class="jabatan_pendata">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -464,7 +464,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="sumber_data">Pendata 4</p>
+								    						<p class="sumber_data">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -476,7 +476,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="no_handphone">Pendata 5</p>
+								    						<p class="no_handphone">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -495,7 +495,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="jumlah_aktivitas_wisata_bulanan">Wisata 1</p>
+								    						<p class="jumlah_aktivitas_wisata_bulanan">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -507,7 +507,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="jumlah_biaya_wisata_bulanan">Wisata 2</p>
+								    						<p class="jumlah_biaya_wisata_bulanan">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -519,7 +519,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="lokasi_objek_wisata">Wisata 3</p>
+								    						<p class="lokasi_objek_wisata">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -531,7 +531,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="daya_tarik_wisata_palu">Wisata 4</p>
+								    						<p class="daya_tarik_wisata_palu">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -543,7 +543,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="pengelolaan_pariwisata_palu">Wisata 5</p>
+								    						<p class="pengelolaan_pariwisata_palu">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -562,7 +562,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="acceptorkb_multi">Persalinan 1</p>
+								    						<p class="acceptorkb_multi">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -574,7 +574,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="kualitas_ibu_hamil">Persalinan 1</p>
+								    						<p class="kualitas_ibu_hamil">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -586,7 +586,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="kualitas_bayi">Persalinan 2</p>
+								    						<p class="kualitas_bayi">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -598,7 +598,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="tempat_persalinan">Persalinan 3</p>
+								    						<p class="tempat_persalinan">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -610,7 +610,7 @@
 								    				</div>
 								    					<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="cakupan_imunisasi_multi">Persalinan 3</p>
+								    						<p class="cakupan_imunisasi_multi">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -622,7 +622,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="pertolongan_persalinan">Persalinan 4</p>
+								    						<p class="pertolongan_persalinan">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -634,7 +634,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="fasilitas_layanan_kesehatan">Persalinan 5</p>
+								    						<p class="fasilitas_layanan_kesehatan">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -646,7 +646,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="jenis_kelamin_balita">Persalinan 6</p>
+								    						<p class="jenis_kelamin_balita">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -658,7 +658,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="umur_balita">Persalinan 6</p>
+								    						<p class="umur_balita">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -670,7 +670,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="berat_badan">Persalinan 7</p>
+								    						<p class="berat_badan">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -682,7 +682,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="tinggi_badan">Persalinan 8</p>
+								    						<p class="tinggi_badan">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -694,7 +694,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="kondisi_saat_pengukuran">Persalinan 9</p>
+								    						<p class="kondisi_saat_pengukuran">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -706,7 +706,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="status_gizi_balita">Persalinan 10</p>
+								    						<p class="status_gizi_balita">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -725,7 +725,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="penderita_sakit_kelainan">kesehatan 1</p>
+								    						<p class="penderita_sakit_kelainan">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -737,7 +737,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="perilaku_hidup_bersih">kesehatan 2</p>
+								    						<p class="perilaku_hidup_bersih">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -749,7 +749,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="pola_makan">kesehatan 3</p>
+								    						<p class="pola_makan">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -761,7 +761,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="kebiasaan_berobat">kesehatan 4</p>
+								    						<p class="kebiasaan_berobat">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -773,7 +773,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="jenis_penyakit">kesehatan 5</p>
+								    						<p class="jenis_penyakit">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -792,7 +792,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="col-sm-12 transportasi_umum_multi">aset lainnya 1</p>
+								    						<p class="col-sm-12 transportasi_umum_multi">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -804,7 +804,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="col-sm-12 lembaga_pendidikan_multi">aset lainnya 2</p>
+								    						<p class="col-sm-12 lembaga_pendidikan_multi">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -816,7 +816,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="col-sm-12 aset_produksi_multi">kesehatan 3</p>
+								    						<p class="col-sm-12 aset_produksi_multi">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>								    				
@@ -835,7 +835,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="sumber_air_minum">LOK</p>
+								    						<p class="sumber_air_minum">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -847,7 +847,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="ket_sumber_air_minum">Lok2</p>
+								    						<p class="ket_sumber_air_minum">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -859,7 +859,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="status_kepemilikan_rumah">Lok3</p>
+								    						<p class="status_kepemilikan_rumah">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -871,7 +871,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="sarana_mck">Lok4</p>
+								    						<p class="sarana_mck">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -884,7 +884,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="daya_listrik">Lok5</p>
+								    						<p class="daya_listrik">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -896,7 +896,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="luas_pekarangan_rumah">Lok6</p>
+								    						<p class="luas_pekarangan_rumah">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -909,7 +909,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="pemanfaatan_danau_dkk">Lok7</p>
+								    						<p class="pemanfaatan_danau_dkk">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -921,7 +921,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="dinding_rumah">Lok8</p>
+								    						<p class="dinding_rumah">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -933,7 +933,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="atap_rumah">Lok9</p>
+								    						<p class="atap_rumah">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -945,7 +945,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="lantai_rumah">Lok10</p>
+								    						<p class="lantai_rumah">Tidak Ada</p>
 								    					</div>
 								    				</div>
 								    			</div>

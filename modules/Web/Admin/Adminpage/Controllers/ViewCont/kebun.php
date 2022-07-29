@@ -7,6 +7,8 @@ namespace AdminpageViewCont;
 use AdminTemplateViewCont\DefaultAdminViewController;
 use BusinessProcessRoot\Models\User as UserModel;
 
+use BusinessProcessRoot\Models\Kecamatan as KecamatanModel;
+
 class Kebun extends DefaultAdminViewController{
 	
 	public function __construct(){
@@ -19,6 +21,11 @@ class Kebun extends DefaultAdminViewController{
 		$this->set_js_data($data_pl_top,"bottom","last","assets/admin/plugins/");
 
 		$this->set_data_view("menu","kebun");
+
+		$kModel = new KecamatanModel();
+		$k_list = $kModel->findAll();
+
+		$this->set_data_view("kecamatan",$k_list);
 	}
 
 	public function kebun_example(){
@@ -27,7 +34,7 @@ class Kebun extends DefaultAdminViewController{
 	}
 
 	public function kebun(){
-		$data_js_rd = array(
+		$data_js_rd = array( 
 			'kebun.js'
 		);
 

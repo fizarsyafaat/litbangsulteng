@@ -118,7 +118,7 @@ $(document).ready(function(){
 			[page_csrf] : page_csrf_value,
 		};
 
-		$.post(config_url + "panel/panganobat/json/get-panganobat",data,function(rd){
+		$.post(config_url + "panel/obat/json/get-obat",data,function(rd){
 			var bar_data = {
 				data : [],
 				bars : {show:true},
