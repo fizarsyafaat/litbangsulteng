@@ -258,6 +258,7 @@ $(document).ready(function(){
 					'kepala_keluarga' : kepala_keluarga,
 					'kelurahan' : kelurahan,
 					'no_kk' : no_kk,
+					'mode' : 'statistic',
 				};
 
 				if(paging==1){
@@ -293,6 +294,7 @@ $(document).ready(function(){
 			rd=red['kk_list'];
 			if(id == 0){
 				if(kelurahan==0){
+					console.log(red);
 					teks_tr = "";
 
 					for(var i = 0; i<rd.length;i++){
@@ -310,6 +312,75 @@ $(document).ready(function(){
 					$("#kk-table tbody").html(teks_total);
 					$(".pagination-kk").html(red['pager']);
 					$("#kk-table tfoot").hide();
+
+					//STATISTIC GENDER
+					donutGenderData = [];
+					for(var igender=0;igender<red['statistic']['gender'].length;igender++){
+					    var donutDataSingle =
+				        {
+				            label: red['statistic']['gender'][igender]['name'],
+				            data: red['statistic']['gender'][igender]['percentage'],
+				            color: "#" + Math.floor(Math.random()*16777215).toString(16),
+				        };
+
+
+					    donutGenderData.push(donutDataSingle);
+					}
+
+
+				    $.plot("#donut-chart-gender", donutGenderData, {
+				        series: {
+				            pie: {
+				                show: true,
+				                radius: 1,
+				                innerRadius: 0.5,
+				                label: {
+				                    show: true,
+				                    radius: 2 / 3,
+				                    formatter: labelFormatter,
+				                    threshold: 0.1,
+				                },
+				            },
+				        },
+				        legend: {
+				            show: false,
+				        },
+				    });
+
+					//STATISTIC AGAMA
+					donutReligionData = [];
+					for(var igender=0;igender<red['statistic']['religion'].length;igender++){
+					    var donutDataSingle =
+				        {
+				            label: red['statistic']['religion'][igender]['name'],
+				            data: red['statistic']['religion'][igender]['percentage'],
+				            color: "#" + Math.floor(Math.random()*16777215).toString(16),
+				        };
+
+
+					    donutReligionData.push(donutDataSingle);
+					}
+
+
+				    $.plot("#donut-chart-religion", donutReligionData, {
+				        series: {
+				            pie: {
+				                show: true,
+				                radius: 1,
+				                innerRadius: 0.5,
+				                label: {
+				                    show: true,
+				                    radius: 2 / 3,
+				                    formatter: labelFormatter,
+				                    threshold: 0.1,
+				                },
+				            },
+				        },
+				        legend: {
+				            show: false,
+				        },
+				    });
+
 				}else{
 					teks_tr = "";
 
@@ -629,6 +700,8 @@ $(document).ready(function(){
 				
 
 				$("#kk-view").modal("show");
+
+
 			}
 		},"json")
 		.fail(function(rd){
@@ -640,12 +713,6 @@ $(document).ready(function(){
 	if($("#cari-kk").length >= 1){
 		get_main_kk();
 	}
-
-	$(".search-kk").click(function(){
-		var kelurahan = $("#kk-paging-view").attr("data-id-kelurahan");
-		$("#kk-paging-view").attr("meta-id",0);
-		get_main_kk(kelurahan);
-	});
 
 	//get-kelurahan-kk
 
@@ -671,8 +738,15 @@ $(document).ready(function(){
 	});
 
 	$(".search-kk").click(function(){
-		$("#dashboard").attr("meta-id",0);
-		get_main_kk_page();
+		if($("#dashboard").length >= 1){
+			$("#dashboard").attr("meta-id",0);
+			get_main_kk_page();			
+		}else{
+			var kelurahan = $("#kk-paging-view").attr("data-id-kelurahan");
+			$("#kk-paging-view").attr("meta-id",0);
+			get_main_kk(kelurahan);
+		}
+
 	});
 
 	$(document.body).on("click",".pagination.pagination-kk a.page_item",function(e){
@@ -682,4 +756,8 @@ $(document).ready(function(){
 
 		get_main_kk(0,1,page_l);
 	});
+
+    function labelFormatter(label, series) {
+        return '<div style="font-size:13px; text-align:center; padding:2px; color: #fff; font-weight: 600;">' + label + "<br>" + Math.round(series.percent) + "%</div>";
+    }
 });

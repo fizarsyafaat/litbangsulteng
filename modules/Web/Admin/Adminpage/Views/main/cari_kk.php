@@ -74,6 +74,57 @@
                 		</div>
                 	</div>
                 	<div class="row">
+                		<div class="col-sm-6 col-md-4">
+                			<div class="card card-default">
+                				<div class="card-header">
+                					<h3>Rekapitulasi KK</h3>
+                				</div>
+                				<div class="card-body">
+                					<div class="row">
+                						<div class="col-12">
+		                					<h2 style="text-align: center;">Jumlah KK</h2>
+		                					<h2 style="text-align: center;">12938</h2>
+		                				</div>
+	                				</div>
+                				</div>
+                				<div class="card-footer">
+                				</div>
+                			</div>
+                		</div>
+                		<div class="col-sm-6 col-md-4">
+                			<div class="card card-default">
+                				<div class="card-header">
+                					<h3>Jenis Kelamin</h3>
+                				</div>
+                				<div class="card-body">
+                					<div class="row">
+                						<div class="col-12">
+		                                    <div id="donut-chart-gender" style="height: 300px;"></div>
+		                				</div>
+	                				</div>
+                				</div>
+                				<div class="card-footer">
+                				</div>
+                			</div>
+                		</div>
+                		<div class="col-sm-6 col-md-4">
+                			<div class="card card-default">
+                				<div class="card-header">
+                					<h3>Agama</h3>
+                				</div>
+                				<div class="card-body">
+                					<div class="row">
+                						<div class="col-12">
+		                                    <div id="donut-chart-religion" style="height: 300px;"></div>
+		                				</div>
+	                				</div>
+                				</div>
+                				<div class="card-footer">
+                				</div>
+                			</div>
+                		</div>
+                	</div>
+                	<div class="row">
                 		<div class="col-12 table-responsive">
                 			<table id="kk-table" class="table table-striped">
                 				<thead class="thead-dark">

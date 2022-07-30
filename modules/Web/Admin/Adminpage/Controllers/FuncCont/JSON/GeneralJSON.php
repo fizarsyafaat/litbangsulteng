@@ -10,6 +10,8 @@ use BusinessProcessRoot\Models\KkMain as KkMainModel;
 
 use BusinessProcessRoot\Models\Kecamatan as KecamatanModel;
 use BusinessProcessRoot\Models\Kelurahan as KelurahanModel;
+use BusinessProcessRoot\Models\Agama as AgamaModel;
+use BusinessProcessRoot\Entities\Misc\Statistic as StatisticEntities;
 
 class GeneralJSON extends DefaultAdminFuncController{
 	use ResponseTrait;
@@ -22,11 +24,15 @@ class GeneralJSON extends DefaultAdminFuncController{
 		$request = $this->request;
 
 		$kModel = new KkMainModel();
+		$kstatisticModel = new KkMainModel();
+
 		$kepala_keluarga = htmlspecialchars(strip_tags($request->getPost("kepala_keluarga")));
 		$no_kk = htmlspecialchars(strip_tags($request->getPost("no_kk")));
 		$kelurahan = (int) ($request->getPost("kelurahan"));
 		$kk_id = (int) ($request->getPost("kk_id"));
+		$mode = $request->getPost("mode");
 		$paging = ($request->getPost("paging"));
+		$data_filter = array();
 
 		try{
 			$page = (int) ($request->getPost("page"));
@@ -40,15 +46,23 @@ class GeneralJSON extends DefaultAdminFuncController{
 
 		if(strlen($kepala_keluarga)>=1){
 			$kModel = $kModel->like("kepala_keluarga",$kepala_keluarga);
+			$data_filter['kepala_keluarga'] = $kepala_keluarga;
+			$kstatisticModel = $kstatisticModel->like("kepala_keluarga",$kepala_keluarga);
 		}
 		if(strlen($no_kk)>=1){
 			$kModel = $kModel->like("no_kk",$no_kk);
+			$data_filter['no_kk'] = $no_kk;
+			$kstatisticModel = $kstatisticModel->like("no_kk",$no_kk);
 		}
 		if($kelurahan>=1){
 			$kModel = $kModel->where("kelurahan",$kelurahan);
+			$data_filter['kelurahan'] = $kelurahan;
+			$kstatisticModel = $kstatisticModel->where("kelurahan",$kelurahan);
 		}
 		if($kk_id>=1){
 			$kModel = $kModel->where("kk_id",$kk_id);
+			$data_filter['kk_id'] = $kk_id;
+			$kstatisticModel = $kstatisticModel->where("kk_id",$kk_id);
 		}
 
         if($paging){
@@ -91,9 +105,40 @@ class GeneralJSON extends DefaultAdminFuncController{
 			$kl->get_pendata= $kl->get_pendata();
 		}
 
+		$statistic = new StatisticEntities();
+
+		if($mode=="statistic"){
+			$data_filter_statistic = $data_filter;
+			//statistic
+			//gender
+	        $male = $kstatisticModel->join("kk_main_data_utama_responden","kk_main_data_utama_responden.kk_id = kk_main.kk_id")->where("jenis_kelamin",1)->get()->getResult("BusinessProcessRoot\Entities\KkMain");
+	        $female = $kstatisticModel->join("kk_main_data_utama_responden","kk_main_data_utama_responden.kk_id = kk_main.kk_id")->where("jenis_kelamin",2)->get()->getResult("BusinessProcessRoot\Entities\KkMain");
+
+	        $data_gender = array(
+	        	'male' => sizeof($male),
+	        	'female' => sizeof($female),
+	        );
+
+	        $statistic->gender = $statistic->get_percentage($data_gender);
+
+			//Agama
+			$agama_model = new AgamaModel();
+			$all_agama = $agama_model->findAll();
+			$data_religion = array();
+
+			foreach($all_agama as $m){
+				$data_filter_statistic['agama'] = $m->agama_id;
+				$data_religion[$m->nama_agama] = sizeof($kstatisticModel->get_filter_data($data_filter_statistic));
+			}
+
+	        $statistic->religion = $statistic->get_percentage($data_religion);
+		}
+
+
 		$data = array(
 			'pager' => $pager,
-			'kk_list' => $kk_list
+			'kk_list' => $kk_list,
+			'statistic' => $statistic,
 		);
 
 		echo json_encode($data);

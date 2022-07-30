@@ -91,11 +91,11 @@ class Dashboard extends DefaultAdminViewController{
 	}
 
 	public function cari_kk(){
-		$data_js_rd = array(
-			'dashboard.js'
+		$data_pl_top = array(
+			'flot/jquery.flot.js','flot/plugins/jquery.flot.resize.js',
+			'flot/plugins/jquery.flot.pie.js'
 		);
-
-		$this->set_js_data($data_js_rd,"bottom","last","assets/admin/custom/js/");
+		$this->set_js_data($data_pl_top,"bottom","last","assets/admin/plugins/");
 
 		$this->set_data_view("submenu","carikk");
 		return $this->tc_view("AdminpageView\main\cari_kk");
