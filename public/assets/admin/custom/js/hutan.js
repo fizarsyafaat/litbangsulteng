@@ -127,7 +127,7 @@ $(document).ready(function(){
 
 		var data = {
 			[page_csrf] : page_csrf_value,
-		};
+		}; 
 
 		console.log(data);
 
