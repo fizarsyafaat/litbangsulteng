@@ -31,7 +31,7 @@ class HutanJSON extends DefaultAdminFuncController{
 		$kecamatan = (int) ($request->getPost("kecamatan"));
 		$kelurahan = (int) ($request->getPost("kelurahan"));
 
-		$data = array();
+		$data = array(); 
 
 
 		//KEPEMILIKAN RUMAH

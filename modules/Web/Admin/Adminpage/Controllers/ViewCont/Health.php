@@ -4,8 +4,10 @@
 
 namespace AdminpageViewCont;
 
-use AdminTemplateViewCont\DefaultAdminViewController;
+use AdminTemplateViewCont\DefaultAdminViewController; 
 use BusinessProcessRoot\Models\User as UserModel;
+
+use BusinessProcessRoot\Models\Kecamatan as KecamatanModel;
 
 class Health extends DefaultAdminViewController{
 	
@@ -19,6 +21,10 @@ class Health extends DefaultAdminViewController{
 		$this->set_js_data($data_pl_top,"bottom","last","assets/admin/plugins/");
 
 		$this->set_data_view("menu","health");
+
+		$kModel = new KecamatanModel();
+		$k_list = $kModel->findAll();
+		$this->set_data_view("kecamatan",$k_list);
 	}
 
 	public function disease_example(){

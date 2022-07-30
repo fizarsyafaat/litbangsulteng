@@ -3,7 +3,7 @@
 <?= $this->section('main') ?>
         <div id="dashboard" class="content-wrapper" meta-id="0">
             <!-- Content Header (Page header) -->
-            <div class="content-header">
+            <div class="content-header"> 
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">

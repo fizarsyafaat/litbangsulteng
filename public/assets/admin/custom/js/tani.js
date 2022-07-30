@@ -4,7 +4,7 @@ $(document).ready(function(){
 	get_komoditas1();
 	
 
-	var previousPoint = null,
+	var previousPoint = null, 
     	previousLabel = null;
 	
 	
