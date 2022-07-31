@@ -11,6 +11,11 @@ use BusinessProcessRoot\Models\KkMain as KkMainModel;
 use BusinessProcessRoot\Models\Kecamatan as KecamatanModel;
 use BusinessProcessRoot\Models\Kelurahan as KelurahanModel;
 use BusinessProcessRoot\Models\Agama as AgamaModel;
+use BusinessProcessRoot\Models\GolonganDarah as GolonganDarahModel;
+use BusinessProcessRoot\Models\PendidikanTerakhir as PendidikanTerakhirModel;
+use BusinessProcessRoot\Models\MataPencaharianPokok as MataPencaharianPokokModel;
+use BusinessProcessRoot\Models\StatusKemiskinan as StatusKemiskinanModel;
+use BusinessProcessRoot\Models\UangPerBulan as UangPerBulanModel;
 use BusinessProcessRoot\Entities\Misc\Statistic as StatisticEntities;
 
 class GeneralJSON extends DefaultAdminFuncController{
@@ -68,7 +73,7 @@ class GeneralJSON extends DefaultAdminFuncController{
         if($paging){
             $start = ($page - 1) * DATA_PER_PAGE;
             $kk_list = $kModel->limit(DATA_PER_PAGE,$start)->get()->getResult("BusinessProcessRoot\Entities\KkMain");
-            $kk_total = $kModel->findAll();
+            $kk_total = $kModel->get_filter_data($data_filter);
         }else{
 			$kk_list = $kModel->get()->getResult("BusinessProcessRoot\Entities\KkMain");
 			$kk_total = $kk_list;
@@ -110,34 +115,123 @@ class GeneralJSON extends DefaultAdminFuncController{
 		if($mode=="statistic"){
 			$data_filter_statistic = $data_filter;
 			//statistic
-			//gender
-	        $male = $kstatisticModel->join("kk_main_data_utama_responden","kk_main_data_utama_responden.kk_id = kk_main.kk_id")->where("jenis_kelamin",1)->get()->getResult("BusinessProcessRoot\Entities\KkMain");
-	        $female = $kstatisticModel->join("kk_main_data_utama_responden","kk_main_data_utama_responden.kk_id = kk_main.kk_id")->where("jenis_kelamin",2)->get()->getResult("BusinessProcessRoot\Entities\KkMain");
 
-	        $data_gender = array(
-	        	'male' => sizeof($male),
-	        	'female' => sizeof($female),
-	        );
+			//gender{
+				$data_filter_statistic['jenis_kelamin'] = 1;
+		        $male = $kstatisticModel->get_filter_data($data_filter_statistic);
+				$data_filter_statistic['jenis_kelamin'] = 2;
+		        $female = $kstatisticModel->get_filter_data($data_filter_statistic);
 
-	        $statistic->gender = $statistic->get_percentage($data_gender);
+		        $data_gender = array(
+		        	'Laki-laki' => sizeof($male),
+		        	'Wanita' => sizeof($female),
+		        );
 
-			//Agama
-			$agama_model = new AgamaModel();
-			$all_agama = $agama_model->findAll();
-			$data_religion = array();
+		        $statistic->gender = $statistic->get_percentage($data_gender);
+		   // }
 
-			foreach($all_agama as $m){
-				$data_filter_statistic['agama'] = $m->agama_id;
-				$data_religion[$m->nama_agama] = sizeof($kstatisticModel->get_filter_data($data_filter_statistic));
-			}
+			//Agama{
+				$agama_model = new AgamaModel();
+				$all_agama = $agama_model->findAll();
+				$data_religion = array();
 
-	        $statistic->religion = $statistic->get_percentage($data_religion);
+				$data_filter_statistic = $data_filter;
+
+				foreach($all_agama as $m){
+					$data_filter_statistic['agama'] = $m->agama_id;
+					$data_religion[$m->nama_agama] = sizeof($kstatisticModel->get_filter_data($data_filter_statistic));
+				}
+
+		        $statistic->religion = $statistic->get_percentage($data_religion);
+		    //}
+
+	        //goldarah{
+				$golongan_darah_model = new GolonganDarahModel();
+				$all_goldar = $golongan_darah_model->findAll();
+				$data_goldar = array();
+
+				$data_filter_statistic = $data_filter;
+
+				foreach($all_goldar as $m){
+					$data_filter_statistic['goldar'] = $m->golongan_darah_id;
+					$data_goldar[$m->nama_golongan_darah] = sizeof($kstatisticModel->get_filter_data($data_filter_statistic));
+				}
+
+		        $statistic->goldar = $statistic->get_percentage($data_goldar);
+		    //}
+
+		    //pendidikanterakhir{
+				$penter_model = new PendidikanTerakhirModel();
+				$all_penter = $penter_model->findAll();
+				$data_penter = array();
+
+				$data_filter_statistic = $data_filter;
+
+				foreach($all_penter as $m){
+					$data_filter_statistic['penter'] = $m->pendidikan_terakhir_id;
+					$data_penter[$m->nama_pendidikan_terakhir] = sizeof($kstatisticModel->get_filter_data($data_filter_statistic));
+				}
+
+		        $statistic->penter = $statistic->get_percentage($data_penter);
+		    //}
+
+		    //pekerjaan{
+				$pekerjaan_model = new MataPencaharianPokokModel();
+				$all_pekerjaan = $pekerjaan_model->findAll();
+				$data_pekerjaan = array();
+
+				$data_filter_statistic = $data_filter;
+
+				foreach($all_pekerjaan as $m){
+					$data_filter_statistic['pekerjaan'] = $m->mata_pencaharian_pokok_id;
+					$data_pekerjaan[$m->nama_mata_pencaharian_pokok] = sizeof($kstatisticModel->get_filter_data($data_filter_statistic));
+				}
+
+		        $statistic->pekerjaan = $statistic->get_percentage($data_pekerjaan);
+		    //}
+
+		    //penghasilan{
+				$upb_model = new UangPerBulanModel();
+				$all_upb = $upb_model->findAll();
+				$data_penghasilan = array();
+				$data_pengeluaran = array();
+
+				$data_filter_statistic = $data_filter;
+
+				foreach($all_upb as $m){
+					$data_filter_statistic['penghasilan'] = $m->uang_per_bulan_id;
+					$data_penghasilan[$m->nama_uang_per_bulan] = sizeof($kstatisticModel->get_filter_data($data_filter_statistic));
+
+					$data_filter_statistic = $data_filter;
+					$data_filter_statistic['pengeluaran'] = $m->uang_per_bulan_id;
+					$data_pengeluaran[$m->nama_uang_per_bulan] = sizeof($kstatisticModel->get_filter_data($data_filter_statistic));
+				}
+
+		        $statistic->penghasilan = $statistic->get_percentage($data_penghasilan);
+		        $statistic->pengeluaran = $statistic->get_percentage($data_pengeluaran);
+		    //}
+
+		    //penghasilan{
+				$stakem_model = new StatusKemiskinanModel();
+				$all_stakem = $stakem_model->findAll();
+				$data_stakem = array();
+
+				$data_filter_statistic = $data_filter;
+
+				foreach($all_stakem as $m){
+					$data_filter_statistic['stakem'] = $m->status_kemiskinan_id;
+					$data_stakem[$m->nama_status_kemiskinan] = sizeof($kstatisticModel->get_filter_data($data_filter_statistic));
+				}
+
+		        $statistic->stakem = $statistic->get_percentage($data_stakem);
+		    //}
 		}
 
 
 		$data = array(
 			'pager' => $pager,
 			'kk_list' => $kk_list,
+			'total_data' => sizeof($kk_total),
 			'statistic' => $statistic,
 		);
 

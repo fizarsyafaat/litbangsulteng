@@ -73,8 +73,8 @@
                 			</div>
                 		</div>
                 	</div>
-                	<div class="row">
-                		<div class="col-sm-6 col-md-4">
+                	<div class="row statistic-wrapper">
+                		<div class="col-sm-6 col-md-6 col-lg-4">
                 			<div class="card card-default">
                 				<div class="card-header">
                 					<h3>Rekapitulasi KK</h3>
@@ -83,7 +83,7 @@
                 					<div class="row">
                 						<div class="col-12">
 		                					<h2 style="text-align: center;">Jumlah KK</h2>
-		                					<h2 style="text-align: center;">12938</h2>
+		                					<h2 class='total-kk' style="text-align: center;">12938</h2>
 		                				</div>
 	                				</div>
                 				</div>
@@ -91,7 +91,7 @@
                 				</div>
                 			</div>
                 		</div>
-                		<div class="col-sm-6 col-md-4">
+                		<div class="col-sm-6 col-md-6 col-lg-4">
                 			<div class="card card-default">
                 				<div class="card-header">
                 					<h3>Jenis Kelamin</h3>
@@ -102,12 +102,29 @@
 		                                    <div id="donut-chart-gender" style="height: 300px;"></div>
 		                				</div>
 	                				</div>
+                					<div class="row table-below-chart">
+                						<div class="col-12">
+		                                    <div id="table-responsive">
+		                                    	<table class="table gender">
+		                                    		<thead class="thead-dark">
+			                                    		<tr>
+			                                    			<th>Jenis Kelamin</th>
+			                                    			<th>Jumlah KK</th>
+			                                    			<th>Percentage</th>
+			                                    		</tr>
+		                                    		</thead>
+		                                    		<tbody>
+		                                    		</tbody>
+		                                    	</table>
+		                                    </div>
+		                				</div>
+	                				</div>
                 				</div>
                 				<div class="card-footer">
                 				</div>
                 			</div>
                 		</div>
-                		<div class="col-sm-6 col-md-4">
+                		<div class="col-sm-6 col-md-6 col-lg-4">
                 			<div class="card card-default">
                 				<div class="card-header">
                 					<h3>Agama</h3>
@@ -116,6 +133,221 @@
                 					<div class="row">
                 						<div class="col-12">
 		                                    <div id="donut-chart-religion" style="height: 300px;"></div>
+		                				</div>
+	                				</div>
+                					<div class="row table-below-chart">
+                						<div class="col-12">
+		                                    <div id="table-responsive">
+		                                    	<table class="table agama">
+		                                    		<thead class="thead-dark">
+			                                    		<tr>
+			                                    			<th>Agama</th>
+			                                    			<th>Jumlah KK</th>
+			                                    			<th>Percentage</th>
+			                                    		</tr>
+		                                    		</thead>
+		                                    		<tbody>
+		                                    		</tbody>
+		                                    	</table>
+		                                    </div>
+		                				</div>
+	                				</div>
+                				</div>
+                				<div class="card-footer">
+                				</div>
+                			</div>
+                		</div>
+                		<div class="col-sm-6 col-md-6 col-lg-4">
+                			<div class="card card-default">
+                				<div class="card-header">
+                					<h3>Golongan Darah</h3>
+                				</div>
+                				<div class="card-body">
+                					<div class="row">
+                						<div class="col-12">
+		                                    <div id="donut-chart-goldar" style="height: 300px;"></div>
+		                				</div>
+	                				</div>
+                					<div class="row table-below-chart">
+                						<div class="col-12">
+		                                    <div id="table-responsive">
+		                                    	<table class="table goldar">
+		                                    		<thead class="thead-dark">
+			                                    		<tr>
+			                                    			<th>Golongan Darah</th>
+			                                    			<th>Jumlah KK</th>
+			                                    			<th>Percentage</th>
+			                                    		</tr>
+		                                    		</thead>
+		                                    		<tbody>
+		                                    		</tbody>
+		                                    	</table>
+		                                    </div>
+		                				</div>
+	                				</div>
+                				</div>
+                				<div class="card-footer">
+                				</div>
+                			</div>
+                		</div>
+                		<div class="col-sm-6 col-md-6 col-lg-4">
+                			<div class="card card-default">
+                				<div class="card-header">
+                					<h3>Pendidikan Terakhir</h3>
+                				</div>
+                				<div class="card-body">
+                					<div class="row">
+                						<div class="col-12">
+		                                    <div id="donut-chart-penter" style="height: 300px;"></div>
+		                				</div>
+	                				</div>
+                					<div class="row table-below-chart">
+                						<div class="col-12">
+		                                    <div id="table-responsive">
+		                                    	<table class="table penter">
+		                                    		<thead class="thead-dark">
+			                                    		<tr>
+			                                    			<th>Pendidikan Terakhir</th>
+			                                    			<th>Jumlah KK</th>
+			                                    			<th>Percentage</th>
+			                                    		</tr>
+		                                    		</thead>
+		                                    		<tbody>
+		                                    		</tbody>
+		                                    	</table>
+		                                    </div>
+		                				</div>
+	                				</div>
+                				</div>
+                				<div class="card-footer">
+                				</div>
+                			</div>
+                		</div>
+                		<div class="col-sm-6 col-md-6 col-lg-4">
+                			<div class="card card-default">
+                				<div class="card-header">
+                					<h3>Pekerjaan</h3>
+                				</div>
+                				<div class="card-body">
+                					<div class="row">
+                						<div class="col-12">
+		                                    <div id="donut-chart-pekerjaan" style="height: 300px;"></div>
+		                				</div>
+	                				</div>
+                					<div class="row table-below-chart">
+                						<div class="col-12">
+		                                    <div id="table-responsive">
+		                                    	<table class="table pekerjaan">
+		                                    		<thead class="thead-dark">
+			                                    		<tr>
+			                                    			<th>Pekerjaan</th>
+			                                    			<th>Jumlah KK</th>
+			                                    			<th>Percentage</th>
+			                                    		</tr>
+		                                    		</thead>
+		                                    		<tbody>
+		                                    		</tbody>
+		                                    	</table>
+		                                    </div>
+		                				</div>
+	                				</div>
+                				</div>
+                				<div class="card-footer">
+                				</div>
+                			</div>
+                		</div>
+                		<div class="col-sm-6 col-md-6 col-lg-4">
+                			<div class="card card-default">
+                				<div class="card-header">
+                					<h3>Penghasilan per bulan</h3>
+                				</div>
+                				<div class="card-body">
+                					<div class="row">
+                						<div class="col-12">
+		                                    <div id="donut-chart-penghasilan" style="height: 300px;"></div>
+		                				</div>
+	                				</div>
+                					<div class="row table-below-chart">
+                						<div class="col-12">
+		                                    <div id="table-responsive">
+		                                    	<table class="table penghasilan">
+		                                    		<thead class="thead-dark">
+			                                    		<tr>
+			                                    			<th>Penghasilan</th>
+			                                    			<th>Jumlah KK</th>
+			                                    			<th>Percentage</th>
+			                                    		</tr>
+		                                    		</thead>
+		                                    		<tbody>
+		                                    		</tbody>
+		                                    	</table>
+		                                    </div>
+		                				</div>
+	                				</div>
+                				</div>
+                				<div class="card-footer">
+                				</div>
+                			</div>
+                		</div>
+                		<div class="col-sm-6 col-md-6 col-lg-4">
+                			<div class="card card-default">
+                				<div class="card-header">
+                					<h3>Pengeluaran Per Bulan</h3>
+                				</div>
+                				<div class="card-body">
+                					<div class="row">
+                						<div class="col-12">
+		                                    <div id="donut-chart-pengeluaran" style="height: 300px;"></div>
+		                				</div>
+	                				</div>
+                					<div class="row table-below-chart">
+                						<div class="col-12">
+		                                    <div id="table-responsive">
+		                                    	<table class="table pengeluaran">
+		                                    		<thead class="thead-dark">
+			                                    		<tr>
+			                                    			<th>Pengeluaran</th>
+			                                    			<th>Jumlah KK</th>
+			                                    			<th>Percentage</th>
+			                                    		</tr>
+		                                    		</thead>
+		                                    		<tbody>
+		                                    		</tbody>
+		                                    	</table>
+		                                    </div>
+		                				</div>
+	                				</div>
+                				</div>
+                				<div class="card-footer">
+                				</div>
+                			</div>
+                		</div>
+                		<div class="col-sm-6 col-md-6 col-lg-4">
+                			<div class="card card-default">
+                				<div class="card-header">
+                					<h3>Status Kemiskinan</h3>
+                				</div>
+                				<div class="card-body">
+                					<div class="row">
+                						<div class="col-12">
+		                                    <div id="donut-chart-stakem" style="height: 300px;"></div>
+		                				</div>
+	                				</div>
+                					<div class="row table-below-chart">
+                						<div class="col-12">
+		                                    <div id="table-responsive">
+		                                    	<table class="table stakem">
+		                                    		<thead class="thead-dark">
+			                                    		<tr>
+			                                    			<th>Status Kemiskinan</th>
+			                                    			<th>Jumlah KK</th>
+			                                    			<th>Percentage</th>
+			                                    		</tr>
+		                                    		</thead>
+		                                    		<tbody>
+		                                    		</tbody>
+		                                    	</table>
+		                                    </div>
 		                				</div>
 	                				</div>
                 				</div>

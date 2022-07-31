@@ -309,6 +309,8 @@ $(document).ready(function(){
 
 					teks_total = teks_tr;
 
+					$(".total-kk").html(red['total_data']);
+
 					$("#kk-table tbody").html(teks_total);
 					$(".pagination-kk").html(red['pager']);
 					$("#kk-table tfoot").hide();
@@ -320,6 +322,7 @@ $(document).ready(function(){
 				        {
 				            label: red['statistic']['gender'][igender]['name'],
 				            data: red['statistic']['gender'][igender]['percentage'],
+				            raw_data : red['statistic']['gender'][igender]['total_data'],
 				            color: "#" + Math.floor(Math.random()*16777215).toString(16),
 				        };
 
@@ -347,6 +350,17 @@ $(document).ready(function(){
 				        },
 				    });
 
+				    var text = "";
+				    for(var igender=0;igender<donutGenderData.length;igender++){
+				    	text += "<tr>";
+				    	text += "<td>"+donutGenderData[igender].label+"</td>";
+				    	text += "<td>"+donutGenderData[igender].raw_data+"</td>";
+				    	text += "<td>"+donutGenderData[igender].data+"%</td>";
+				    	text += "</tr>";
+				    }
+
+				    $(".table.gender tbody").html(text);
+
 					//STATISTIC AGAMA
 					donutReligionData = [];
 					for(var igender=0;igender<red['statistic']['religion'].length;igender++){
@@ -354,6 +368,7 @@ $(document).ready(function(){
 				        {
 				            label: red['statistic']['religion'][igender]['name'],
 				            data: red['statistic']['religion'][igender]['percentage'],
+				            raw_data : red['statistic']['religion'][igender]['total_data'],
 				            color: "#" + Math.floor(Math.random()*16777215).toString(16),
 				        };
 
@@ -381,6 +396,292 @@ $(document).ready(function(){
 				        },
 				    });
 
+				    var text = "";
+				    for(var iagama=0;iagama<donutReligionData.length;iagama++){
+				    	text += "<tr>";
+				    	text += "<td>"+donutReligionData[iagama].label+"</td>";
+				    	text += "<td>"+donutReligionData[iagama].raw_data+"</td>";
+				    	text += "<td>"+donutReligionData[iagama].data+"%%</td>";
+				    	text += "</tr>";
+				    }
+
+				    $(".table.agama tbody").html(text);
+
+					//STATISTIC GOLDAR
+					donutGoldarData = [];
+					for(var igoldar=0;igoldar<red['statistic']['goldar'].length;igoldar++){
+					    var donutDataSingle =
+				        {
+				            label: red['statistic']['goldar'][igoldar]['name'],
+				            data: red['statistic']['goldar'][igoldar]['percentage'],
+				            raw_data : red['statistic']['goldar'][igoldar]['total_data'],
+				            color: "#" + Math.floor(Math.random()*16777215).toString(16),
+				        };
+
+
+					    donutGoldarData.push(donutDataSingle);
+					}
+
+
+				    $.plot("#donut-chart-goldar", donutGoldarData, {
+				        series: {
+				            pie: {
+				                show: true,
+				                radius: 1,
+				                innerRadius: 0.5,
+				                label: {
+				                    show: true,
+				                    radius: 2 / 3,
+				                    formatter: labelFormatter,
+				                    threshold: 0.1,
+				                },
+				            },
+				        },
+				        legend: {
+				            show: false,
+				        },
+				    });
+
+				    var text = "";
+				    for(var igoldar=0;igoldar<donutGoldarData.length;igoldar++){
+				    	text += "<tr>";
+				    	text += "<td>"+donutGoldarData[igoldar].label+"</td>";
+				    	text += "<td>"+donutGoldarData[igoldar].raw_data+"</td>";
+				    	text += "<td>"+donutGoldarData[igoldar].data+"%</td>";
+				    	text += "</tr>";
+				    }
+
+				    $(".table.goldar tbody").html(text);
+
+					//STATISTIC PENTER
+					donutPenterData = [];
+					for(var ipenter=0;ipenter<red['statistic']['penter'].length;ipenter++){
+					    var donutDataSingle =
+				        {
+				            label: red['statistic']['penter'][ipenter]['name'],
+				            data: red['statistic']['penter'][ipenter]['percentage'],
+				            raw_data : red['statistic']['penter'][ipenter]['total_data'],
+				            color: "#" + Math.floor(Math.random()*16777215).toString(16),
+				        };
+
+
+					    donutPenterData.push(donutDataSingle);
+					}
+
+
+				    $.plot("#donut-chart-penter", donutPenterData, {
+				        series: {
+				            pie: {
+				                show: true,
+				                radius: 1,
+				                innerRadius: 0.5,
+				                label: {
+				                    show: true,
+				                    radius: 2 / 3,
+				                    formatter: labelFormatter,
+				                    threshold: 0.1,
+				                },
+				            },
+				        },
+				        legend: {
+				            show: false,
+				        },
+				    });
+
+				    var text = "";
+				    for(var ipenter=0;ipenter<donutPenterData.length;ipenter++){
+				    	text += "<tr>";
+				    	text += "<td>"+donutPenterData[ipenter].label+"</td>";
+				    	text += "<td>"+donutPenterData[ipenter].raw_data+"</td>";
+				    	text += "<td>"+donutPenterData[ipenter].data+"%</td>";
+				    	text += "</tr>";
+				    }
+
+				    $(".table.penter tbody").html(text);
+
+					//STATISTIC PEKERJAAN
+					donutPekerjaanData = [];
+					for(var ipenter=0;ipenter<red['statistic']['pekerjaan'].length;ipenter++){
+					    var donutDataSingle =
+				        {
+				            label: red['statistic']['pekerjaan'][ipenter]['name'],
+				            data: red['statistic']['pekerjaan'][ipenter]['percentage'],
+				            raw_data : red['statistic']['pekerjaan'][ipenter]['total_data'],
+				            color: "#" + Math.floor(Math.random()*16777215).toString(16),
+				        };
+
+
+					    donutPekerjaanData.push(donutDataSingle);
+					}
+
+
+				    $.plot("#donut-chart-pekerjaan", donutPekerjaanData, {
+				        series: {
+				            pie: {
+				                show: true,
+				                radius: 1,
+				                innerRadius: 0.5,
+				                label: {
+				                    show: true,
+				                    radius: 2 / 3,
+				                    formatter: labelFormatter,
+				                    threshold: 0.1,
+				                },
+				            },
+				        },
+				        legend: {
+				            show: false,
+				        },
+				    });
+
+				    var text = "";
+				    for(var ipekerjaan=0;ipekerjaan<donutPekerjaanData.length;ipekerjaan++){
+				    	text += "<tr>";
+				    	text += "<td>"+donutPekerjaanData[ipekerjaan].label+"</td>";
+				    	text += "<td>"+donutPekerjaanData[ipekerjaan].raw_data+"</td>";
+				    	text += "<td>"+donutPekerjaanData[ipekerjaan].data+"%</td>";
+				    	text += "</tr>";
+				    }
+
+				    $(".table.pekerjaan tbody").html(text);
+
+					//STATISTIC PENGHASILAN
+					donutPenghasilanData = [];
+					for(var ipenghasilan=0;ipenghasilan<red['statistic']['penghasilan'].length;ipenghasilan++){
+					    var donutDataSingle =
+				        {
+				            label: red['statistic']['penghasilan'][ipenghasilan]['name'],
+				            data: red['statistic']['penghasilan'][ipenghasilan]['percentage'],
+				            raw_data : red['statistic']['penghasilan'][ipenghasilan]['total_data'],
+				            color: "#" + Math.floor(Math.random()*16777215).toString(16),
+				        };
+
+
+					    donutPenghasilanData.push(donutDataSingle);
+					}
+
+
+				    $.plot("#donut-chart-penghasilan", donutPenghasilanData, {
+				        series: {
+				            pie: {
+				                show: true,
+				                radius: 1,
+				                innerRadius: 0.5,
+				                label: {
+				                    show: true,
+				                    radius: 2 / 3,
+				                    formatter: labelFormatter,
+				                    threshold: 0.1,
+				                },
+				            },
+				        },
+				        legend: {
+				            show: false,
+				        },
+				    });
+
+				    var text = "";
+				    for(var ipenghasilan=0;ipenghasilan<donutPenghasilanData.length;ipenghasilan++){
+				    	text += "<tr>";
+				    	text += "<td>"+donutPenghasilanData[ipenghasilan].label+"</td>";
+				    	text += "<td>"+donutPenghasilanData[ipenghasilan].raw_data+"</td>";
+				    	text += "<td>"+donutPenghasilanData[ipenghasilan].data+"%</td>";
+				    	text += "</tr>";
+				    }
+
+				    $(".table.penghasilan tbody").html(text);
+
+					//STATISTIC PENGELUARAN
+					donutPengeluaranData = [];
+					for(var ipengeluaran=0;ipengeluaran<red['statistic']['pengeluaran'].length;ipengeluaran++){
+					    var donutDataSingle =
+				        {
+				            label: red['statistic']['pengeluaran'][ipengeluaran]['name'],
+				            data: red['statistic']['pengeluaran'][ipengeluaran]['percentage'],
+				            raw_data : red['statistic']['pengeluaran'][ipengeluaran]['total_data'],
+				            color: "#" + Math.floor(Math.random()*16777215).toString(16),
+				        };
+
+
+					    donutPengeluaranData.push(donutDataSingle);
+					}
+
+
+				    $.plot("#donut-chart-pengeluaran", donutPengeluaranData, {
+				        series: {
+				            pie: {
+				                show: true,
+				                radius: 1,
+				                innerRadius: 0.5,
+				                label: {
+				                    show: true,
+				                    radius: 2 / 3,
+				                    formatter: labelFormatter,
+				                    threshold: 0.1,
+				                },
+				            },
+				        },
+				        legend: {
+				            show: false,
+				        },
+				    });
+
+				    var text = "";
+				    for(var ipengeluaran=0;ipengeluaran<donutPengeluaranData.length;ipengeluaran++){
+				    	text += "<tr>";
+				    	text += "<td>"+donutPengeluaranData[ipengeluaran].label+"</td>";
+				    	text += "<td>"+donutPengeluaranData[ipengeluaran].raw_data+"</td>";
+				    	text += "<td>"+donutPengeluaranData[ipengeluaran].data+"%</td>";
+				    	text += "</tr>";
+				    }
+
+				    $(".table.pengeluaran tbody").html(text);
+
+					//STATISTIC PENGELUARAN
+					donutStakemData = [];
+					for(var istakem=0;istakem<red['statistic']['stakem'].length;istakem++){
+					    var donutDataSingle =
+				        {
+				            label: red['statistic']['stakem'][istakem]['name'],
+				            data: red['statistic']['stakem'][istakem]['percentage'],
+				            raw_data : red['statistic']['stakem'][istakem]['total_data'],
+				            color: "#" + Math.floor(Math.random()*16777215).toString(16),
+				        };
+
+
+					    donutStakemData.push(donutDataSingle);
+					}
+
+
+				    $.plot("#donut-chart-stakem", donutStakemData, {
+				        series: {
+				            pie: {
+				                show: true,
+				                radius: 1,
+				                innerRadius: 0.5,
+				                label: {
+				                    show: true,
+				                    radius: 2 / 3,
+				                    formatter: labelFormatter,
+				                    threshold: 0.1,
+				                },
+				            },
+				        },
+				        legend: {
+				            show: false,
+				        },
+				    });
+
+				    var text = "";
+				    for(var istakem=0;istakem<donutStakemData.length;istakem++){
+				    	text += "<tr>";
+				    	text += "<td>"+donutStakemData[istakem].label+"</td>";
+				    	text += "<td>"+donutStakemData[istakem].raw_data+"</td>";
+				    	text += "<td>"+donutStakemData[istakem].data+"%</td>";
+				    	text += "</tr>";
+				    }
+
+				    $(".table.stakem tbody").html(text);
 				}else{
 					teks_tr = "";
 

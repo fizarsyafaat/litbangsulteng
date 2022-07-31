@@ -16,10 +16,18 @@ class Statistic extends Entity
 		}
 
 		foreach($data as $key => $value){
-			$n = new \StdClass();
-			$n->name = ucfirst(strtolower($key));
-			$n->percentage = round( ($value/$total_data) * 100,1) ;
-			$data_send[] = $n;
+			try{
+				$n = new \StdClass();
+				$n->name = ucfirst(strtolower($key));
+				$n->percentage = round( ($value/$total_data) * 100,1) ;
+				$n->total_data = $value;
+				$data_send[] = $n;
+			}catch(\Exception $e){
+				$n->name = ucfirst(strtolower($key));
+				$n->total_data = 0;
+				$n->percentage = 0;
+				$data_send[] = $n;
+			}
 		}
 
 		return $data_send;
