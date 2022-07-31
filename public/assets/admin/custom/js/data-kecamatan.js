@@ -21,7 +21,12 @@ $(document).ready(function(){
 
 			ticks_ar = [];
 
-			for(var i=0;i<rd.length;i++){
+			//sortir data
+			rd.sort(function(a, b) {
+			    return parseInt(b['total_kk']) - parseInt(a['total_kk']);
+			});
+
+			for(var i=0;i<6;i++){
 				ar = [];
 				tick = [];
 				ar.push(i,rd[i]['total_kk']);
@@ -30,6 +35,20 @@ $(document).ready(function(){
 				ticks_ar.push(tick);
 				bar_data.data.push(ar);
 			}
+
+			var total_kk_lainnya = 0;
+
+			for(var i=6;i<rd.length;i++){
+				total_kk_lainnya += rd[i]['total_kk']
+			}
+
+			ar = [];
+			tick = [];
+			ar.push(6,total_kk_lainnya);
+			tick.push(6,"Lainnya");
+
+			ticks_ar.push(tick);
+			bar_data.data.push(ar);
 
 		    $.plot("#bar-chart", [bar_data], {
 		        grid: {
