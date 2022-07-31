@@ -34,6 +34,9 @@ class GeneralJSON extends DefaultAdminFuncController{
 		$kepala_keluarga = htmlspecialchars(strip_tags($request->getPost("kepala_keluarga")));
 		$no_kk = htmlspecialchars(strip_tags($request->getPost("no_kk")));
 		$kelurahan = (int) ($request->getPost("kelurahan"));
+		$kecamatan = (int) ($request->getPost("kecamatan"));
+		$pekerjaan = (int) ($request->getPost("pekerjaan"));
+		$stakem = (int) ($request->getPost("stakem"));
 		$kk_id = (int) ($request->getPost("kk_id"));
 		$mode = $request->getPost("mode");
 		$paging = ($request->getPost("paging"));
@@ -50,32 +53,36 @@ class GeneralJSON extends DefaultAdminFuncController{
 		}
 
 		if(strlen($kepala_keluarga)>=1){
-			$kModel = $kModel->like("kepala_keluarga",$kepala_keluarga);
 			$data_filter['kepala_keluarga'] = $kepala_keluarga;
-			$kstatisticModel = $kstatisticModel->like("kepala_keluarga",$kepala_keluarga);
 		}
 		if(strlen($no_kk)>=1){
-			$kModel = $kModel->like("no_kk",$no_kk);
 			$data_filter['no_kk'] = $no_kk;
-			$kstatisticModel = $kstatisticModel->like("no_kk",$no_kk);
 		}
 		if($kelurahan>=1){
-			$kModel = $kModel->where("kelurahan",$kelurahan);
 			$data_filter['kelurahan'] = $kelurahan;
-			$kstatisticModel = $kstatisticModel->where("kelurahan",$kelurahan);
+		}
+		if($pekerjaan>=1){
+			$data_filter['pekerjaan'] = $pekerjaan;
+		}
+		if($kecamatan>=1){
+			$data_filter['kecamatan'] = $kecamatan;
+		}
+		if($stakem>=1){
+			$data_filter['stakem'] = $stakem;
 		}
 		if($kk_id>=1){
-			$kModel = $kModel->where("kk_id",$kk_id);
 			$data_filter['kk_id'] = $kk_id;
-			$kstatisticModel = $kstatisticModel->where("kk_id",$kk_id);
 		}
 
         if($paging){
             $start = ($page - 1) * DATA_PER_PAGE;
-            $kk_list = $kModel->limit(DATA_PER_PAGE,$start)->get()->getResult("BusinessProcessRoot\Entities\KkMain");
+            $data_filter_page = $data_filter;
+            $data_filter_page['limit'] = DATA_PER_PAGE;
+            $data_filter_page['start'] = $start;
+            $kk_list = $kModel->get_filter_data($data_filter_page);
             $kk_total = $kModel->get_filter_data($data_filter);
         }else{
-			$kk_list = $kModel->get()->getResult("BusinessProcessRoot\Entities\KkMain");
+			$kk_list = $kModel->get_filter_data($data_filter);
 			$kk_total = $kk_list;
         }
 
@@ -213,16 +220,25 @@ class GeneralJSON extends DefaultAdminFuncController{
 		        $statistic->pengeluaran = $statistic->get_percentage($data_pengeluaran);
 		    //}
 
-		    //penghasilan{
+		    //kemiskinan{
 				$stakem_model = new StatusKemiskinanModel();
 				$all_stakem = $stakem_model->findAll();
 				$data_stakem = array();
 
 				$data_filter_statistic = $data_filter;
+				$k = 0;
 
 				foreach($all_stakem as $m){
 					$data_filter_statistic['stakem'] = $m->status_kemiskinan_id;
-					$data_stakem[$m->nama_status_kemiskinan] = sizeof($kstatisticModel->get_filter_data($data_filter_statistic));
+					if($k==0){
+						$nama_status = "Miskin";
+					}else if($k==1){
+						$nama_status = "Tidak miskin";
+					}else{
+						$nama_status = "Lainnya";
+					}
+					$data_stakem[$nama_status] = sizeof($kstatisticModel->get_filter_data($data_filter_statistic));
+					$k+=1;
 				}
 
 		        $statistic->stakem = $statistic->get_percentage($data_stakem);

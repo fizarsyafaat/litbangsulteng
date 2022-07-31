@@ -270,15 +270,24 @@ $(document).ready(function(){
 				var page_csrf = $(".csrf-header-master").attr("name");
 				var page_csrf_value = $(".csrf-header-master").attr("value");
 				var kepala_keluarga = $(".kepala-keluarga").val();
+				var kelurahan_src = $(".kelurahan-crkk").find(":selected").attr("value");
+				var kecamatan_src = $(".kecamatan-crkk").find(":selected").attr("value");
+				var stakem = $(".stakem-crkk").find(":selected").attr("value");
+				var pekerjaan = $(".pekerjaan-crkk").find(':selected').attr("value");
 				var no_kk = $(".no_kk").val();
 
 				var data = {
 					[page_csrf] : page_csrf_value,
 					'kepala_keluarga' : kepala_keluarga,
-					'kelurahan' : kelurahan,
+					'pekerjaan' : pekerjaan,
+					'kelurahan' : kelurahan_src,
+					'kecamatan' : kecamatan_src,
+					'stakem' : stakem,
 					'no_kk' : no_kk,
 					'mode' : 'statistic',
 				};
+
+				console.log(data);
 
 				if(paging==1){
 					data['paging'] = 1;
@@ -721,6 +730,7 @@ $(document).ready(function(){
 					$("#kk-table-kelurahan tfoot").hide();
 				}
 			}else{
+				console.log(red);
 				console.log(rd);
 				
 				//umum
@@ -1080,4 +1090,37 @@ $(document).ready(function(){
     function labelFormatter(label, series) {
         return '<div style="font-size:13px; text-align:center; padding:2px; color: #fff; font-weight: 600;">' + label + "<br>" + Math.round(series.percent) + "%</div>";
     }
+
+	$(".kecamatan-crkk").on("change",function(){
+		get_kelurahan();
+	});
+
+	function get_kelurahan(){
+		var kecamatan_id = $(".kecamatan-crkk").find(":selected").attr("value");
+		var page_csrf = $(".csrf-header-master").attr("name");
+		var page_csrf_value = $(".csrf-header-master").attr("value");
+
+		var data = {
+			[page_csrf] : page_csrf_value,
+		};
+
+		console.log(data);
+
+		$.post(config_url + "panel/address/json/get-subdistrict/"+kecamatan_id,data,function(rd){
+			var text = "<option value='0'>Semua Kelurahan</option>";
+			for(var i=0;i<rd.length;i++){
+				text += "<option value="+rd[i]['id_kelurahan']+">"+rd[i]['nama_kelurahan']+"</option>";
+			}
+
+			$(".kelurahan-crkk").html(text);
+		},"json")
+		.fail(function(rd){
+			console.log(rd);
+			Toast.fire({
+				type: 'error',
+				title: "Something wrong in the server"
+			});
+		});
+	}
+
 });

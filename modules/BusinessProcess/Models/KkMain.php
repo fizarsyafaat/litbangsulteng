@@ -19,8 +19,12 @@ class KkMain extends Model
         $builderClone = $builder;
 
 		$builder->join("kk_main_data_utama_responden",'kk_main.kk_id = kk_main_data_utama_responden.kk_id');
+		$builder->join("kelurahan",'kk_main.kelurahan = kelurahan.id_kelurahan');
 		$builder->join("kk_main_data_pekerjaan_dan_organisasi",'kk_main.kk_id = kk_main_data_pekerjaan_dan_organisasi.kk_id');
 
+        if(isset($data['kk_id'])){
+            $builder->where("kk_main.kk_id",$data['kk_id']);
+        }
         if(isset($data['no_kk'])){
             $builder->where("no_kk",$data['no_kk']);
         }
@@ -59,6 +63,9 @@ class KkMain extends Model
         }
         if(isset($data['stakem'])){
             $builder->where("status_kemiskinan",$data['stakem']);
+        }
+        if(isset($data['limit'])){
+        	$builder->limit($data['limit'],$data['start']);
         }
 
         $query = $builder->get()->getResult("BusinessProcessRoot\Entities\KkMain");

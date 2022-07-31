@@ -45,20 +45,37 @@
                 							<input type="text" class="form-control kepala-keluarga" name="kk">
                 						</div>
                 						<div class="col-lg-3 col-md-4 col-sm-8 col-12 form-group">
+                							<label>Kecamatan</label>
+                							<select class="form-control kecamatan-crkk">
+                								<option value="0">Semua Kecamatan</option>
+                								<?php foreach($kecamatan as $kc){?>
+                								<option value="<?php echo $kc->id_kecamatan;?>"><?php echo $kc->nama_kecamatan;?></option>
+                								<?php } ?>
+                							</select>
+                						</div>
+                						<div class="col-lg-3 col-md-4 col-sm-8 col-12 form-group">
+                							<label>Kelurahan</label>
+                							<select class="form-control kelurahan-crkk">
+                								<option value="0">Semua Kelurahan</option>
+                							</select>
+                						</div>
+                						<div class="col-lg-3 col-md-4 col-sm-8 col-12 form-group">
                 							<label>Pekerjaan</label>
-                							<select class="form-control">
+                							<select class="form-control pekerjaan-crkk">
                 								<option value="0">Semua Pekerjaan</option>
+                								<?php foreach($pekerjaan as $p){?>
+                								<option value="<?php echo $p->mata_pencaharian_pokok_id;?>"><?php echo $p->nama_mata_pencaharian_pokok;?></option>
+                								<?php } ?>
                 							</select>
                 						</div>
                 						<div class="col-lg-3 col-md-4 col-sm-8 col-12 form-group">
                 							<label>Status Kemiskinan</label>
-                							<select class="form-control">
+                							<select class="form-control stakem-crkk">
                 								<option value="0">Semua Status</option>
+                								<?php foreach($stakem as $s){?>
+                								<option value="<?php echo $s->status_kemiskinan_id;?>"><?php echo $s->nama_status_kemiskinan;?></option>
+                								<?php } ?>
                 							</select>
-                						</div>
-                						<div class="col-lg-3 col-md-4 col-sm-8 col-12 form-group">
-                							<label>No KTP Kepala Keluarga</label>
-                							<input type="text" class="form-control" name="kk">
                 						</div>
                 					</div>
                 				</div>

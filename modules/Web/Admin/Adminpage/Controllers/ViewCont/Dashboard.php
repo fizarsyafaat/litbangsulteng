@@ -97,6 +97,14 @@ class Dashboard extends DefaultAdminViewController{
 		);
 		$this->set_js_data($data_pl_top,"bottom","last","assets/admin/plugins/");
 
+		$kc_model = new KecamatanModel();
+		$mpp_model = new MataPencaharianPokokModel();
+		$st_model = new StatusKemiskinanModel();
+
+		$this->set_data_view("kecamatan",$kc_model->findAll());
+		$this->set_data_view("pekerjaan",$mpp_model->findAll());
+		$this->set_data_view("stakem",$st_model->findAll());
+
 		$this->set_data_view("submenu","carikk");
 		return $this->tc_view("AdminpageView\main\cari_kk");
 	}
