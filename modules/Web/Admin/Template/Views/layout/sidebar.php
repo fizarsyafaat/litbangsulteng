@@ -61,7 +61,7 @@
                                             <p>Insert Data</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
+                                  <!-- /. sidebar-menu  <li class="nav-item">
                                         <a href="#" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Kependudukan</p>
@@ -72,7 +72,7 @@
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Potensi Daerah</p>
                                         </a>
-                                    </li>
+                                    </li> -->
                                     <li class="nav-item">
                                         <a href="<?php echo route_to('user.panel.kobo-collect'); ?>" class="nav-link <?php if($submenu == "kobo-collect"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
@@ -213,18 +213,18 @@
                                     </p>
                                 </a>
                                 <ul class="nav nav-treeview">
-                                    <li class="nav-item">
+                                   <!-- /.sidebar-menu   <li class="nav-item">
                                         <a href="<?php echo route_to('user.panel.transportasi.transportasi'); ?>" class="nav-link <?php if($submenu == "transportasi"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Aset Transportasi Umum</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
+                                  <li class="nav-item">
                                         <a href="<?php echo route_to('user.panel.pendidikan.pendidikan'); ?>" class="nav-link <?php if($submenu == "pendidikan"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Aset Lembaga Pendidkan</p>
                                         </a>
-                                    </li>
+                                    </li> --> 
                                     <li class="nav-item">
                                         <a href="<?php echo route_to('user.panel.produksi.produksi'); ?>" class="nav-link <?php if($submenu == "produksi"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
