@@ -34,11 +34,7 @@ class Database extends \CodeIgniter\Database\Config
 		'hostname' => 'localhost',
 		'username' => 'root',
 		'password' => '',
-<<<<<<< HEAD
 		'database' => '220310_kependudukan_research',
-=======
-		'database' => 'smartcity',
->>>>>>> 905546e7756d630323997d74d5f86e4c122f535d
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,
