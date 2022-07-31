@@ -92,20 +92,20 @@ class GeneralJSON extends DefaultAdminFuncController{
 			$kl->get_kk_main_aset_tanah = $kl->get_kk_main_aset_tanah();
 			$kl->get_kk_main_aset_rumah = $kl->get_kk_main_aset_rumah();
 			$kl->get_kk_main_aset_perkebunan = $kl->get_kk_main_aset_perkebunan();
-			$kl->get_kk_main_aset_tanaman_pangan = $kl->get_kk_main_aset_tanaman_pangan();			
-			$kl->get_kk_main_aset_buah_buahan = $kl->get_kk_main_aset_buah_buahan();						
-			$kl->get_kk_main_aset_tanaman_obat = $kl->get_kk_main_aset_tanaman_obat();							
-			$kl->get_kk_main_aset_kehutanan= $kl->get_kk_main_aset_kehutanan();							
-			$kl->get_kk_main_aset_ternak= $kl->get_kk_main_aset_ternak();								
-			$kl->get_kk_main_aset_ikan= $kl->get_kk_main_aset_ikan();									
-			$kl->get_kk_main_aset_ikan_tangkap= $kl->get_kk_main_aset_ikan_tangkap();				
-			$kl->get_kk_main_pariwisata= $kl->get_kk_main_pariwisata();						
-			$kl->get_kk_main_kesehatan= $kl->get_kk_main_kesehatan();						
-			$kl->get_kk_main_aset_transportasi_umum= $kl->get_kk_main_aset_transportasi_umum();			
-			$kl->get_kk_main_aset_lembaga_pendidikan= $kl->get_kk_main_aset_lembaga_pendidikan();		
-			$kl->get_kk_main_aset_produksi= $kl->get_kk_main_aset_produksi();		
-			$kl->get_kk_main_persalinan= $kl->get_kk_main_persalinan();		
-			$kl->get_kk_main_acceptorkb= $kl->get_kk_main_acceptorkb();		
+			$kl->get_kk_main_aset_tanaman_pangan = $kl->get_kk_main_aset_tanaman_pangan();
+			$kl->get_kk_main_aset_buah_buahan = $kl->get_kk_main_aset_buah_buahan();
+			$kl->get_kk_main_aset_tanaman_obat = $kl->get_kk_main_aset_tanaman_obat();
+			$kl->get_kk_main_aset_kehutanan= $kl->get_kk_main_aset_kehutanan();
+			$kl->get_kk_main_aset_ternak= $kl->get_kk_main_aset_ternak();
+			$kl->get_kk_main_aset_ikan= $kl->get_kk_main_aset_ikan();
+			$kl->get_kk_main_aset_ikan_tangkap= $kl->get_kk_main_aset_ikan_tangkap();
+			$kl->get_kk_main_pariwisata= $kl->get_kk_main_pariwisata();
+			$kl->get_kk_main_kesehatan= $kl->get_kk_main_kesehatan();
+			$kl->get_kk_main_aset_transportasi_umum= $kl->get_kk_main_aset_transportasi_umum();
+			$kl->get_kk_main_aset_lembaga_pendidikan= $kl->get_kk_main_aset_lembaga_pendidikan();
+			$kl->get_kk_main_aset_produksi= $kl->get_kk_main_aset_produksi();
+			$kl->get_kk_main_persalinan= $kl->get_kk_main_persalinan();
+			$kl->get_kk_main_acceptorkb= $kl->get_kk_main_acceptorkb();
 			$kl->get_kk_main_cakupan_imunisasi= $kl->get_kk_main_cakupan_imunisasi();
 			$kl->get_pendata= $kl->get_pendata();
 		}
@@ -205,6 +205,8 @@ class GeneralJSON extends DefaultAdminFuncController{
 					$data_filter_statistic = $data_filter;
 					$data_filter_statistic['pengeluaran'] = $m->uang_per_bulan_id;
 					$data_pengeluaran[$m->nama_uang_per_bulan] = sizeof($kstatisticModel->get_filter_data($data_filter_statistic));
+
+					$data_filter_statistic = $data_filter;
 				}
 
 		        $statistic->penghasilan = $statistic->get_percentage($data_penghasilan);
@@ -247,7 +249,7 @@ class GeneralJSON extends DefaultAdminFuncController{
 		$kc_list = $kcModel->findAll();
 		$k_array = [];
 
-		foreach($kc_list as $kc){ 
+		foreach($kc_list as $kc){
 			$m = new \Stdclass();
 			$m->title = $kc->nama_kecamatan;
 			$m->total_kk = sizeof($kModel->join("kelurahan",'kk_main.kelurahan = kelurahan.id_kelurahan')->where("id_kecamatan",$kc->id_kecamatan)->findAll());
