@@ -134,7 +134,7 @@ $(document).ready(function(){
 			    return parseInt(b['total_kk']) - parseInt(a['total_kk']);
 			});
 
-			for(var i=0;i<12;i++){
+			for(var i=0;i<6;i++){
 				ar = [];
 				tick = [];
 				ar.push(i,rd[i]['total_kk']);
@@ -146,14 +146,14 @@ $(document).ready(function(){
 
 			var total_kk_lainnya = 0;
 
-			for(var i=12;i<rd.length;i++){
+			for(var i=6;i<rd.length;i++){
 				total_kk_lainnya += rd[i]['total_kk']
 			}
 
 			ar = [];
 			tick = [];
-			ar.push(12,total_kk_lainnya);
-			tick.push(12,"Lainnya");
+			ar.push(6,total_kk_lainnya);
+			tick.push(6,"Lainnya");
 
 			ticks_ar.push(tick);
 			bar_data.data.push(ar);
