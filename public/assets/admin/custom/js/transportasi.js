@@ -1,20 +1,24 @@
 $(document).ready(function(){
 
 
-	get_ikan();
+	get_komoditas1();
 	
 
-
-	var previousPoint = null,
-    	previousLabel = null;
+	var previousPoint = null, 
+    	previousLabel = null; 
 	
-	function get_ikan(){
+	
+	function get_komoditas1(){
 		var id = 0;
 		var page_csrf = $(".csrf-header-master").attr("name");
 		var page_csrf_value = $(".csrf-header-master").attr("value");
+		var kecamatan_id = $(".all-districts-transportasi").find(":selected").attr("value");
+		var kelurahan_id = $(".all-subdistricts-transportasi").find(":selected").attr("value");
 
 		var data = {
 			[page_csrf] : page_csrf_value,
+			'kelurahan' : kelurahan_id,
+			'kecamatan' : kecamatan_id,
 		};
 
 		$.post(config_url + "panel/transportasi/json/get-transportasi",data,function(rd){
@@ -106,6 +110,46 @@ $(document).ready(function(){
 		        previousPoint = null;
 		    }
 		});
-	}              
-	/* END BAR CHART */
+	}
+
+
+	
+	$(".all-districts-transportasi").on("change",function(){
+		get_kelurahan_transportasi();
+	});
+
+	function get_kelurahan_transportasi(){
+		var kecamatan_id = $(".all-districts-transportasi").find(":selected").attr("value");
+		var page_csrf = $(".csrf-header-master").attr("name");
+		var page_csrf_value = $(".csrf-header-master").attr("value");
+
+		var data = {
+			[page_csrf] : page_csrf_value,
+		};
+
+		console.log(data);
+
+		$.post(config_url + "panel/address/json/get-subdistrict/"+kecamatan_id,data,function(rd){
+			var text = "<option value='0'>Semua Kelurahan</option>";
+			for(var i=0;i<rd.length;i++){
+				text += "<option value="+rd[i]['id_kelurahan']+">"+rd[i]['nama_kelurahan']+"</option>";
+			}
+
+			$(".all-subdistricts-transportasi").html(text);
+		},"json")
+		.fail(function(rd){
+			console.log(rd);
+			Toast.fire({
+				type: 'error',
+				title: "Something wrong in the server"
+			});
+		});
+	}
+
+	$(".filter-transportasi").on("click",function(){
+		get_komoditas1();
+	});
+	
+	                
+	                /* END BAR CHART */
 });

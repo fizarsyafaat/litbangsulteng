@@ -10,7 +10,6 @@ use CodeIgniter\API\ResponseTrait;
 use BusinessProcessRoot\Models\LembagaPendidikan as LembagaPendidikanModel;
 use BusinessProcessRoot\Models\KkMainLembagaPendidikan as KkMainLembagaPendidikanModel;
 
-
 class PendidikanJSON extends DefaultAdminFuncController{
 	use ResponseTrait;
 
@@ -19,19 +18,45 @@ class PendidikanJSON extends DefaultAdminFuncController{
 	}
 
 	public function json_get_pendidikan(){
+		$request = $this->request;
+
 		$kModel = new LembagaPendidikanModel();
 		$kkmModel = new KkMainLembagaPendidikanModel();
 
 		$k_list = $kModel->findAll();	
 
-		foreach($k_list as $m){
-			$m->total_data = sizeof($kkmModel->where("lembaga_pendidikan",$m->lembaga_pendidikan_id)->findAll());
-		}
-		
+		$kkmModel->join("kk_main",'kk_main_lembaga_pendidikan.kk_id = kk_main.kk_id');
+		$kkmModel->join("kelurahan","kk_main.kelurahan = kelurahan.id_kelurahan");
 
+		$kecamatan = (int) ($request->getPost("kecamatan"));
+		$kelurahan = (int) ($request->getPost("kelurahan"));
+
+		$data = array();
+
+
+		//KEPEMILIKAN RUMAH
+
+		if($kecamatan > 0){
+			$data['kecamatan'] = $kecamatan;
+		}
+
+		if($kelurahan > 0){
+			$data['kelurahan'] = $kelurahan;
+		}
+
+
+		foreach($k_list as $m){
+			$data['lembaga_pendidikan'] = $m->lembaga_pendidikan_id;
+			$kkm_ent = $kkmModel->get_filter_data_pendidikan($data);
+			$m->total_data = sizeof($kkm_ent);
+		}
+
+			
 		$data = array(
-			'lembaga_pendidikan' => $k_list,
+			'lembaga_pendidikan' => $k_list
+			
 		);
+
 		echo json_encode($data);
 	}
 

@@ -7,6 +7,8 @@ namespace AdminpageViewCont;
 use AdminTemplateViewCont\DefaultAdminViewController;
 use BusinessProcessRoot\Models\User as UserModel;
 
+use BusinessProcessRoot\Models\Kecamatan as KecamatanModel;
+
 class Produksi extends DefaultAdminViewController{
 	
 	public function __construct(){
@@ -19,12 +21,15 @@ class Produksi extends DefaultAdminViewController{
 		$this->set_js_data($data_pl_top,"bottom","last","assets/admin/plugins/");
 
 		$this->set_data_view("menu","transportasi");
+		$kModel = new KecamatanModel();
+		$k_list = $kModel->findAll();
+		$this->set_data_view("kecamatan",$k_list); 
 	}
 
 	public function produksi_example(){
 		$this->set_data_view("submenu","produksi");
 		return $this->tc_view("AdminpageView\main\aset\grafikproduksi");
-	}
+	} 
 
 	public function produksi(){
 		$data_js_rd = array(
