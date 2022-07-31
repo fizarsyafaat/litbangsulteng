@@ -1,20 +1,24 @@
 $(document).ready(function(){
 
 
-	get_tani();
+	get_komoditas1();
 	
 
-
-	var previousPoint = null,
+	var previousPoint = null, 
     	previousLabel = null;
 	
-	function get_tani(){
+	
+	function get_komoditas1(){
 		var id = 0;
 		var page_csrf = $(".csrf-header-master").attr("name");
 		var page_csrf_value = $(".csrf-header-master").attr("value");
+		var kecamatan_id = $(".all-districts-ternak").find(":selected").attr("value");
+		var kelurahan_id = $(".all-subdistricts-ternak").find(":selected").attr("value");
 
 		var data = {
 			[page_csrf] : page_csrf_value,
+			'kelurahan' : kelurahan_id,
+			'kecamatan' : kecamatan_id, 
 		};
 
 		$.post(config_url + "panel/peternak/json/get-peternak",data,function(rd){
@@ -107,10 +111,45 @@ $(document).ready(function(){
 		    }
 		});
 	}
-	
+
 
 	
+	$(".all-districts-ternak").on("change",function(){
+		get_kelurahan_ternak();
+	});
 
+	function get_kelurahan_ternak(){
+		var kecamatan_id = $(".all-districts-ternak").find(":selected").attr("value");
+		var page_csrf = $(".csrf-header-master").attr("name");
+		var page_csrf_value = $(".csrf-header-master").attr("value");
+
+		var data = {
+			[page_csrf] : page_csrf_value,
+		};
+
+		console.log(data);
+
+		$.post(config_url + "panel/address/json/get-subdistrict/"+kecamatan_id,data,function(rd){
+			var text = "<option value='0'>Semua Kelurahan</option>";
+			for(var i=0;i<rd.length;i++){
+				text += "<option value="+rd[i]['id_kelurahan']+">"+rd[i]['nama_kelurahan']+"</option>";
+			}
+
+			$(".all-subdistricts-ternak").html(text);
+		},"json")
+		.fail(function(rd){
+			console.log(rd);
+			Toast.fire({
+				type: 'error',
+				title: "Something wrong in the server"
+			});
+		});
+	}
+
+	$(".filter-ternak").on("click",function(){
+		get_komoditas1();
+	});
+	
 	                
 	                /* END BAR CHART */
 });

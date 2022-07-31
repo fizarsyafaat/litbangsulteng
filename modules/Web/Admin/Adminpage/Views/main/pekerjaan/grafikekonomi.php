@@ -7,13 +7,22 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Grafik Modal Dan Laba Masyarakat Kota Palu</h1>
+                            <h1 class="m-0">Grafik Sumber Modal Dan Laba Masyarakat Kota Palu</h1>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Modal & Laba</a></li>
-                                <li class="breadcrumb-item active">Grafik</li>
+                        	
+                             <ol class="breadcrumb float-sm-right">
+                                  <li style="margin-left:10px;"> <select class="form-control all-districts-kerja">
+                                                            <option value="0">Semua Kecamatan</option>
+                                                            <?php foreach($kecamatan as $kc){?>
+                                                                <option value="<?php echo $kc->id_kecamatan;?>"><?php echo $kc->nama_kecamatan;?></option>
+                                                            <?php } ?>
+                                                        </select></li>
+                                <li  style="margin-left:10px;"> <select class="form-control all-subdistricts-kerja">
+                                                            <option value="0">Semua Kelurahan</option>
+                                                        </select> </li>
+                             <li class="breadcrumb-item active" style="margin-left:10px;" style="margin-left:20px;"><button class="btn btn-primary filter-kerja">Filter Data</button></li>
                             </ol>
                         </div>
                         <!-- /.col -->
@@ -37,7 +46,7 @@
 			                                <div class="card-header">
 			                                    <h3 class="card-title">
 			                                        <i class="far fa-chart-bar"></i>
-			                                        Rata-Rata Modal Masyarakat Kota Palu (Grafik)
+			                                        Sumber Modal Masyarakat Kota Palu (Grafik)
 			                                    </h3>
 
 			                                    <div class="card-tools">

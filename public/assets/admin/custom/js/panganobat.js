@@ -1,21 +1,24 @@
 $(document).ready(function(){
 
 
-	get_pangan();
-	get_obat();
+	get_komoditas1();
 	
 
-
-	var previousPoint = null,
+	var previousPoint = null, 
     	previousLabel = null;
 	
-	function get_pangan(){
+	
+	function get_komoditas1(){
 		var id = 0;
 		var page_csrf = $(".csrf-header-master").attr("name");
 		var page_csrf_value = $(".csrf-header-master").attr("value");
+		var kecamatan_id = $(".all-districts-panganobat").find(":selected").attr("value");
+		var kelurahan_id = $(".all-subdistricts-panganobat").find(":selected").attr("value");
 
 		var data = {
 			[page_csrf] : page_csrf_value,
+			'kelurahan' : kelurahan_id,
+			'kecamatan' : kecamatan_id,
 		};
 
 		$.post(config_url + "panel/panganobat/json/get-panganobat",data,function(rd){
@@ -108,9 +111,15 @@ $(document).ready(function(){
 		    }
 		});
 	}
+
+
 	
-	function get_obat(){
-		var id = 0;
+	$(".all-districts-panganobat").on("change",function(){
+		get_kelurahan_panganobat();
+	});
+
+	function get_kelurahan_panganobat(){
+		var kecamatan_id = $(".all-districts-panganobat").find(":selected").attr("value");
 		var page_csrf = $(".csrf-header-master").attr("name");
 		var page_csrf_value = $(".csrf-header-master").attr("value");
 
@@ -118,98 +127,29 @@ $(document).ready(function(){
 			[page_csrf] : page_csrf_value,
 		};
 
-		$.post(config_url + "panel/obat/json/get-obat",data,function(rd){
-			var bar_data = {
-				data : [],
-				bars : {show:true},
+		console.log(data);
+
+		$.post(config_url + "panel/address/json/get-subdistrict/"+kecamatan_id,data,function(rd){
+			var text = "<option value='0'>Semua Kelurahan</option>";
+			for(var i=0;i<rd.length;i++){
+				text += "<option value="+rd[i]['id_kelurahan']+">"+rd[i]['nama_kelurahan']+"</option>";
 			}
 
-			ticks_ar = [];
-
-			for(var i=0;i<rd['jenis_komoditas'].length;i++){
-				ar = [];
-				tick = [];
-				ar.push(i,rd['jenis_komoditas'][i]['total_data']);
-				tick.push(i,rd['jenis_komoditas'][i]['nama_komoditas_tanaman_obat']);
-
-				ticks_ar.push(tick);
-				bar_data.data.push(ar);
-			}
-
-			console.log(bar_data);
-
-	        $.plot("#bar-chart1", [bar_data], {
-	            grid: {
-	                borderWidth: 1,
-	                borderColor: "#f3f3f3",
-	                tickColor: "#f3f3f3",
-		            hoverable: true,
-		            clickable: true,
-	            },
-	            series: {
-	                bars: {
-	                    show: true,
-	                    barWidth: 0.5,
-	                    align: "center",
-	                },
-	            },
-	            valueLabels: {
-	                show: true
-	            },
-	            colors: ["#3c8dbc"],
-		        xaxis: {
-		            ticks: ticks_ar,
-		        },
-	        });
+			$(".all-subdistricts-panganobat").html(text);
 		},"json")
 		.fail(function(rd){
 			console.log(rd);
-		
-		});
-
-		function showTooltip(x, y, color, contents) {
-		    $('<div id="tooltip">' + contents + '</div>').css({
-		        position: 'absolute',
-		        display: 'none',
-		        top: y - 40,
-		        left: x - 120,
-		        border: '2px solid ' + color,
-		        padding: '3px',
-		            'font-size': '12px',
-		            'border-radius': '5px',
-		            'background-color': '#fff',
-		            'font-family': 'Verdana, Arial, Helvetica, Tahoma, sans-serif',
-		        opacity: 0.9
-		    }).appendTo("body").fadeIn(200);
-		}
-		                
-		$("#bar-chart1").on("plothover", function (event, pos, item) {
-		    if (item) {
-		        if ((previousLabel != item.series.label) || (previousPoint != item.dataIndex)) {
-		            previousPoint = item.dataIndex;
-		            previousLabel = item.series.label;
-		            $("#tooltip").remove();
-
-		            var x = item.datapoint[0];
-		            var y = item.datapoint[1];
-
-		            var color = item.series.color;
-
-		            //console.log(item.series.xaxis.ticks[x].label);               
-
-		            showTooltip(item.pageX,
-		            item.pageY,
-		            color,
-		                "<strong>Jumlah KK</strong><br>" + item.series.xaxis.ticks[x].label + " : <strong>" + y + "</strong>");
-		        }
-		    } else {
-		        $("#tooltip").remove();
-		        previousPoint = null;
-		    }
+			Toast.fire({
+				type: 'error',
+				title: "Something wrong in the server"
+			});
 		});
 	}
-	
 
+	$(".filter-panganobat").on("click",function(){
+		get_komoditas1();
+	});
+	
 	                
 	                /* END BAR CHART */
 });

@@ -6,6 +6,7 @@ namespace AdminpageViewCont;
 
 use AdminTemplateViewCont\DefaultAdminViewController;
 use BusinessProcessRoot\Models\User as UserModel;
+use BusinessProcessRoot\Models\Kecamatan as KecamatanModel;
 
 class Panganobat extends DefaultAdminViewController{
 	
@@ -19,6 +20,9 @@ class Panganobat extends DefaultAdminViewController{
 		$this->set_js_data($data_pl_top,"bottom","last","assets/admin/plugins/");
 
 		$this->set_data_view("menu","kebun");
+		$kModel = new KecamatanModel();
+		$k_list = $kModel->findAll();
+		$this->set_data_view("kecamatan",$k_list);
 	}
 
 	public function panganobat_example(){
@@ -27,7 +31,7 @@ class Panganobat extends DefaultAdminViewController{
 	}
 
 	public function panganobat(){
-		$data_js_rd = array(
+		$data_js_rd = array( 
 			'panganobat.js'
 		);
 

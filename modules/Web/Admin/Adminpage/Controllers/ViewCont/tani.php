@@ -2,7 +2,7 @@
 
 //modules\Home\Homepage\Controllers\ViewCont;
 
-namespace AdminpageViewCont;
+namespace AdminpageViewCont; 
 
 use AdminTemplateViewCont\DefaultAdminViewController;
 use BusinessProcessRoot\Models\User as UserModel;
@@ -26,7 +26,7 @@ class Tani extends DefaultAdminViewController{
 	}
 
 	public function tani_example(){
-		$this->set_data_view("submenu","tani");
+		$this->set_data_view("submenu","tani"); 
 		return $this->tc_view("AdminpageView\main\kebun\grafiktani");
 	}
 

@@ -6,7 +6,7 @@ namespace AdminpageViewCont;
 
 use AdminTemplateViewCont\DefaultAdminViewController;
 use BusinessProcessRoot\Models\User as UserModel;
-
+use BusinessProcessRoot\Models\Kecamatan as KecamatanModel;
 class Obat extends DefaultAdminViewController{
 	
 	public function __construct(){
@@ -19,6 +19,9 @@ class Obat extends DefaultAdminViewController{
 		$this->set_js_data($data_pl_top,"bottom","last","assets/admin/plugins/");
 
 		$this->set_data_view("menu","kebun");
+			$kModel = new KecamatanModel();
+		$k_list = $kModel->findAll();
+		$this->set_data_view("kecamatan",$k_list);
 	}
 
 	public function obat_example(){
@@ -30,7 +33,7 @@ class Obat extends DefaultAdminViewController{
 		$data_js_rd = array(
 			'obat.js'
 		);
-
+ 
 		$this->set_js_data($data_js_rd,"bottom","last","assets/admin/custom/js/");
 
 

@@ -7,6 +7,7 @@ namespace AdminpageViewCont;
 use AdminTemplateViewCont\DefaultAdminViewController;
 use BusinessProcessRoot\Models\User as UserModel;
 
+use BusinessProcessRoot\Models\Kecamatan as KecamatanModel;
 class Ikan extends DefaultAdminViewController{
 	
 	public function __construct(){
@@ -19,6 +20,9 @@ class Ikan extends DefaultAdminViewController{
 		$this->set_js_data($data_pl_top,"bottom","last","assets/admin/plugins/");
 
 		$this->set_data_view("menu","peternak");
+			$kModel = new KecamatanModel();
+		$k_list = $kModel->findAll();
+		$this->set_data_view("kecamatan",$k_list);
 	}
 
 	public function ikan_example(){

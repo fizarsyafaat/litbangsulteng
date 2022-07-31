@@ -1,22 +1,23 @@
 $(document).ready(function(){
 
 
-	get_penyakit();
-
 	get_jenis_penyakit();
-
+	get_sakit_kelainan();
 
 	var previousPoint = null,
     	previousLabel = null;
 
-	
-	function get_penyakit(){
+	function get_sakit_kelainan(){
 		var id = 0;
 		var page_csrf = $(".csrf-header-master").attr("name");
 		var page_csrf_value = $(".csrf-header-master").attr("value");
+		var kecamatan_id = $(".all-districts-kesehatan").find(":selected").attr("value");
+		var kelurahan_id = $(".all-subdistricts-kesehatan").find(":selected").attr("value");
 
 		var data = {
 			[page_csrf] : page_csrf_value,
+			'kelurahan' : kelurahan_id,
+			'kecamatan' : kecamatan_id,
 		};
 
 		$.post(config_url + "panel/health/json/get-penyakit",data,function(rd){
@@ -27,11 +28,11 @@ $(document).ready(function(){
 
 			ticks_ar = [];
 
-			for(var i=0;i<rd['sakit_kelainan'].length;i++){
+			for(var i=0;i<rd['penderita_sakit_kelainan'].length;i++){
 				ar = [];
 				tick = [];
-				ar.push(i,rd['sakit_kelainan'][i]['total_data']);
-				tick.push(i,rd['sakit_kelainan'][i]['nama_penderita_sakit_kelainan']);
+				ar.push(i,rd['penderita_sakit_kelainan'][i]['total_data']);
+				tick.push(i,rd['penderita_sakit_kelainan'][i]['nama_penderita_sakit_kelainan']);
 
 				ticks_ar.push(tick);
 				bar_data.data.push(ar);
@@ -114,9 +115,13 @@ $(document).ready(function(){
 		var id = 0;
 		var page_csrf = $(".csrf-header-master").attr("name");
 		var page_csrf_value = $(".csrf-header-master").attr("value");
+		var kecamatan_id = $(".all-districts-kesehatan").find(":selected").attr("value");
+		var kelurahan_id = $(".all-subdistricts-kesehatan").find(":selected").attr("value");
 
 		var data = {
 			[page_csrf] : page_csrf_value,
+			'kelurahan' : kelurahan_id,
+			'kecamatan' : kecamatan_id,
 		};
 
 		$.post(config_url + "panel/health/json/get-penyakit",data,function(rd){
@@ -210,6 +215,48 @@ $(document).ready(function(){
 		});
 	}
 
-	                
-	                /* END BAR CHART */
+
+	
+
+
+
+	///TAMBAHAN FILTER
+
+	$(".all-districts-kesehatan").on("change",function(){
+		get_kelurahan_kesehatan();
+	});
+
+	function get_kelurahan_kesehatan(){
+		var kecamatan_id = $(".all-districts-kesehatan").find(":selected").attr("value");
+		var page_csrf = $(".csrf-header-master").attr("name");
+		var page_csrf_value = $(".csrf-header-master").attr("value");
+
+		var data = {
+			[page_csrf] : page_csrf_value,
+		};
+
+		console.log(data);
+
+		$.post(config_url + "panel/address/json/get-subdistrict/"+kecamatan_id,data,function(rd){
+			var text = "<option value='0'>Semua Kelurahan</option>";
+			for(var i=0;i<rd.length;i++){
+				text += "<option value="+rd[i]['id_kelurahan']+">"+rd[i]['nama_kelurahan']+"</option>";
+			}
+
+			$(".all-subdistricts-kesehatan").html(text);
+		},"json")
+		.fail(function(rd){
+			console.log(rd);
+			Toast.fire({
+				type: 'error',
+				title: "Something wrong in the server"
+			});
+		});
+	}
+
+	$(".filter-kesehatan").on("click",function(){
+		get_jenis_penyakit();
+		get_sakit_kelainan();
+		
+	});
 });

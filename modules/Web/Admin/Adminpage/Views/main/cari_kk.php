@@ -1176,7 +1176,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="acceptorkb_multi">Persalinan 1</p>
+								    						<p class="acceptorkb_multi">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1188,7 +1188,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="kualitas_ibu_hamil">Persalinan 1</p>
+								    						<p class="kualitas_ibu_hamil">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1200,7 +1200,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="kualitas_bayi">Persalinan 2</p>
+								    						<p class="kualitas_bayi">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1212,7 +1212,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="tempat_persalinan">Persalinan 3</p>
+								    						<p class="tempat_persalinan">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1224,7 +1224,7 @@
 								    				</div>
 								    					<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="cakupan_imunisasi_multi">Persalinan 3</p>
+								    						<p class="cakupan_imunisasi_multi">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1236,7 +1236,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="pertolongan_persalinan">Persalinan 4</p>
+								    						<p class="pertolongan_persalinan">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1248,7 +1248,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="fasilitas_layanan_kesehatan">Persalinan 5</p>
+								    						<p class="fasilitas_layanan_kesehatan">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1260,7 +1260,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="jenis_kelamin_balita">Persalinan 6</p>
+								    						<p class="jenis_kelamin_balita">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1272,7 +1272,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="umur_balita">Persalinan 6</p>
+								    						<p class="umur_balita">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1284,7 +1284,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="berat_badan">Persalinan 7</p>
+								    						<p class="berat_badan">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1296,7 +1296,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="tinggi_badan">Persalinan 8</p>
+								    						<p class="tinggi_badan">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1308,7 +1308,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="kondisi_saat_pengukuran">Persalinan 9</p>
+								    						<p class="kondisi_saat_pengukuran">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1320,7 +1320,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="status_gizi_balita">Persalinan 10</p>
+								    						<p class="status_gizi_balita">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1339,7 +1339,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="penderita_sakit_kelainan">kesehatan 1</p>
+								    						<p class="penderita_sakit_kelainan">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1351,7 +1351,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="perilaku_hidup_bersih">kesehatan 2</p>
+								    						<p class="perilaku_hidup_bersih">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1363,7 +1363,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="pola_makan">kesehatan 3</p>
+								    						<p class="pola_makan">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1375,7 +1375,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="kebiasaan_berobat">kesehatan 4</p>
+								    						<p class="kebiasaan_berobat">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1387,7 +1387,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="jenis_penyakit">kesehatan 5</p>
+								    						<p class="jenis_penyakit">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1406,7 +1406,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="col-sm-12 transportasi_umum_multi">aset lainnya 1</p>
+								    						<p class="col-sm-12 transportasi_umum_multi">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1418,7 +1418,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="col-sm-12 lembaga_pendidikan_multi">aset lainnya 2</p>
+								    						<p class="col-sm-12 lembaga_pendidikan_multi">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1430,7 +1430,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="col-sm-12 aset_produksi_multi">kesehatan 3</p>
+								    						<p class="col-sm-12 aset_produksi_multi">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>								    				
@@ -1448,7 +1448,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="jumlah_aktivitas_wisata_bulanan">Wisata 1</p>
+								    						<p class="jumlah_aktivitas_wisata_bulanan">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1460,7 +1460,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="jumlah_biaya_wisata_bulanan">Wisata 2</p>
+								    						<p class="jumlah_biaya_wisata_bulanan">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1472,7 +1472,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="lokasi_objek_wisata">Wisata 3</p>
+								    						<p class="lokasi_objek_wisata">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1484,7 +1484,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="daya_tarik_wisata_palu">Wisata 4</p>
+								    						<p class="daya_tarik_wisata_palu">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1496,7 +1496,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="pengelolaan_pariwisata_palu">Wisata 5</p>
+								    						<p class="pengelolaan_pariwisata_palu">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1514,7 +1514,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="nama_pendata">Pendata 1</p>
+								    						<p class="nama_pendata">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1526,7 +1526,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="pekerjaan_pendata">Pendata 2</p>
+								    						<p class="pekerjaan_pendata">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1538,7 +1538,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="jabatan_pendata">Pendata 3</p>
+								    						<p class="jabatan_pendata">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1550,7 +1550,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="sumber_data">Pendata 4</p>
+								    						<p class="sumber_data">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>
@@ -1562,7 +1562,7 @@
 								    				</div>
 								    				<div class="row">
 								    					<div class="col-sm-6">
-								    						<p class="no_handphone">Pendata 5</p>
+								    						<p class="no_handphone">Belum Ada Data</p>
 								    					</div>
 								    				</div>
 								    			</div>

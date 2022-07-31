@@ -2,7 +2,7 @@
 
 namespace BusinessProcessRoot\Models;
 
-use CodeIgniter\Model;
+use CodeIgniter\Model; 
 use CodeIgniter\Database\BaseBuilder;
 
 class KkMainAsetPerkebunan extends Model
@@ -16,7 +16,7 @@ class KkMainAsetPerkebunan extends Model
 
     public function get_filter_data($data){
         $db = \Config\Database::connect();
-
+ 
         $builder = $db->table('kk_main_aset_perkebunan');
         $builderClone = $builder;
 
