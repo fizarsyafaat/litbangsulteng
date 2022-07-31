@@ -159,7 +159,7 @@
                                             <p>Grafik Pertanian</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
+                                  <!-- /.sidebar  <li class="nav-item">
                                         <a href="<?php echo route_to('user.panel.panganobat.panganobat'); ?>" class="nav-link <?php if($submenu == "panganobat"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Grafik Tanaman Pangan</p>
@@ -170,7 +170,7 @@
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Grafik Tanaman Obat</p>
                                         </a>
-                                    </li>
+                                    </li>--> 
                                     <li class="nav-item">
                                         <a href="<?php echo route_to('user.panel.hutan.hutan'); ?>" class="nav-link <?php if($submenu == "hutan"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
@@ -189,12 +189,12 @@
                                     </p>
                                 </a>
                                 <ul class="nav nav-treeview">
-                                    <li class="nav-item">
+                                  <!-- /.sidebar  <li class="nav-item">
                                         <a href="<?php echo route_to('user.panel.peternak.peternak'); ?>" class="nav-link <?php if($submenu == "peternak"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Grafik Peternakan</p>
                                         </a>
-                                    </li>
+                                    </li>--> 
                                     <li class="nav-item">
                                         <a href="<?php echo route_to('user.panel.ikan.ikan'); ?>" class="nav-link <?php if($submenu == "ikan"){ echo "active"; }?>">
                                             <i class="far fa-circle nav-icon"></i>
