@@ -23,6 +23,7 @@ $(document).ready(function(){
 		};
 
 		$.post(config_url + "panel/kebun/json/get-kebun",data,function(rd){
+			console.log(rd);
 			var bar_data = {
 				data : [],
 				bars : {show:true},
@@ -39,8 +40,6 @@ $(document).ready(function(){
 				ticks_ar.push(tick);
 				bar_data.data.push(ar);
 			}
-
-			console.log(bar_data);
 
 	        $.plot("#bar-chart", [bar_data], {
 	            grid: {
@@ -65,6 +64,20 @@ $(document).ready(function(){
 		            ticks: ticks_ar,
 		        },
 	        });
+
+
+		    var text = "";
+		    rdm = rd['jenis_komoditas'];
+
+			rdm.sort(function(a, b) {
+			    return parseInt(b['total_data']) - parseInt(a['total_data']);
+			});
+
+		    for(var is=0;is<rdm.length;is++){
+			    text += "<tr><td>"+(parseInt(is)+1)+"</td><td>"+rdm[is]['nama_komoditas_perkebunan']+"</td><td>"+rdm[is]['total_data']+"</td></tr>";
+			}
+
+		    $("#jumlah-kk-kebun tbody").html(text);
 		},"json")
 		.fail(function(rd){
 			console.log(rd);

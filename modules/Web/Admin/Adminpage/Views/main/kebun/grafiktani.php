@@ -52,13 +52,28 @@
                                     <div class="card-body">
                                         <div id="bar-chart" style="height: 600px;"></div>
                                    </div>
-			                                <!-- /.card-body-->
-			                            </div>
-			                            <!-- /.card -->
-			                        </div>
-			                	</div>
-			                	
-			                </div>
+	                                <!-- /.card-body-->
+	                            </div>
+	                            <!-- /.card -->
+	                        </div>
+	                        <div class="col-12" style="margin-top:100px;">
+	                        	<div class="table-responsive">
+	                        		<table class="table" id="jumlah-kk-tani">
+	                        			<thead class="thead-dark">
+	                        				<tr>
+	                        					<th>No</th>
+	                        					<th>Komoditas</th>
+	                        					<th>Jumlah Data</th>
+	                        				</tr>
+	                        			</thead>
+	                        			<tbody>
+	                        			</tbody>
+	                        		</table>
+	                        	</div>
+	                        </div>
+	                	</div>
+	                	
+	                </div>
             			
                 <!-- /.container-fluid -->
             </section>

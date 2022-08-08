@@ -63,6 +63,19 @@ $(document).ready(function(){
 		            ticks: ticks_ar,
 		        },
 	        });
+
+		    var text = "";
+		    rdm = rd['penderita_sakit_kelainan'];
+
+			rdm.sort(function(a, b) {
+			    return parseInt(b['total_data']) - parseInt(a['total_data']);
+			});
+
+		    for(var is=0;is<rdm.length;is++){
+			    text += "<tr><td>"+(parseInt(is)+1)+"</td><td>"+rdm[is]['nama_penderita_sakit_kelainan']+"</td><td>"+rdm[is]['total_data']+"</td></tr>";
+			}
+
+		    $("#jumlah-kk-sakit-lain tbody").html(text);
 		},"json")
 		.fail(function(rd){
 			console.log(rd);
@@ -167,6 +180,19 @@ $(document).ready(function(){
 		            ticks: ticks_ar,
 		        },
 	        });
+
+		    var text = "";
+		    rdm = rd['jenis_penyakit'];
+
+			rdm.sort(function(a, b) {
+			    return parseInt(b['total_data']) - parseInt(a['total_data']);
+			});
+
+		    for(var is=0;is<rdm.length;is++){
+			    text += "<tr><td>"+(parseInt(is)+1)+"</td><td>"+rdm[is]['nama_jenis_penyakit']+"</td><td>"+rdm[is]['total_data']+"</td></tr>";
+			}
+
+		    $("#jumlah-kk-sakit tbody").html(text);
 		},"json")
 		.fail(function(rd){
 			console.log(rd);

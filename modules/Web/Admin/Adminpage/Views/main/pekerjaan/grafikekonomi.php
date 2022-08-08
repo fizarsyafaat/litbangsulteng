@@ -62,6 +62,21 @@
 			                            </div>
 			                            <!-- /.card -->
 			                        </div>
+			                        <div class="col-12" style="margin-top:100px;">
+			                        	<div class="table-responsive">
+			                        		<table class="table" id="jumlah-kk-sumber-modal">
+			                        			<thead class="thead-dark">
+			                        				<tr>
+			                        					<th>No</th>
+			                        					<th>Sumber Modal</th>
+			                        					<th>Jumlah Data</th>
+			                        				</tr>
+			                        			</thead>
+			                        			<tbody>
+			                        			</tbody>
+			                        		</table>
+			                        	</div>
+			                        </div>
 			                	</div>
 			                	
 			                </div>
@@ -91,6 +106,21 @@
 			                                <!-- /.card-body-->
 			                            </div>
 			                            <!-- /.card -->
+			                        </div>
+			                        <div class="col-12" style="margin-top:100px;">
+			                        	<div class="table-responsive">
+			                        		<table class="table" id="jumlah-kk-laba">
+			                        			<thead class="thead-dark">
+			                        				<tr>
+			                        					<th>No</th>
+			                        					<th>Rata-rata Laba</th>
+			                        					<th>Jumlah Data</th>
+			                        				</tr>
+			                        			</thead>
+			                        			<tbody>
+			                        			</tbody>
+			                        		</table>
+			                        	</div>
 			                        </div>
 			                	</div>
 			                	

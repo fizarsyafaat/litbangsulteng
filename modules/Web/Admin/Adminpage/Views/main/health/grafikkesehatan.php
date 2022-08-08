@@ -61,6 +61,21 @@
 			                            </div>
 			                            <!-- /.card -->
 			                        </div>
+			                        <div class="col-12" style="margin-top:100px;">
+			                        	<div class="table-responsive">
+			                        		<table class="table" id="jumlah-kk-sakit-lain">
+			                        			<thead class="thead-dark">
+			                        				<tr>
+			                        					<th>No</th>
+			                        					<th>Sakit Kelainan</th>
+			                        					<th>Jumlah Data</th>
+			                        				</tr>
+			                        			</thead>
+			                        			<tbody>
+			                        			</tbody>
+			                        		</table>
+			                        	</div>
+			                        </div>
 			                	</div>
 			                	
 			                </div>
@@ -90,6 +105,21 @@
 			                                <!-- /.card-body-->
 			                            </div>
 			                            <!-- /.card -->
+			                        </div>
+			                        <div class="col-12" style="margin-top:100px;">
+			                        	<div class="table-responsive">
+			                        		<table class="table" id="jumlah-kk-sakit">
+			                        			<thead class="thead-dark">
+			                        				<tr>
+			                        					<th>No</th>
+			                        					<th>Penyakit</th>
+			                        					<th>Jumlah Data</th>
+			                        				</tr>
+			                        			</thead>
+			                        			<tbody>
+			                        			</tbody>
+			                        		</table>
+			                        	</div>
 			                        </div>
 			                	</div>
 			                	

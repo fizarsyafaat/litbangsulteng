@@ -24,6 +24,7 @@ $(document).ready(function(){
 		};
 
 		$.post(config_url + "panel/pekerjaan/json/get-pekerjaan",data,function(rd){
+			console.log(rd);
 			var bar_data = {
 				data : [],
 				bars : {show:true},
@@ -41,7 +42,6 @@ $(document).ready(function(){
 				bar_data.data.push(ar);
 			}
 
-			console.log(bar_data);
 
 	        $.plot("#bar-chart", [bar_data], {
 	            grid: {
@@ -66,6 +66,20 @@ $(document).ready(function(){
 		            ticks: ticks_ar,
 		        },
 	        });
+
+		    //for ext
+		    var text = "";
+		    rdm = rd['mata_pencaharian_pokok'];
+
+			rdm.sort(function(a, b) {
+			    return parseInt(b['total_data']) - parseInt(a['total_data']);
+			});
+
+		    for(var is=0;is<rdm.length;is++){
+			    text += "<tr><td>"+(parseInt(is)+1)+"</td><td>"+rdm[is]['nama_mata_pencaharian_pokok']+"</td><td>"+rdm[is]['total_data']+"</td></tr>";
+			}
+
+		    $("#jumlah-kk-pekerjaan tbody").html(text);
 		},"json")
 		.fail(function(rd){
 			console.log(rd);
@@ -145,8 +159,6 @@ $(document).ready(function(){
 				bar_data.data.push(ar);
 			}
 
-			console.log(bar_data);
-
 	        $.plot("#bar-chart2", [bar_data], {
 	            grid: {
 	                borderWidth: 1,
@@ -170,6 +182,19 @@ $(document).ready(function(){
 		            ticks: ticks_ar,
 		        },
 	        });
+
+		    var text = "";
+		    rdm = rd['sumber_modal'];
+
+			rdm.sort(function(a, b) {
+			    return parseInt(b['total_data']) - parseInt(a['total_data']);
+			});
+
+		    for(var is=0;is<rdm.length;is++){
+			    text += "<tr><td>"+(parseInt(is)+1)+"</td><td>"+rdm[is]['nama_sumber_modal']+"</td><td>"+rdm[is]['total_data']+"</td></tr>";
+			}
+
+		    $("#jumlah-kk-sumber-modal tbody").html(text);
 		},"json")
 		.fail(function(rd){
 			console.log(rd);
@@ -274,6 +299,19 @@ $(document).ready(function(){
 		            ticks: ticks_ar,
 		        },
 	        });
+
+		    var text = "";
+		    rdm = rd['laba_per_bulan'];
+
+			rdm.sort(function(a, b) {
+			    return parseInt(b['total_data']) - parseInt(a['total_data']);
+			});
+
+		    for(var is=0;is<rdm.length;is++){
+			    text += "<tr><td>"+(parseInt(is)+1)+"</td><td>"+rdm[is]['nama_laba_per_bulan']+"</td><td>"+rdm[is]['total_data']+"</td></tr>";
+			}
+
+		    $("#jumlah-kk-laba tbody").html(text);
 		},"json")
 		.fail(function(rd){
 			console.log(rd);
