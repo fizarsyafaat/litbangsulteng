@@ -1,7 +1,7 @@
 <div class="login-wrap">
 	<div class="login-html">
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab" style="opacity: 0;">Sign Up</label>
 		<div class="login-form">
 			<form  action="<?php echo route_to('user.login.view'); ?>" class="sign-in-htm" method="post">
 				<div class="group">
@@ -34,8 +34,9 @@
 	body{
 	margin:0;
 	color:#6a6f8c;
-	background:#c8c8c8;
 	font:600 16px/18px 'Open Sans',sans-serif;
+	background:url(https://litbang.palukota.go.id/writable/uploads/login_bg_img.png);
+	background-size: cover;
 }
 *,:after,:before{box-sizing:border-box}
 .clearfix:after,.clearfix:before{content:'';display:table}
@@ -48,7 +49,7 @@ a{color:inherit;text-decoration:none}
 	max-width:525px;
 	min-height:670px;
 	position:relative;
-	background:url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center;
+	background-color: white;
 	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
 .login-html{
@@ -56,7 +57,6 @@ a{color:inherit;text-decoration:none}
 	height:100%;
 	position:absolute;
 	padding:90px 70px 50px 70px;
-	background:rgba(40,57,101,.9);
 }
 .login-html .sign-in-htm,
 .login-html .sign-up-htm{
@@ -89,7 +89,7 @@ a{color:inherit;text-decoration:none}
 }
 .login-html .sign-in:checked + .tab,
 .login-html .sign-up:checked + .tab{
-	color:#fff;
+	color:#333;
 	border-color:#1161ee;
 }
 .login-form{
@@ -102,18 +102,27 @@ a{color:inherit;text-decoration:none}
 	margin-bottom:15px;
 }
 .login-form .group .label,
-.login-form .group .input,
+.login-form .group .input{
+	width:100%;
+	color:#333;
+	display:block;	
+}
 .login-form .group .button{
 	width:100%;
-	color:#fff;
+	color:#FFF;
 	display:block;
 }
-.login-form .group .input,
+.login-form .group .input{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(75,75,75,.1);	
+}
 .login-form .group .button{
 	border:none;
 	padding:15px 20px;
 	border-radius:25px;
-	background:rgba(255,255,255,.1);
+	background:rgba(252,252,252,.1);
 }
 .login-form .group input[data-type="password"]{
 	text-security:circle;
@@ -132,14 +141,14 @@ a{color:inherit;text-decoration:none}
 	border-radius:2px;
 	position:relative;
 	display:inline-block;
-	background:rgba(255,255,255,.1);
+	background:rgba(76,76,76,.1);
 }
 .login-form .group label .icon:before,
 .login-form .group label .icon:after{
 	content:'';
 	width:10px;
 	height:2px;
-	background:#fff;
+	background:#333;
 	position:absolute;
 	transition:all .2s ease-in-out 0s;
 }
@@ -155,7 +164,7 @@ a{color:inherit;text-decoration:none}
 	transform:scale(0) rotate(0);
 }
 .login-form .group .check:checked + label{
-	color:#fff;
+	color:#333;
 }
 .login-form .group .check:checked + label .icon{
 	background:#1161ee;
@@ -176,7 +185,7 @@ a{color:inherit;text-decoration:none}
 .hr{
 	height:2px;
 	margin:60px 0 50px 0;
-	background:rgba(255,255,255,.2);
+	background:rgba(76,76,76,.2);
 }
 .foot-lnk{
 	text-align:center;

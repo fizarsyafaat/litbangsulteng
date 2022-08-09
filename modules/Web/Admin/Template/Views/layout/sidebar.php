@@ -12,7 +12,7 @@
                     <!-- Sidebar user panel (optional) -->
                     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                         <div class="image">
-                            <img src="dist/img/avatar.png"  />
+                            <img src="/writable/uploads/icon_logo.jpg"  />
                         </div>
                         <div class="info">
                             <a href="#" class="d-block">Selamat Datang Admin</a>

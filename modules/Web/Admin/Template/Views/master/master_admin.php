@@ -5,7 +5,7 @@
         <input type="hidden" class="csrf-header-master" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>">
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="/assets/admin/image/innask.PNG" alt="AdminLTELogo" height="60" width="60" />
+            <img class="animation__shake" src="/writable/uploads/icon_logo.jpg" alt="Pemkot Palu" height="60" width="60" />
         </div>
 
 		<?= $this->include('Admin\Template\Views\layout\navbar') ?>
